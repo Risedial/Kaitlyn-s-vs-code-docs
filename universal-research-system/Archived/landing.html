@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Every time you start a new AI conversation, your research starts over.</title>
+  <style>
+    :root {
+      --card: #ffffff;
+      --ring: #ffc0cb;
+      --input: #d4d4d4;
+      --muted: #ddd9c4;
+      --accent: #ffff00;
+      --border: #d4d4d4;
+      --radius: 0.5rem;
+      --chart-1: #ffc0cb;
+      --chart-2: #87ceeb;
+      --chart-3: #ffff00;
+      --chart-4: #ff99cc;
+      --chart-5: #33cc33;
+      --popover: #ffffff;
+      --primary: #ffc0cb;
+      --sidebar: #f7f9fa;
+      --font-mono: Roboto Mono, monospace;
+      --font-sans: Poppins, sans-serif;
+      --secondary: #87ceeb;
+      --background: #f7f9fa;
+      --foreground: #333333;
+      --destructive: #ef4444;
+      --sidebar-ring: #ffc0cb;
+      --sidebar-accent: #ffff00;
+      --sidebar-border: #d4d4d4;
+      --card-foreground: #333333;
+      --sidebar-primary: #ffc0cb;
+      --muted-foreground: #6e6e6e;
+      --accent-foreground: #000000;
+      --popover-foreground: #333333;
+      --primary-foreground: #000000;
+      --sidebar-foreground: #333333;
+      --secondary-foreground: #000000;
+      --destructive-foreground: #ffffff;
+      --sidebar-accent-foreground: #000000;
+      --sidebar-primary-foreground: #000000;
+    }
+    .dark {
+      --card: #2f3436;
+      --ring: #ff99cc;
+      --input: #444444;
+      --muted: #444444;
+      --accent: #87ceeb;
+      --border: #444444;
+      --radius: 0.5rem;
+      --chart-1: #ff99cc;
+      --chart-2: #33cc33;
+      --chart-3: #87ceeb;
+      --chart-4: #ffff00;
+      --chart-5: #ffcc00;
+      --popover: #2f3436;
+      --primary: #ff99cc;
+      --sidebar: #1a1d23;
+      --secondary: #33cc33;
+      --background: #1a1d23;
+      --foreground: #e5e5e5;
+      --destructive: #ef4444;
+      --sidebar-ring: #ff99cc;
+      --sidebar-accent: #87ceeb;
+      --sidebar-border: #444444;
+      --card-foreground: #e5e5e5;
+      --sidebar-primary: #ff99cc;
+      --muted-foreground: #a3a3a3;
+      --accent-foreground: #000000;
+      --popover-foreground: #e5e5e5;
+      --primary-foreground: #000000;
+      --sidebar-foreground: #e5e5e5;
+      --secondary-foreground: #000000;
+      --destructive-foreground: #ffffff;
+      --sidebar-accent-foreground: #000000;
+      --sidebar-primary-foreground: #000000;
+    }
+    @theme inline {
+      --color-card: var(--card);
+      --color-ring: var(--ring);
+      --color-input: var(--input);
+      --color-muted: var(--muted);
+      --color-accent: var(--accent);
+      --color-border: var(--border);
+      --color-radius: var(--radius);
+      --color-chart-1: var(--chart-1);
+      --color-chart-2: var(--chart-2);
+      --color-chart-3: var(--chart-3);
+      --color-chart-4: var(--chart-4);
+      --color-chart-5: var(--chart-5);
+      --color-popover: var(--popover);
+      --color-primary: var(--primary);
+      --color-sidebar: var(--sidebar);
+      --color-font-mono: var(--font-mono);
+      --color-font-sans: var(--font-sans);
+      --color-secondary: var(--secondary);
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-destructive: var(--destructive);
+      --color-sidebar-ring: var(--sidebar-ring);
+      --color-sidebar-accent: var(--sidebar-accent);
+      --color-sidebar-border: var(--sidebar-border);
+      --color-card-foreground: var(--card-foreground);
+      --color-sidebar-primary: var(--sidebar-primary);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-sidebar-foreground: var(--sidebar-foreground);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-destructive-foreground: var(--destructive-foreground);
+      --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+      --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    }
+    body { font-family: var(--font-sans, sans-serif); background: var(--background); color: var(--foreground); margin: 0; padding: 0; }
+    main { max-width: 800px; margin: 0 auto; padding: 1rem; }
+    @media (min-width: 640px) { main { padding: 2rem; } }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.4rem; border-bottom: 2px solid var(--border); padding-bottom: 0.4rem; margin-top: 2.5rem; }
+    h3 { font-size: 1.1rem; margin-top: 1.75rem; }
+    p { line-height: 1.7; }
+    code { font-family: var(--font-mono, monospace); background: var(--muted); padding: 0.15em 0.35em; border-radius: 3px; font-size: 0.9em; }
+    pre code { display: block; overflow-x: auto; padding: 1rem; line-height: 1.6; }
+    table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.92em; }
+    th { background: var(--muted); text-align: left; padding: 0.5rem 0.75rem; border: 1px solid var(--border); }
+    td { padding: 0.5rem 0.75rem; border: 1px solid var(--border); vertical-align: top; }
+    tbody tr:nth-child(even) { background: color-mix(in srgb, var(--muted) 40%, transparent); }
+    header.attribution { background: var(--primary); color: var(--primary-foreground); padding: 0.75rem 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.9rem; }
+    header.attribution a { color: var(--primary-foreground); font-weight: 600; }
+    nav.sections { position: sticky; top: 0; background: var(--background); border-bottom: 1px solid var(--border); padding: 0.5rem 1rem; overflow-x: auto; white-space: nowrap; z-index: 10; font-size: 0.85rem; }
+    nav.sections a { margin-right: 1rem; color: var(--primary); text-decoration: none; }
+    nav.sections a:hover { text-decoration: underline; }
+    button#theme-toggle { background: transparent; border: 1px solid var(--primary-foreground); color: var(--primary-foreground); padding: 0.25rem 0.6rem; border-radius: var(--radius); cursor: pointer; font-size: 0.85rem; }
+    ul { line-height: 1.7; }
+    ol { line-height: 1.7; }
+    /* Tab bar — mobile first */
+    .tab-bar {
+      display: flex;
+      background: var(--background);
+      border-bottom: 2px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 0.75rem 0.5rem;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      color: var(--muted-foreground);
+      font-family: var(--font-sans, sans-serif);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+    .tab-btn:hover:not(.active) { color: var(--foreground); }
+    .tab-panel.hidden { display: none; }
+    /* Section nav wraps on narrow screens */
+    nav.sections {
+      white-space: normal;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 0;
+    }
+    nav.sections a { white-space: nowrap; }
+    /* Tables scroll horizontally on mobile */
+    main table {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header class="attribution">
+    <span>Built and designed by Alex Bitar &mdash; <a href="https://www.threads.com/@alexbitar" target="_blank" rel="noopener">@alexbitar on Threads</a></span>
+    <button id="theme-toggle">Light Mode</button>
+  </header>
+
+  <nav class="tab-bar" role="tablist" aria-label="Page sections">
+    <button class="tab-btn active" id="btn-overview" role="tab" aria-selected="true" aria-controls="tab-overview">Overview</button>
+    <button class="tab-btn" id="btn-docs" role="tab" aria-selected="false" aria-controls="tab-docs">Documentation</button>
+  </nav>
+
+  <div id="tab-overview" class="tab-panel" role="tabpanel" aria-labelledby="btn-overview">
+    <nav class="sections" aria-label="Overview sections">
+      <a href="#what-it-is">What it is</a>
+      <a href="#the-problem-it-solves">The problem it solves</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#what-you-get">What you get</a>
+      <a href="#who-it-is-for">Who it is for</a>
+      <a href="#how-the-methodology-works">How the methodology works</a>
+    </nav>
+    <main>
+      <h1>Every time you start a new AI conversation, your research starts over.</h1>
+      <hr>
+      <h2 id="what-it-is">What it is</h2>
+      <p>The Universal Research System is a structured research tool that works inside Claude Code. You give it a question or topic, and it works through that topic systematically across as many sessions as you need, building a growing knowledge document that accumulates findings, identifies how key ideas connect, and picks up exactly where you left off every time you return.</p>
+      <hr>
+      <h2 id="the-problem-it-solves">The problem it solves</h2>
+      <p>When you use AI for deep research, each new conversation is a blank slate. The AI has no memory of what you found in the last session. If your question is complex enough to require more than one conversation (and the serious ones always are), you face a hard choice: spend half your time reconstructing what you already covered, accept shallow results that fit inside a single session, or abandon the project entirely.</p>
+      <p>Most researchers end up with scattered notes, missed angles, and no clear record of what they actually discovered. The problem is not intelligence or effort. It is that there is no mechanism for carrying work forward automatically. This system provides that mechanism.</p>
+      <hr>
+      <h2 id="how-it-works">How it works</h2>
+      <ol>
+        <li>You give the system a question or topic, and it asks you five setup questions to understand what kind of research you want: the scope, the perspectives that matter to you, and what you want to do with the findings.</li>
+        <li>It identifies all the key factors and concepts relevant to your topic, checking each one for relevance before committing to research it.</li>
+        <li>It researches each factor thoroughly, requiring real evidence for every finding before that finding counts, and saves every result to disk after each step so nothing is lost if a session ends.</li>
+        <li>It evaluates how the researched factors connect to each other, requiring independent evidence for each claimed connection rather than inference alone.</li>
+        <li>Once every factor is covered and every connection is evaluated, it synthesizes all findings into a structured knowledge document you can read, search, and ask questions against in future sessions.</li>
+      </ol>
+      <hr>
+      <h2 id="what-you-get">What you get</h2>
+      <ul>
+        <li><strong>Know</strong> exactly where your research stands at any point: the system writes a plain-language summary at the end of every session telling you what was completed and what comes next.</li>
+        <li><strong>Get</strong> a permanent, searchable knowledge document that grows with each session, not a set of scattered notes or a conversation history you cannot return to.</li>
+        <li><strong>Build</strong> a validated map of how key ideas in your topic connect to each other, supported by evidence rather than assertion.</li>
+        <li><strong>Stop</strong> losing context between sessions: every session resumes exactly where the previous one stopped, with no manual reconstruction required.</li>
+        <li><strong>Run</strong> research on topics too complex for a single conversation without sacrificing depth or coverage.</li>
+      </ul>
+      <hr>
+      <h2 id="who-it-is-for">Who it is for</h2>
+      <p>This tool is for researchers, analysts, strategists, and writers who work on questions that are too deep, too multi-layered, or too broad to resolve in a single AI conversation. They have been living with a recurring problem: every time they bring a complex question to an AI, they get either surface-level answers or answers that treat every session as the first one. If your work requires sustained inquiry across many sessions rather than one-shot questions, this system was built for your situation.</p>
+      <hr>
+      <h2 id="how-the-methodology-works">How the methodology works</h2>
+      <p>Most AI research tools give you answers. This one builds a record. The difference is that there is a defined method for covering every relevant factor in your question, researching each one to an evidence standard, and confirming every relationship between factors from more than one source before it counts.</p>
+      <ol>
+        <li>You give the system your research question, then answer five clarifying questions to establish the scope, the lens you want applied, and the output format you want.</li>
+        <li>The system identifies every factor relevant to your question, tests each one for relevance before committing to research it, and adds only those that make the cut to the research list.</li>
+        <li>It researches each factor one by one, requiring at least three substantive findings per factor, each with the claim, the supporting evidence, and the logical path from evidence to claim written out. A factor is not considered complete until it meets that standard.</li>
+        <li>It tests every pair of researched factors for a structural relationship, classifying each as cause-and-effect, analogy, structural overlap, or correlation.</li>
+        <li>Once all factors are researched and all relationships evaluated, it synthesizes everything into a structured knowledge document and writes a plain-language summary of what was completed and what comes next.</li>
+        <li>When research is complete, you ask any question about the topic and the system answers from the full record. No new research runs.</li>
+      </ol>
+      <p><strong>What it requires before saying two things are connected</strong></p>
+      <p>A normal AI conversation will say two ideas are connected if it has one plausible reason to believe they are. This system requires two independent lines of evidence before it will mark a connection as confirmed, with the supporting evidence and the logical path written out for each. Single-source connections are held out of the final document until a second line is found. The standard exists to prevent the most common failure mode in AI research: a relationship that seems solid because it was argued from one direction and never tested from a second.</p>
+      <p><strong>What you end up with</strong></p>
+      <p>The result is a structured knowledge document organized by factor and connection, not by conversation turn, that grows with every session and persists accurately across sessions months apart. You can return to it, search it, and ask questions against it without reconstructing what you found last time. It does not expire with the conversation.</p>
+    </main>
+  </div>
+
+  <div id="tab-docs" class="tab-panel hidden" role="tabpanel" aria-labelledby="btn-docs">
+    <nav class="sections" aria-label="Documentation sections">
+      <a href="#two-sentence-confirmation">Two-Sentence Confirmation</a>
+    <a href="#section-1-system-overview">Section 1: System Overview</a>
+    <a href="#section-2-architecture">Section 2: Architecture</a>
+    <a href="#section-3-component-breakdown">Section 3: Component Breakdown</a>
+    <a href="#section-4-execution-flow">Section 4: Execution Flow</a>
+    <a href="#section-5-micro-level-details">Section 5: Micro-Level Details</a>
+    </nav>
+    <main>
+    <h1>Universal Research System &mdash; Complete Technical Explanation</h1>
+    <p><strong>Generated:</strong> 2026-03-16<br>
+    <strong>Source files read:</strong> <code>.claude/commands/command-01-research.md</code>, <code>universal-research-system/Research system brain/north-star.md</code></p>
+    <hr>
+
+    <h2 id="two-sentence-confirmation">Two-Sentence Confirmation</h2>
+    <p>(1) The Universal Research System is a stateless, file-driven AI pipeline that takes any research question as input and builds a validated knowledge artifact &mdash; variables, scored connections, and synthesis &mdash; across multiple independent AI sessions with zero shared memory between them.</p>
+    <p>(2) I read 2 files: <code>command-01-research.md</code> (the command and execution engine) and <code>north-star.md</code> (the absolute governing document in <code>universal-research-system/Research system brain/</code>).</p>
+    <hr>
+
+    <h2 id="section-1-system-overview">SECTION 1: SYSTEM OVERVIEW</h2>
+    <p><strong>What this system is:</strong> The Universal Research System is a multi-session research pipeline that runs inside Claude Code (an AI CLI). It takes any topic or question, systematically identifies all relevant variables, researches each one against a rigorous quality gate, validates connections between variables, and synthesizes the result into a structured knowledge artifact &mdash; across however many AI sessions the scope requires.</p>
+    <p><strong>What problem it solves:</strong> Claude Code has zero memory between sessions. A fresh session cannot remember what a prior session discovered. If a research task exceeds one context window &mdash; which deep multi-variable research always does &mdash; you need a mechanism to preserve all state externally and restore it exactly at the next session start. This system solves that by writing all state to disk (<code>state.json</code>) after every significant action and re-reading those files as the first three operations of every session. The command file itself contains all phase logic; the AI contributes no remembered context &mdash; it only follows the instructions in the files it reads.</p>
+    <p><strong>Who uses it, when, and why:</strong> A single user invokes the system via <code>/command-01-research [topic]</code> in Claude Code. The user interacts at three points only: (1) answering five setup questions in Phase 1 to define research scope and filters, (2) optionally reviewing Borderline-confidence variables flagged for review during variable discovery, and (3) asking questions in Phase 6 (Q&amp;A Mode) after synthesis is complete. Between those interaction points, the system operates autonomously, governed entirely by its files.</p>
+    <p><strong>What it produces:</strong> A validated knowledge map (<code>knowledge-map.md</code>) containing every researched variable with confidence scores and reasoning chains, plus every validated inter-variable connection with type classification and evidence count. Alongside this: a synthesis conclusion document, dated session output files for every session, and a <code>next-session.md</code> handoff file telling the user exactly what to run next.</p>
+    <p><strong>The governing philosophy (from <code>north-star.md</code>):</strong> &ldquo;The AI is not the product &mdash; the system the AI builds and maintains is the product.&rdquo; This is not a one-shot query tool. It is a system that accumulates structured knowledge incrementally, with quality gates at every step, constrained by a governing document (<code>north-star.md</code>) that the command must re-read in full at the start of every session without exception (Rule NSA-2).</p>
+    <hr>
+
+    <h2 id="section-2-architecture">SECTION 2: ARCHITECTURE</h2>
+    <p><strong>Components and roles:</strong></p>
+    <table>
+      <thead>
+        <tr><th>Component</th><th>Location</th><th>Role</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Command engine</td><td><code>.claude/commands/command-01-research.md</code></td><td>Complete execution logic &mdash; all phase sequencing, decision gates, output specs, constraint enforcement</td></tr>
+        <tr><td>North Star</td><td><code>universal-research-system/Research system brain/north-star.md</code></td><td>Absolute authority governing document &mdash; 8 CIE frameworks; read-only; read at every session start</td></tr>
+        <tr><td>State file</td><td><code>universal-research-system/state.json</code></td><td>Complete external memory &mdash; all research state persisted between sessions</td></tr>
+        <tr><td>Knowledge map</td><td><code>universal-research-system/knowledge-map.md</code></td><td>Primary deliverable &mdash; growing structured artifact written in Phase 5 only</td></tr>
+        <tr><td>Session outputs</td><td><code>universal-research-system/session-outputs/[dated-files].md</code></td><td>Dated audit trail of each session&rsquo;s work</td></tr>
+        <tr><td>Handoff file</td><td><code>universal-research-system/next-session.md</code></td><td>Session-end directive &mdash; tells user exactly what command to run next</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Dependency graph:</strong></p>
+    <pre><code>User invokes /command-01-research
+        &#x2193;
+Command engine reads:
+  1. north-star.md          &#x2190; READ ONLY &#x2014; never written
+  2. state.json             &#x2190; read/write &#x2014; primary state
+  3. knowledge-map.md       &#x2190; read/write &#x2014; Phase 5 only
+
+Command engine writes:
+  &#x2192; state.json              (after every variable, every pair, every phase transition)
+  &#x2192; session-outputs/*.md    (one per session, after state.json is written)
+  &#x2192; next-session.md         (every session end)
+  &#x2192; knowledge-map.md        (Phase 5 only, always read before write)</code></pre>
+    <p><strong>What depends on what:</strong></p>
+    <ul>
+      <li>The command engine depends on <code>north-star.md</code> being present &mdash; its absence halts the entire system</li>
+      <li>The command engine depends on <code>state.json</code> for phase detection &mdash; its absence triggers Phase 1 initialization</li>
+      <li>Phase 6 depends on <code>knowledge-map.md</code> as its sole answer source</li>
+      <li><code>next-session.md</code> is not read by the command engine &mdash; it is for the user only</li>
+      <li>Session output files are not read by subsequent sessions &mdash; <code>state.json</code> is the sole continuity mechanism</li>
+    </ul>
+    <hr>
+
+    <h2 id="section-3-component-breakdown">SECTION 3: COMPONENT BREAKDOWN</h2>
+    <hr>
+    <p><strong>COMPONENT:</strong> <code>.claude/commands/command-01-research.md</code><br>
+    <strong>ROLE:</strong> The complete execution engine &mdash; contains all phase logic, decision trees, output format specifications, constraint enforcement, and error handling for the entire research pipeline.<br>
+    <strong>INPUTS:</strong> (1) Topic/question argument on first invocation; (2) <code>north-star.md</code> (READ 1); (3) <code>state.json</code> (READ 2); (4) <code>knowledge-map.md</code> (READ 3); (5) User answers to five setup questions during Phase 1<br>
+    <strong>OUTPUTS:</strong> Writes <code>state.json</code> (every phase, every variable, every pair), <code>knowledge-map.md</code> (Phase 5 only), dated session output files (one per session), <code>next-session.md</code> (every session end)<br>
+    <strong>KEY LOGIC:</strong></p>
+    <ul>
+      <li>Cold-start sequence: read <code>north-star.md</code> &rarr; read <code>state.json</code> &rarr; read <code>knowledge-map.md</code> &mdash; fixed order, non-negotiable, before any other logic</li>
+      <li>Phase detection: reads <code>state.phase</code> from <code>state.json</code>; dispatches exclusively to the matching phase block</li>
+      <li>Phase 1 (<em>problem_framing</em>): presents five setup questions as a single output; maps answers to <code>user_lens_profile</code> fields; writes <code>state.json</code> with <code>phase=&quot;variable_discovery&quot;</code> before writing session output file</li>
+      <li>Phase 2 (<em>variable_discovery</em>): identifies variables filtered by <code>user_lens_profile</code>; assigns confidence bands (Core/Relevant/Borderline &mdash; Weak/Exclude not added); anti-redundancy check against <code>researched_variables[]</code>; writes <code>state.json</code> with <code>phase=&quot;variable_research&quot;</code></li>
+      <li>Phase 3 (<em>variable_research</em>): session budget check before each variable (<code>session_variables_processed &times; 1,400</code>; stop if &ge;18,000); per-finding SPEC-5 reasoning chain gate (all 4 fields required or finding excluded); completion gate requires overall band &ge;Relevant AND &ge;3 gate-passing findings; writes <code>state.json</code> after each variable before proceeding to the next</li>
+      <li>Phase 4 (<em>connection_validation</em>): builds all pending pairs from <code>researched_variables[]</code> if <code>connections.pending[]</code> is empty; session budget check before each pair (<code>session_pairs_processed &times; 500</code>; stop if &ge;18,000); classifies each pair as causal/analogical/architectural/correlational/none; validates with &ge;2 independent evidence lines both &ge;Relevant; detects new variables and reverts to variable_research if found; writes <code>state.json</code> after each pair</li>
+      <li>Phase 5 (<em>synthesis</em>): reads <code>knowledge-map.md</code> first (mandatory Step 5.1); identifies emergent patterns (chains, clusters, cross-domain bridges); writes conclusion document; writes/updates <code>knowledge-map.md</code>; increments <code>cycle_count</code>; sets <code>phase=&quot;qa_mode&quot;</code></li>
+      <li>Phase 6 (<em>qa_mode</em>): answers questions from <code>knowledge-map.md</code> only &mdash; no new research, no external inference, no speculation; resets state on new topic detection</li>
+    </ul>
+    <hr>
+    <p><strong>COMPONENT:</strong> <code>universal-research-system/Research system brain/north-star.md</code><br>
+    <strong>ROLE:</strong> Absolute authority governing document &mdash; defines the CIE operating philosophy, 8 frameworks, and all meta/meta-meta level rules; constrains every command that reads it.<br>
+    <strong>INPUTS:</strong> None &mdash; it reads nothing; it is the primary source<br>
+    <strong>OUTPUTS:</strong> Behavioral constraints applied to every session that reads it (per Rule NSA-2: must be read at runtime, not from memory)<br>
+    <strong>KEY LOGIC:</strong></p>
+    <ul>
+      <li>Framework 1 (HAM &mdash; Hierarchical Abstraction Mapping): requires extracting five levels before acting &mdash; meta-meta (why), meta (how designed), macro (what produced), micro (how components work), micro-micro (edge cases, failure modes)</li>
+      <li>Framework 2 (ROE &mdash; Reverse Outcome Engineering): plan from end state backward; context window fit rule: &le;80,000 tokens per fresh chat; handoff documents must contain exactly 6 elements (current state, decisions made, ruled-out options, what comes next, open questions, files to read)</li>
+      <li>Framework 3 (PAA &mdash; Prompt-as-Architecture): prompt structure must demonstrate the methodology, not describe it; prompts sent to fresh chats must be fully self-contained</li>
+      <li>Framework 4 (NSA &mdash; North Star Anchoring): user feedback at micro/micro-micro &rarr; implement directly; at macro &rarr; implement and log; at meta &rarr; pause, quote the principle, ask for confirmation; at meta-meta &rarr; pause, require explicit written authorization; Rule NSA-3: this document wins at meta/meta-meta; user wins at macro/micro/micro-micro</li>
+      <li>Framework 5 (MSA &mdash; Meta-System Architecture): 6-layer stack (Layer 0: north star &rarr; Layer 1: system built &rarr; Layer 2: brand customization &rarr; Layer 3: self-iteration command &rarr; Layer 4: implementation plan &rarr; Layer 5: audit trail); changes propagate downward only; a lower layer cannot redefine a higher one</li>
+      <li>Framework 6 (Context-as-Constraint): each fresh chat is a stateless execution unit; never &gt;3 large files (&gt;500 lines) in context simultaneously; external memory is the folder/file audit trail</li>
+      <li>Framework 7 (SOC &mdash; Separation of Concerns): infrastructure (command logic, folder architecture, handoff format) requires explicit user authorization to change; content (brand voice, copy, outputs) can be changed freely</li>
+      <li>Framework 8 (UAL &mdash; Universal Achievement Layer): evaluation/feedback layer; 5 system phases (Orientation &rarr; Testing &rarr; Optimization &rarr; Expansion &rarr; Self-iteration); binary decision thresholds: below acceptable quality &rarr; 8-layer failure diagnostic; on target &rarr; continue; no movement &rarr; escalate to self-iteration command</li>
+      <li>Research Discernment Rule: research required for platform-specific/version-specific/evolving information; internal context sufficient for stable concepts; research scoped precisely with defined question first</li>
+      <li>Rule NSA-1: this document cannot be modified by a command &mdash; only by direct user edit</li>
+      <li>Rule NSA-2: any command referencing this document must read it at runtime, never from memory</li>
+    </ul>
+    <hr>
+    <p><strong>COMPONENT:</strong> <code>universal-research-system/state.json</code><br>
+    <strong>ROLE:</strong> The system&rsquo;s complete external memory &mdash; persists all research state between sessions so every new session resumes exactly where the previous one stopped.<br>
+    <strong>INPUTS:</strong> Written by the command engine throughout every session<br>
+    <strong>OUTPUTS:</strong> Read at cold-start (READ 2) to determine phase and restore all research state<br>
+    <strong>KEY LOGIC:</strong> Contains these fields per SPEC-1 schema:</p>
+    <table>
+      <thead>
+        <tr><th>Field</th><th>Type</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>research_question</code></td><td>string</td><td>The topic being researched</td></tr>
+        <tr><td><code>phase</code></td><td>string enum</td><td>Current phase &mdash; drives phase detection dispatch</td></tr>
+        <tr><td><code>cycle_count</code></td><td>integer</td><td>Number of completed research cycles; incremented in Phase 5</td></tr>
+        <tr><td><code>last_updated</code></td><td>ISO-8601</td><td>Timestamp of last write</td></tr>
+        <tr><td><code>user_lens_profile</code></td><td>object</td><td>output_format, approved_perspectives[], excluded_methodologies[], open_to_cross_domain (bool), minimum_confidence_band, research_scope</td></tr>
+        <tr><td><code>researched_variables[]</code></td><td>array</td><td>Completed variable names</td></tr>
+        <tr><td><code>pending_variables[]</code></td><td>array</td><td>Variables awaiting research</td></tr>
+        <tr><td><code>research_summaries{}</code></td><td>object</td><td>Keyed by variable name; each entry: confidence_band, finding_count, summary (2&ndash;4 sentences), reasoning_chains[] (each: claim, evidence, logic, confidence_band)</td></tr>
+        <tr><td><code>connections.validated[]</code></td><td>array</td><td>{from, to, type, explanation, evidence_count}</td></tr>
+        <tr><td><code>connections.pending[]</code></td><td>array</td><td>{from, to, evidence_count} &mdash; pairs awaiting evaluation</td></tr>
+        <tr><td><code>connections.discarded[]</code></td><td>array</td><td>{from, to, reason}</td></tr>
+        <tr><td><code>session_log[]</code></td><td>array</td><td>Session records: date, phase_executed, variables_researched, connections_validated, output_file</td></tr>
+      </tbody>
+    </table>
+    <p>Write timing (MC-8 constraint): written after each variable in Phase 3; written after each pair in Phase 4; written before any session output file is generated in all phases.</p>
+    <hr>
+    <p><strong>COMPONENT:</strong> <code>universal-research-system/knowledge-map.md</code><br>
+    <strong>ROLE:</strong> The primary growing deliverable &mdash; a human-readable structured document encoding all researched variables and validated connections; the sole answer source in Phase 6.<br>
+    <strong>INPUTS:</strong> Read at cold-start (READ 3) and as mandatory first action in Phase 5 (Step 5.1); written only in Phase 5<br>
+    <strong>OUTPUTS:</strong> Answer source for all Phase 6 Q&amp;A responses<br>
+    <strong>KEY LOGIC:</strong> Structure per SPEC-3:</p>
+    <pre><code># Knowledge Map &#x2014; [research_question]
+**Last updated:** [timestamp]  **Cycle:** [n]  **Variables mapped:** [count]
+
+## Variable: [Name]
+**Confidence band:** Core / Relevant / Borderline
+**Summary:** [2&#x2013;4 sentence synthesis from research_summaries]
+**Reasoning chain:** [key evidence and logic condensed, 2&#x2013;4 sentences]
+**Finding count:** [n]
+
+### Connections from [Variable Name]
+#### &#x2192; [Connected Variable Name]
+**Type:** causal / analogical / architectural / correlational
+**Validated:** yes
+**Evidence count:** [n]
+**Explanation:** [from connections.validated[]]</code></pre>
+    <p>Every variable in <code>researched_variables[]</code> and every connection in <code>connections.validated[]</code> is included. Discarded connections are excluded. On cycle &gt; 0: existing sections are preserved; new variable sections are added; connection sections are updated where new validated connections exist.</p>
+    <hr>
+    <p><strong>COMPONENT:</strong> <code>universal-research-system/session-outputs/[YYYY-MM-DD]-[phase]-[n].md</code><br>
+    <strong>ROLE:</strong> Dated audit trail of each session&rsquo;s work &mdash; an immutable record of what was produced in each phase execution.<br>
+    <strong>INPUTS:</strong> Generated from state.json contents and research performed during the session<br>
+    <strong>OUTPUTS:</strong> Immutable dated record; not read by subsequent sessions (state.json is the authoritative continuity mechanism)<br>
+    <strong>KEY LOGIC:</strong></p>
+    <p>Naming convention:</p>
+    <pre><code>[YYYY-MM-DD]-problem-framing-1.md
+[YYYY-MM-DD]-variable-discovery-[cycle].md
+[YYYY-MM-DD]-variable-research-[n].md
+[YYYY-MM-DD]-connection-validation-[n].md
+[YYYY-MM-DD]-synthesis-[cycle_count].md</code></pre>
+    <p>For [n]: count existing files of that type in session-outputs/ and use the next available number.</p>
+    <p>Content by phase:</p>
+    <ul>
+      <li><em>problem-framing</em>: research question, all five Q&amp;A pairs as answered, full populated <code>user_lens_profile</code> JSON block</li>
+      <li><em>variable-discovery</em>: numbered list of all discovered variables, each with confidence band and one-sentence relevance description</li>
+      <li><em>variable-research</em>: all variables researched that session &mdash; full reasoning chains, finding counts, confidence bands, summaries, completion status</li>
+      <li><em>connection-validation</em>: all pairs evaluated &mdash; validated connections with types/explanations/evidence counts; discarded connections with reasons</li>
+      <li><em>synthesis</em>: complete synthesis document (research question, validated variables, validated connections, emergent patterns, conclusion)</li>
+    </ul>
+    <hr>
+    <p><strong>COMPONENT:</strong> <code>universal-research-system/next-session.md</code><br>
+    <strong>ROLE:</strong> Session-end handoff directive &mdash; tells the user exactly what command to run next and what the system will execute; written at the end of every session.<br>
+    <strong>INPUTS:</strong> Written by the command engine at every session end (every phase)<br>
+    <strong>OUTPUTS:</strong> Read by the user only &mdash; not consumed by subsequent command executions<br>
+    <strong>KEY LOGIC:</strong> Per SPEC-6 format:</p>
+    <pre><code># Next Session &#x2014; [YYYY-MM-DD]
+
+## Status
+Phase completed: [phase just executed]
+Current phase: [state.phase after transition]
+Variables researched this session: [n]
+Variables remaining: [count of pending_variables[]]
+Connections validated this session: [n]
+
+## Command to Send
+/command-01-research
+
+## What happens next
+[One sentence &#x2014; what the next session will execute]</code></pre>
+    <p>&ldquo;Current phase&rdquo; reflects the value <code>state.phase</code> is set to AFTER the transition, not the phase that just ran. &ldquo;Command to Send&rdquo; is <code>/command-01-research</code> with no argument for all phases after Phase 1. The research question is stored in <code>state.json</code>. The topic argument is only included on the very first invocation when <code>state.json</code> does not yet exist. Overwritten each session &mdash; not appended.</p>
+    <hr>
+
+    <h2 id="section-4-execution-flow">SECTION 4: EXECUTION FLOW</h2>
+    <p><strong>Step 1 &mdash; Invocation</strong><br>
+    User runs <code>/command-01-research [topic]</code> in Claude Code. The command engine at <code>.claude/commands/command-01-research.md</code> is loaded. State: either <code>state.json</code> does not exist (first run) or it exists from a prior session.</p>
+    <p><strong>Step 2 &mdash; READ 1: north-star.md (cold-start, mandatory)</strong><br>
+    Command reads <code>universal-research-system/Research system brain/north-star.md</code> in full.<br>
+    &rarr; If absent: output <code>HALT: Required file missing &mdash; universal-research-system/Research system brain/north-star.md &mdash; Do not proceed until this file exists.</code> Stop entirely.<br>
+    &rarr; If present: apply all rules. Rule NSA-2 enforces that this read cannot be skipped or substituted from memory.</p>
+    <p><strong>Step 3 &mdash; READ 2: state.json (cold-start, mandatory)</strong><br>
+    Command reads <code>universal-research-system/state.json</code>.<br>
+    &rarr; If absent: initialize with SPEC-1 schema; set <code>phase=&quot;problem_framing&quot;</code>, <code>cycle_count=0</code>, <code>last_updated=[ISO-8601]</code>, <code>research_question=[command argument]</code>; all arrays and objects empty; write to disk immediately.<br>
+    &rarr; If present: parse in full; all fields treated as ground truth; no overriding or inferring.</p>
+    <p><strong>Step 4 &mdash; READ 3: knowledge-map.md (cold-start, mandatory)</strong><br>
+    Command reads <code>universal-research-system/knowledge-map.md</code>.<br>
+    &rarr; If absent: initialize as empty file; write to disk; output <code>WARNING: knowledge-map.md was not found. Initialized as empty.</code>; continue.<br>
+    &rarr; If present: read in full before generating any output.</p>
+    <p><strong>Step 5 &mdash; Phase detection</strong><br>
+    Command reads <code>state.phase</code>. Dispatches to exactly one phase block.<br>
+    &rarr; If value is unrecognized: output <code>ERROR: Unrecognized phase value in state.json: &quot;[value]&quot;. Valid values: problem_framing, variable_discovery, variable_research, connection_validation, synthesis, qa_mode. Correct state.json manually and re-run.</code> Stop.</p>
+    <hr>
+
+    <h3 id="phase-1-problem_framing-steps-6-9">PHASE 1 &mdash; problem_framing (Steps 6&ndash;9)</h3>
+    <p><strong>Step 6 &mdash; Initialize artifacts</strong><br>
+    Create <code>session-outputs/</code> folder if absent. Confirm <code>research_question</code> is set; if empty: output <code>ERROR: No research topic provided.</code> and stop.</p>
+    <p><strong>Step 7 &mdash; Present setup questions</strong><br>
+    Output all five questions together in a single block. Do not present them sequentially. Do not proceed until all five are answered.</p>
+    <ul>
+      <li>Q1 &rarr; maps to <code>output_format</code>: A=research_document, B=knowledge_map, C=json_profile, D=multiple_documents</li>
+      <li>Q2 &rarr; maps to <code>approved_perspectives[]</code>: A=first_principles_systems_thinking, B=empirical_evidence_based, C=practitioner_applied, D=empty array (no filter)</li>
+      <li>Q3 &rarr; maps to <code>open_to_cross_domain</code>: A=true, B=false</li>
+      <li>Q4 &rarr; maps to <code>research_scope</code>: A=broad_survey, B=deep_specific</li>
+      <li>Q5 &rarr; maps to <code>excluded_methodologies[]</code>: A=empty, B=user-specified list</li>
+    </ul>
+    <p><strong>Step 8 &mdash; Populate user_lens_profile</strong><br>
+    Set <code>minimum_confidence_band=&quot;relevant&quot;</code> (default &mdash; not from user input). Populate all other fields from user answers. Write into <code>state.user_lens_profile</code>.</p>
+    <p><strong>Step 9 &mdash; Write sequence (MC-8 ordering enforced)</strong></p>
+    <ol>
+      <li>Set <code>state.phase=&quot;variable_discovery&quot;</code>; set <code>last_updated</code></li>
+      <li>Append to <code>session_log</code></li>
+      <li><strong>Write <code>state.json</code></strong> &mdash; this write occurs before the session output file</li>
+      <li>Write <code>session-outputs/[YYYY-MM-DD]-problem-framing-1.md</code></li>
+      <li>Write <code>next-session.md</code> (SPEC-6 format)</li>
+    </ol>
+    <hr>
+
+    <h3 id="phase-2-variable_discovery-steps-10-13">PHASE 2 &mdash; variable_discovery (Steps 10&ndash;13)</h3>
+    <p><strong>Step 10 &mdash; Load filters</strong><br>
+    Read <code>research_question</code> and <code>user_lens_profile</code> from <code>state.json</code>.</p>
+    <p><strong>Step 11 &mdash; Identify variables</strong><br>
+    Generate all candidate variables relevant to the research question, applying:</p>
+    <ul>
+      <li><code>approved_perspectives</code>: if non-empty, include only variables whose methodological basis aligns with listed perspectives</li>
+      <li><code>excluded_methodologies</code>: exclude any variable whose basis falls in the excluded list</li>
+      <li><code>research_scope</code>: if <code>broad_survey</code>, maximize variable count; if <code>deep_specific</code>, constrain to highest-confidence variables only</li>
+    </ul>
+    <p>Assign a confidence band to each: Core (80&ndash;100), Relevant (60&ndash;79), Borderline (40&ndash;59, flagged for user review). Do <strong>not</strong> add Weak or Exclude variables.</p>
+    <p><strong>Step 12 &mdash; Anti-redundancy check (MC-5)</strong><br>
+    Before adding any variable to <code>pending_variables[]</code>, verify it is not already in <code>researched_variables[]</code>. Skip if present.</p>
+    <p><strong>Step 13 &mdash; Write sequence</strong></p>
+    <ol>
+      <li>Add all identified variable names to <code>state.pending_variables[]</code></li>
+      <li>Set <code>state.phase=&quot;variable_research&quot;</code>; set <code>last_updated</code></li>
+      <li>Append to <code>session_log</code></li>
+      <li>Write <code>state.json</code></li>
+      <li>Write <code>session-outputs/[YYYY-MM-DD]-variable-discovery-[cycle_count+1].md</code></li>
+      <li>Write <code>next-session.md</code></li>
+    </ol>
+    <hr>
+
+    <h3 id="phase-3-variable_research-steps-14-22">PHASE 3 &mdash; variable_research (Steps 14&ndash;22)</h3>
+    <p><strong>Step 14 &mdash; Pre-check (MC-5)</strong><br>
+    Remove from <code>pending_variables[]</code> any variable name that also appears in <code>researched_variables[]</code>.</p>
+    <p><strong>Step 15 &mdash; Initialize session counter</strong><br>
+    <code>session_variables_processed = 0</code> (session-local, starts fresh each invocation).</p>
+    <p><strong>Step 16 &mdash; Session budget check (before each variable)</strong><br>
+    Calculate: <code>session_variables_processed &times; 1,400</code><br>
+    &rarr; If &ge; 18,000: write <code>next-session.md</code> (note variables remaining = count of <code>pending_variables[]</code>); <strong>stop</strong> &mdash; do not process further variables.<br>
+    &rarr; If &lt; 18,000: proceed.</p>
+    <p><strong>Step 17 &mdash; Research the variable</strong><br>
+    Produce &ge;3 distinct, substantive, non-redundant findings. General statements that restate the variable&rsquo;s definition do not qualify.</p>
+    <p><strong>Step 18 &mdash; SPEC-5 reasoning chain gate (MC-1 &mdash; structural, not advisory)</strong><br>
+    For each finding, write all four fields:</p>
+    <pre><code>Claim: [the specific finding or connection being asserted]
+Evidence: [what supports this claim &#x2014; described in specific terms]
+Logic: [the inferential path from evidence to claim]
+Confidence band: [Core / Relevant / Borderline / Weak / Exclude]</code></pre>
+    <p>A finding missing any field is excluded from the knowledge map and logged as unvalidated. It does <strong>not</strong> count toward <code>finding_count</code>.</p>
+    <p><strong>Step 19 &mdash; Populate research_summaries</strong><br>
+    Assign overall <code>confidence_band</code> (modal band across validated findings, or minimum if inconsistent). Populate <code>state.research_summaries[variable_name]</code> with: confidence_band, finding_count (gate-passing only), summary (2&ndash;4 sentence synthesis), reasoning_chains[] array.</p>
+    <p><strong>Step 20 &mdash; Completion gate</strong><br>
+    Both conditions must be simultaneously true:</p>
+    <ol>
+      <li>Overall <code>confidence_band</code> &ge; Relevant (score 60+)</li>
+      <li><code>finding_count</code> &ge; 3 (gate-passing findings only)</li>
+    </ol>
+    <p>&rarr; Gate passes: remove variable from <code>pending_variables[]</code>; add to <code>researched_variables[]</code><br>
+    &rarr; Gate fails: flag as incomplete in session output; leave in <code>pending_variables[]</code>; continue to next variable</p>
+    <p><strong>Step 21 &mdash; Write state.json (MC-8)</strong><br>
+    Write <code>state.json</code> immediately after completing each variable &mdash; before moving to the next. Increment <code>session_variables_processed</code>.</p>
+    <p><strong>Step 22 &mdash; Phase close (after all pending_variables[] processed)</strong></p>
+    <ol>
+      <li>Set <code>state.phase=&quot;connection_validation&quot;</code>; set <code>last_updated</code></li>
+      <li>Append to <code>session_log</code> (list variables researched this session)</li>
+      <li>Write <code>state.json</code></li>
+      <li>Write <code>session-outputs/[YYYY-MM-DD]-variable-research-[n].md</code></li>
+      <li>Write <code>next-session.md</code></li>
+    </ol>
+    <hr>
+
+    <h3 id="phase-4-connection_validation-steps-23-32">PHASE 4 &mdash; connection_validation (Steps 23&ndash;32)</h3>
+    <p><strong>Step 23 &mdash; Build pending pair list (if connections.pending[] is empty)</strong><br>
+    Enumerate all pairs (A, B) from <code>researched_variables[]</code> where A &ne; B. Exclude any pair already in <code>connections.validated[]</code> or <code>connections.discarded[]</code>. Add remaining pairs to <code>connections.pending[]</code> with <code>evidence_count=0</code>. Write <code>state.json</code> after building the list.</p>
+    <p><strong>Step 24 &mdash; Initialize session counter</strong><br>
+    <code>session_pairs_processed = 0</code> (session-local).</p>
+    <p><strong>Step 25 &mdash; Session budget check (before each pair)</strong><br>
+    Calculate: <code>session_pairs_processed &times; 500</code><br>
+    &rarr; If &ge; 18,000: write <code>next-session.md</code>; <strong>stop</strong>.<br>
+    &rarr; If &lt; 18,000: proceed.</p>
+    <p><strong>Step 26 &mdash; Classify relationship type</strong><br>
+    Determine which type applies:</p>
+    <ul>
+      <li><code>causal</code>: A directly causes or produces B &mdash; mechanistic, directional link</li>
+      <li><code>analogical</code>: A and B share a structural pattern; one domain mirrors the other in form or function</li>
+      <li><code>architectural</code>: A and B are components of the same structural system; they co-exist as parts of a larger whole</li>
+      <li><code>correlational</code>: A and B co-occur without an established causal direction</li>
+      <li><code>none</code>: no structural connection found; variables are genuinely independent</li>
+    </ul>
+    <p><strong>Step 27 &mdash; Type = none path</strong><br>
+    Move pair from <code>connections.pending[]</code> to <code>connections.discarded[]</code> with reason: &ldquo;No structural connection identified.&rdquo; Proceed to next pair.</p>
+    <p><strong>Step 28 &mdash; Type &ne; none path: validate</strong><br>
+    Write 1&ndash;3 sentence explanation of the connection (why/how A connects to B, structural basis). Gather &ge;2 independent evidence lines. Independence rule: derived from different sources, domains, or reasoning paths &mdash; not the same finding restated differently. Both lines must score &ge; Relevant (60+).<br>
+    &rarr; Validated (&ge;2 independent lines, both &ge;Relevant): move to <code>connections.validated[]</code> recording {from, to, type, explanation, evidence_count}<br>
+    &rarr; Not validated: move to <code>connections.discarded[]</code> recording {from, to, reason}</p>
+    <p><strong>Step 29 &mdash; New variable detection</strong><br>
+    If, during pair research, a variable is identified that is not in <code>researched_variables[]</code> AND not in <code>pending_variables[]</code>:</p>
+    <ol>
+      <li>Add to <code>pending_variables[]</code></li>
+      <li>Complete the current pair processing (validated or discarded per Step 28)</li>
+      <li>Write <code>state.json</code> with <code>phase=&quot;variable_research&quot;</code> (phase reversion)</li>
+      <li>Write <code>next-session.md</code> noting the reversion reason</li>
+      <li><strong>Stop</strong> &mdash; do not process any further pairs this session</li>
+    </ol>
+    <p><strong>Step 30 &mdash; Write state.json (MC-8)</strong><br>
+    Write <code>state.json</code> after each pair, before processing the next. Increment <code>session_pairs_processed</code>.</p>
+    <p><strong>Step 31 &mdash; Convergence evaluation (after all pending[] pairs processed)</strong><br>
+    Both must be simultaneously true: <code>pending_variables[]</code> is empty AND <code>connections.pending[]</code> is empty<br>
+    &rarr; Both empty: set <code>state.phase=&quot;synthesis&quot;</code><br>
+    &rarr; <code>pending_variables[]</code> gained new items (from Step 29): <code>state.phase=&quot;variable_research&quot;</code> (already set in Step 29)</p>
+    <p><strong>Step 32 &mdash; Phase close</strong></p>
+    <ol>
+      <li>Set <code>last_updated</code></li>
+      <li>Append to <code>session_log</code></li>
+      <li>Write <code>state.json</code></li>
+      <li>Write <code>session-outputs/[YYYY-MM-DD]-connection-validation-[n].md</code></li>
+      <li>Write <code>next-session.md</code></li>
+    </ol>
+    <hr>
+
+    <h3 id="phase-5-synthesis-steps-33-37">PHASE 5 &mdash; synthesis (Steps 33&ndash;37)</h3>
+    <p><strong>Step 33 &mdash; Mandatory pre-read</strong><br>
+    Read <code>knowledge-map.md</code> in full. This is the first action &mdash; non-negotiable. Read <code>connections.validated[]</code> from <code>state.json</code>.</p>
+    <p><strong>Step 34 &mdash; Identify emergent patterns</strong><br>
+    Evaluate all validated connections for:</p>
+    <ul>
+      <li><strong>Chains</strong>: Variable A &rarr; B &rarr; C (causal or architectural sequence through multiple variables)</li>
+      <li><strong>Clusters</strong>: Multiple variables all connecting to a single central variable (hub structure)</li>
+      <li><strong>Cross-domain bridges</strong>: Analogical connections linking variables from different domains</li>
+    </ul>
+    <p><strong>Step 35 &mdash; Write conclusion document</strong><br>
+    Write <code>session-outputs/[YYYY-MM-DD]-synthesis-[state.cycle_count].md</code> with sections: Research Question, Validated Variables, Validated Connections, Emergent Patterns, Conclusion.</p>
+    <p><strong>Step 36 &mdash; Write/update knowledge-map.md</strong><br>
+    Write the SPEC-3 structure. On cycle &gt; 0: read in Step 33 ensures existing content is preserved; add new variable sections; update connection sections where new validated connections exist.</p>
+    <p><strong>Step 37 &mdash; Phase close</strong></p>
+    <ol>
+      <li><strong>Increment <code>cycle_count</code></strong> (add 1)</li>
+      <li>Set <code>state.phase=&quot;qa_mode&quot;</code>; set <code>last_updated</code></li>
+      <li>Append to <code>session_log</code></li>
+      <li>Write <code>state.json</code> (MC-8 &mdash; write after updating <code>cycle_count</code>)</li>
+      <li>Write <code>next-session.md</code></li>
+    </ol>
+    <hr>
+
+    <h3 id="phase-6-qa_mode-steps-38-41">PHASE 6 &mdash; qa_mode (Steps 38&ndash;41)</h3>
+    <p><strong>Step 38 &mdash; Load full context</strong><br>
+    Read <code>knowledge-map.md</code> in full. Read all <code>research_summaries</code> and <code>connections.validated[]</code> from <code>state.json</code>.</p>
+    <p><strong>Step 39 &mdash; Classify user input</strong><br>
+    Determine whether user message is a question about the current research OR a new research topic unrelated to <code>state.research_question</code>.</p>
+    <p><strong>Step 40 &mdash; Answer (if question about current research)</strong><br>
+    Match question&rsquo;s keywords and concepts to 2&ndash;5 most relevant variable nodes and validated connections. Compose answer using only content from <code>knowledge-map.md</code> and <code>state.research_summaries</code>. Rules: no new research, no external inference beyond the knowledge map, no speculation. If insufficient information: output exactly: <code>&quot;The current knowledge map does not contain sufficient information to answer [question]. To expand the research, run /command-01-research [topic] in a new session &mdash; Phase 2 (Variable Discovery) can identify additional variables.&quot;</code> Return to Step 39.</p>
+    <p><strong>Step 41 &mdash; Reset (if new research topic)</strong></p>
+    <ol>
+      <li>Set <code>research_question=[new topic]</code></li>
+      <li>Clear: <code>pending_variables[]</code>, <code>researched_variables[]</code>, <code>research_summaries</code>, <code>connections.validated[]</code>, <code>connections.pending[]</code>, <code>connections.discarded[]</code></li>
+      <li>Set <code>phase=&quot;problem_framing&quot;</code>, <code>cycle_count=0</code></li>
+      <li>Reset <code>user_lens_profile</code>: empty arrays, <code>open_to_cross_domain=true</code>, <code>minimum_confidence_band=&quot;relevant&quot;</code>, <code>output_format=&quot;&quot;</code>, <code>research_scope=&quot;&quot;</code></li>
+      <li>Set <code>last_updated</code></li>
+      <li>Write <code>state.json</code></li>
+      <li>Write <code>next-session.md</code> with reset format</li>
+      <li>Output: <code>Research topic reset. Clear this chat and run: /command-01-research [new topic]</code></li>
+    </ol>
+    <hr>
+
+    <h2 id="section-5-micro-level-details">SECTION 5: MICRO-LEVEL DETAILS</h2>
+    <p><strong>Session budget arithmetic &mdash; Phase 3:</strong><br>
+    The counter <code>session_variables_processed</code> starts at 0 per session invocation. It increments by 1 after each variable, regardless of whether the variable passed or failed the completion gate. The formula <code>session_variables_processed &times; 1,400</code> compared against threshold 18,000 means: at 12 variables, the result is 16,800 (&lt; 18,000, proceed); at 13 variables, the result is 18,200 (&ge; 18,000, stop). Effective maximum per session: 12 variables.</p>
+    <p><strong>Session budget arithmetic &mdash; Phase 4:</strong><br>
+    <code>session_pairs_processed &times; 500</code> compared against 18,000. At 35 pairs: 17,500 (proceed); at 36 pairs: 18,000 (stop). Effective maximum per session: 35 pairs.</p>
+    <p><strong>Pair count scaling:</strong><br>
+    For N variables, Phase 4 must evaluate up to N&times;(N-1) ordered pairs. At 12 variables: up to 132 ordered pairs (or 66 unordered). The 35-pair session cap means Phase 4 may require multiple sessions for larger variable sets. Each subsequent session resumes from <code>connections.pending[]</code> (unevaluated pairs remain there).</p>
+    <p>AMBIGUITY: The spec says &ldquo;Enumerate all pairs (A, B) from <code>researched_variables[]</code> where A &ne; B&rdquo; but does not specify whether (A, B) and (B, A) are treated as the same pair or two distinct pairs. The <code>connections.validated[]</code> format records <code>{from, to}</code>, which implies directionality &mdash; A&rarr;B and B&rarr;A could both be distinct validated connections. This is unresolved in the files.</p>
+    <p><strong>SPEC-5 gate is structural, not advisory:</strong><br>
+    The command file explicitly states: &ldquo;This is a hard gate &mdash; a finding missing any field is excluded from the knowledge map and logged as unvalidated. It does not count toward <code>finding_count</code>.&rdquo; A variable can generate many findings but still fail the completion gate if fewer than 3 pass the four-field SPEC-5 check. Findings that fail the gate are: not included in <code>research_summaries[].reasoning_chains[]</code>, not reflected in <code>finding_count</code>, and flagged as unvalidated in session output.</p>
+    <p><strong>Completion gate is an AND condition:</strong><br>
+    Both: (1) overall <code>confidence_band</code> &ge; Relevant AND (2) <code>finding_count</code> &ge; 3 &mdash; both conditions must be simultaneously true. A variable with 5 findings but a Borderline overall band does not complete. A variable with a Core band but only 2 gate-passing findings does not complete. Incomplete variables remain in <code>pending_variables[]</code> for the next session.</p>
+    <p><strong>Overall confidence_band assignment:</strong><br>
+    &ldquo;Use the modal band across validated findings, or the minimum if findings are inconsistent.&rdquo; Modal = the most frequently occurring band across the variable&rsquo;s gate-passing findings. If there is no clear mode (e.g., equal counts of Core and Relevant), use the minimum (lower-scoring) band. This makes the overall band conservative when evidence is mixed.</p>
+    <p><strong>MC-8 write ordering:</strong><br>
+    The invariant is: <code>state.json</code> is always written before session output files. If context fills between <code>state.json</code> write and session output file write, state is preserved. The session output file is recoverable by re-running; the state is not reconstructable from conversation history alone (the system has no conversation history &mdash; Rule CTX-1: each fresh chat is stateless).</p>
+    <p><strong>Cycle count naming:</strong><br>
+    Phase 5 Step 5.3 names the conclusion document <code>synthesis-[state.cycle_count].md</code> before incrementing. Step 5.5 then increments <code>cycle_count</code>. On first run: <code>cycle_count=0</code>, file is named <code>synthesis-0.md</code>, then <code>cycle_count</code> becomes 1. On second synthesis: file named <code>synthesis-1.md</code>, then <code>cycle_count</code> becomes 2. This produces zero-indexed filenames.</p>
+    <p><strong>Phase 4 new variable detection triggers full stop:</strong><br>
+    When Step 4.2.4 detects a new variable, the system must complete the current pair evaluation (move to validated or discarded), then immediately set <code>phase=&quot;variable_research&quot;</code>, write <code>state.json</code>, write <code>next-session.md</code>, and stop &mdash; processing no additional pairs. The next session will execute Phase 3 to research the new variable, then return to Phase 4 (which will pick up remaining <code>connections.pending[]</code> pairs).</p>
+    <p><strong>State reset in Phase 6 does not clear session_log:</strong><br>
+    Step 6.5 explicitly lists the fields to clear: <code>pending_variables[]</code>, <code>researched_variables[]</code>, <code>research_summaries</code>, <code>connections.validated[]</code>, <code>connections.pending[]</code>, <code>connections.discarded[]</code>. <code>session_log[]</code> is not listed among the cleared fields. Session history from prior topics persists across resets.</p>
+    <p>AMBIGUITY: Whether this is intentional (preserving audit history across topics) or an omission is not specified in the files.</p>
+    <p><strong>NSA-2 enforcement mechanism:</strong><br>
+    The command file makes <code>north-star.md</code> READ 1 in an unconditional cold-start sequence. If the file is absent, the system issues a HALT and stops entirely &mdash; it does not attempt to proceed from memory. This is the mechanical enforcement of Rule NSA-2 (&ldquo;never from memory, always read in full&rdquo;). A command operating from cached rules could drift from the north star; requiring a live file read on every session makes drift physically impossible.</p>
+    <p><strong>Connection type &ldquo;cross-domain&rdquo; is not a type:</strong><br>
+    The command file does not define &ldquo;cross-domain&rdquo; as a relationship type. The five types are: causal, analogical, architectural, correlational, none. Cross-domain insight emerges from the <code>analogical</code> type: &ldquo;If an analogical or architectural connection crosses domain boundaries, that is the finding.&rdquo; Cross-domain is a property of certain analogical/architectural connections &mdash; not a separate classification.</p>
+    <p><strong>Constraint table (complete):</strong></p>
+    <table>
+      <thead>
+        <tr><th>Constraint</th><th>Rule</th><th>Mechanism</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>NSA-2</td><td>Read north-star.md before every session &mdash; never from memory</td><td>Cold-start READ 1 &mdash; unconditional, halts if absent</td></tr>
+        <tr><td>MC-8</td><td>state.json written before context fills</td><td>Phase 3: after each variable; Phase 4: after each pair; all phases: before session output</td></tr>
+        <tr><td>MC-5</td><td>No variable researched twice</td><td>Phase 2 Step 2.2 (before adding to pending[]); Phase 3 Step 3.0 (pre-check before loop)</td></tr>
+        <tr><td>MC-1</td><td>No hallucination &mdash; every finding requires SPEC-5 reasoning chain</td><td>Phase 3 Step 3.2.2: four-field gate (structural); Phase 4 Step 4.2.3: &ge;2 independent evidence lines</td></tr>
+        <tr><td>M-12</td><td>Output token hard cap: 32,000 tokens per output</td><td>Overflow detection in Phase 3 and Phase 4 &mdash; threshold at 20,000 estimated remaining</td></tr>
+        <tr><td>M-3</td><td>Session budget cap: 18,000 estimated tokens per session</td><td>Phase 3: <code>session_variables_processed &times; 1,400</code>; Phase 4: <code>session_pairs_processed &times; 500</code></td></tr>
+        <tr><td>Read-only</td><td>Never write to <code>Research system brain/</code> folder</td><td>No write operation in any phase targets that directory</td></tr>
+        <tr><td>MC-3</td><td>Context window never grows with inline history</td><td>All state in state.json and knowledge-map.md &mdash; no inline history accumulated across sessions</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Error conditions and exact output messages:</strong></p>
+    <table>
+      <thead>
+        <tr><th>Error condition</th><th>Exact output</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>north-star.md</code> absent</td><td><code>HALT: Required file missing &mdash; universal-research-system/Research system brain/north-star.md &mdash; Do not proceed until this file exists.</code></td></tr>
+        <tr><td><code>state.json</code> malformed</td><td><code>ERROR: state.json could not be parsed. It may be corrupted. Inspect the file manually at universal-research-system/state.json. If irreparable, delete it and re-run to reinitialize &mdash; note: this will reset all research state to Phase 1.</code></td></tr>
+        <tr><td><code>knowledge-map.md</code> absent on non-Phase-1 run</td><td>Initialize as empty file and output: <code>WARNING: knowledge-map.md was not found. Initialized as empty. If prior research exists, verify the file is present at universal-research-system/knowledge-map.md.</code></td></tr>
+        <tr><td>Unrecognized phase value</td><td><code>ERROR: Unrecognized phase value in state.json: &quot;[value]&quot;. Valid values: problem_framing, variable_discovery, variable_research, connection_validation, synthesis, qa_mode. Correct state.json manually and re-run.</code></td></tr>
+        <tr><td>No argument on first run</td><td><code>ERROR: No research topic provided. Run: /command-01-research [your topic or question]</code></td></tr>
+      </tbody>
+    </table>
+    <p><strong>The governing file listed but not read at runtime:</strong><br>
+    The command file header states <code>universal-research-system/research-patterns-system-context.md</code> is a &ldquo;build spec &mdash; all SPEC definitions sourced here.&rdquo; However, this file does not appear in the <code>Research system brain/</code> directory and is not included in the cold-start read sequence. All SPEC definitions (SPEC-1 through SPEC-6) are defined inline within the command file itself.</p>
+    <p>AMBIGUITY: Either (a) this file exists elsewhere in the project and was not provided, (b) it has been superseded by the inline SPEC definitions, or (c) it is a dead reference. The command&rsquo;s execution does not depend on it &mdash; all SPECs are self-contained within the command file. A developer modifying the system should not expect this file to be authoritative over the inline SPEC definitions.</p>
+    </main>
+  </div>
+
+  <script>
+// Theme — default dark, persisted
+const toggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') { html.classList.remove('dark'); toggle.textContent = 'Dark Mode'; }
+toggle.addEventListener('click', () => {
+  html.classList.toggle('dark');
+  const isDark = html.classList.contains('dark');
+  toggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+// Tab switching with persistence
+const tabDefs = [
+  { btn: document.getElementById('btn-overview'), panel: document.getElementById('tab-overview'), key: 'overview' },
+  { btn: document.getElementById('btn-docs'),     panel: document.getElementById('tab-docs'),     key: 'docs'     }
+];
+function activateTab(target) {
+  tabDefs.forEach(t => {
+    const isActive = t === target;
+    t.btn.classList.toggle('active', isActive);
+    t.btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    t.panel.classList.toggle('hidden', !isActive);
+  });
+  localStorage.setItem('activeTab', target.key);
+}
+tabDefs.forEach(t => t.btn.addEventListener('click', () => activateTab(t)));
+const savedTab = localStorage.getItem('activeTab');
+if (savedTab) {
+  const match = tabDefs.find(t => t.key === savedTab);
+  if (match) activateTab(match);
+}
+  </script>
+</body>
+</html>

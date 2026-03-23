@@ -1,0 +1,7 @@
+i want you to create a self contained prompt that will create a self contained mobile first index.html page that has the content of @universal-research-system/Archived/system-explanation.md and uses the styling from @universal-research-system/Archived/style.css this will be done in one shot and will be saved in this folder:  C:\Users\Alexb\Documents\Alex's Applications\video-transcriber\universal-research-system\Archived
+
+
+
+
+
+envoke the '/hormozi' command in claude code that will get claude code to get that command to write a new markdown file that takes the information from @universal-research-system/Archived/system-explanation.md and turn it into landing page copy and formatting instructions. there should be no em dashes what so ever. it should explain the features and benefits and the problem it solves for the customer, not a technical breakdown. this isnt a landing page to sell people on, its a landing page to help people understand what it is and what makes it valuable.  
