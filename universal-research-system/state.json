@@ -3,7 +3,7 @@
   "phase": "connection_validation",
   "cycle_count": 0,
   "source_content_map_built": true,
-  "last_updated": "2026-03-24T20:00:00Z",
+  "last_updated": "2026-03-24T22:00:00Z",
   "user_lens_profile": {
     "approved_perspectives": [
       "first_principles_systems_thinking"
@@ -2539,189 +2539,212 @@
         "type": "causal",
         "explanation": "Hepatic impairment generates recirculating antigens and toxins that create chronic immune burden exhausting mucosal sIgA reserves; low sIgA allows increased pathogen penetration into the portal system, further activating Kupffer cells and perpetuating hepatic inflammation and impaired detoxification -- a bidirectional gut-liver-mucosal immune loop.",
         "evidence_count": 2
-      }
-    ],
-    "pending": [
+      },
       {
         "from": "Hepatic Detoxification Impairment",
         "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "The liver is the primary site of cortisol inactivation and sex hormone metabolism; hepatic impairment leads to elevated circulating cortisol and disrupted HPA signaling feedback. Both systems co-exist as structural components of the same neuroendocrine-detoxification architecture.",
+        "evidence_count": 2
       },
       {
         "from": "Hepatic Detoxification Impairment",
         "to": "Reactive Food Burden — MRT",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Impaired hepatic Phase II conjugation reduces biotransformation capacity, increasing systemic exposure to food-derived antigens and xenobiotics that drive MRT reactivity. The liver and gut immune system form interdependent architectural components of the same detoxification and immune tolerance architecture.",
+        "evidence_count": 2
       },
       {
         "from": "Hepatic Detoxification Impairment",
         "to": "H. pylori",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "H. pylori infection increases hepatic metabolic load via urease-mediated ammonia production and systemic inflammation, while hepatic impairment reduces clearance of H. pylori-derived toxins. Both occupy interdependent roles in the gut-liver axis as co-structural variables.",
+        "evidence_count": 2
       },
       {
         "from": "Hepatic Detoxification Impairment",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Hepatic impairment reduces bile production and immune surveillance capacity, creating conditions favorable for fungal overgrowth; Candida metabolites (acetaldehyde, arabinitol) in turn burden hepatic detoxification pathways. These variables occupy interdependent roles in the same gut-liver detoxification architecture.",
+        "evidence_count": 2
       },
       {
         "from": "Hepatic Detoxification Impairment",
         "to": "Parasitic Load",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Impaired hepatic biotransformation of pathogen-derived toxins reduces the liver ability to clear parasite metabolic byproducts, creating systemic toxic burden that perpetuates parasitic survival conditions and impairs immune-mediated clearance.",
+        "evidence_count": 2
       },
       {
         "from": "Hepatic Detoxification Impairment",
         "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Hepatic impairment reduces bile acid output and immune surveillance, diminishing colonization resistance and enabling dysbiotic bacterial overgrowth; bacterial endotoxins in turn increase hepatic inflammatory burden via portal circulation, confirming two independent mechanistic pathways.",
+        "evidence_count": 2
       },
       {
         "from": "Hepatic Detoxification Impairment",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Hepatic Detoxification Impairment",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Bile acids are primary regulators of commensal microbiome composition; impaired hepatic bile production disrupts microbial diversity and creates conditions that favor pathogenic species over commensals, directly altering flora balance.",
+        "evidence_count": 2
       },
       {
         "from": "Hepatic Detoxification Impairment",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
-      },
-      {
-        "from": "Hepatic Detoxification Impairment",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
-      },
-      {
-        "from": "Hepatic Detoxification Impairment",
-        "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Hepatic Detoxification Impairment",
-        "to": "Occult Blood",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Beta-glucuronidase activity is elevated by dysbiotic bacteria that proliferate when hepatic bile output is reduced; simultaneously, beta-glucuronidase deconjugates estrogen and toxins that would otherwise be excreted, directly amplifying hepatic Phase II detoxification burden in a reinforcing causal loop.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Secretory IgA — SHP",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Histamine stimulates mast cell degranulation and IgE-mediated immune activation in the gut mucosa; chronic histamine excess suppresses secretory IgA production by diverting mucosal immune resources toward Th2 responses. DAO deficiency compounds this by allowing histamine accumulation at mucosal surfaces.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "HPA Axis Dysregulation Pattern",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Histamine is a direct stimulator of CRH release from the hypothalamus via H1 receptors; chronically elevated histamine drives HPA axis activation, producing cortisol dysregulation. DAO deficiency, by failing to degrade gut-derived histamine, sustains this neuroendocrine signal.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Pregnenolone Steal and Steroidogenesis Disruption",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Chronic histamine-driven HPA activation increases cortisol demand, diverting pregnenolone from sex hormone synthesis toward cortisol production. DAO deficiency that allows sustained histamine elevation therefore propagates steroidogenesis disruption through this cortisol demand pathway.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Cortisol — Diurnal Pattern",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Histamine activates hypothalamic CRH neurons via H1 receptors, and mast cell-derived histamine exhibits circadian variation that can disrupt the normal cortisol diurnal pattern; DAO deficiency sustains histamine availability for this signaling and can flatten the cortisol curve.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "DHEA-S",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Chronic histamine-driven HPA activation suppresses adrenal DHEA synthesis by diverting adrenal resources toward cortisol production; low DAO activity sustaining histamine elevation therefore contributes to DHEA-S reduction through shared HPA burden.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Cortisol-to-DHEA Ratio",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Histamine-driven HPA activation simultaneously elevates cortisol demand and suppresses DHEA production, widening the cortisol-to-DHEA ratio; DAO deficiency compounds this by sustaining the histamine signal that drives the imbalance.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Estradiol",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Histamine stimulates estradiol release from ovarian granulosa cells via H1/H2 receptors, and estradiol reciprocally upregulates mast cell histamine release while downregulating DAO activity; this bidirectional feedback loop makes the two variables directly causally linked.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Progesterone",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Progesterone upregulates DAO activity and suppresses mast cell histamine release; DAO deficiency allowing excess histamine can suppress progesterone synthesis by contributing to HPA burden that diverts precursors away from progesterone production.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Testosterone",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Chronic HPA activation driven by histamine excess suppresses gonadotropin release (LH/FSH), reducing testosterone synthesis; additionally, mast cell-derived histamine can directly inhibit Leydig cell testosterone production via H1 receptors.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Melatonin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Histamine H3 receptors modulate histaminergic neurotransmission in the SCN circadian master clock; elevated histamine from DAO deficiency activates wake-promoting histaminergic circuits that suppress nocturnal melatonin secretion and disrupt circadian melatonin rhythms.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Histamine excess increases tight junction permeability through mast cell degranulation and direct paracellular gap widening; this intestinal permeability allows bacterial LPS and food antigens into the mucosa, triggering further mast cell activation and histamine release. The two variables form a reinforcing architectural loop.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Chronic mast cell degranulation from histamine excess shifts mucosal immunity toward Th2 inflammatory responses, impairing the tolerogenic environment required for adequate secretory IgA production; DAO deficiency sustains mucosal histamine concentrations that drive this immune polarization.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Histamine is both a gut-derived neurotransmitter and a CNS neurotransmitter; DAO deficiency in the gut allows histamine to reach the brain via the gut-brain axis, activating hypothalamic histamine receptors that modulate HPA axis tone. These variables share structural components of the same gut-brain-HPA signaling architecture.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Reactive Food Burden — MRT",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Elevated gut histamine from DAO deficiency sensitizes mast cells to food antigens, amplifying MRT-measured food reactivity; simultaneously, histamine is itself a direct mediator of MRT reactions for histamine-liberating foods. DAO activity is therefore a direct determinant of MRT outcome patterns.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "H. pylori",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "H. pylori infection increases mucosal mast cell density and histamine release while inhibiting DAO activity through inflammatory cytokine production; DAO deficiency that allows histamine accumulation impairs the mucosal immune environment needed to clear H. pylori. The relationship is bidirectional and causal in both directions.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Candida species produce acetaldehyde which inhibits DAO activity and triggers mast cell degranulation; conversely, elevated histamine suppresses Th1 immune responses required for fungal clearance, creating permissive conditions for Candida persistence.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Parasitic Load",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Parasitic infections are potent triggers of mast cell activation and IgE-mediated histamine release as part of Th2 immune defense; chronically elevated histamine from DAO deficiency sustains the Th2 bias that can fail to clear parasitic infections efficiently.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Histamine-producing bacteria (Morganella morganii, Klebsiella pneumoniae, Clostridium perfringens) are commonly dysbiotic species; DAO deficiency allowing histamine accumulation creates a feedback loop where dysbiotic histamine producers outcompete commensals and further suppress DAO via bacterial metabolites.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine-DAO Regulatory System",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Commensals such as Lactobacillus rhamnosus upregulate DAO expression and support histamine degradation; dysbiosis replacing commensals with histamine-producing bacteria depletes DAO activity and increases luminal histamine, creating a feedback loop between histamine-DAO status and commensal balance.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine-DAO Regulatory System",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Histamine-producing dysbiotic bacteria (which dominate when DAO is deficient) overlap substantially with beta-glucuronidase-producing species; both are markers of the same dysbiotic microbial ecosystem where pathogenic species outcompete commensals.",
+        "evidence_count": 2
       },
       {
         "from": "Histamine-DAO Regulatory System",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine-DAO Regulatory System",
-        "to": "Occult Blood",
-        "evidence_count": 0
-      },
+        "type": "causal",
+        "explanation": "Chronic mucosal mast cell activation from histamine excess suppresses IgA-producing B cell function by diverting mucosal immune resources toward IgE-mediated responses; DAO deficiency that allows sustained luminal histamine therefore depresses GI tract secretory IgA output.",
+        "evidence_count": 2
+      }
+    ],
+    "pending": [
       {
         "from": "Secretory IgA — SHP",
         "to": "HPA Axis Dysregulation Pattern",
@@ -4138,6 +4161,41 @@
         "from": "Systemic Oxidative Stress Cascade",
         "to": "Occult Blood",
         "reason": "The causal pathway from OS to GI bleeding requires multiple intermediate steps over extended time (OS -> carcinogenesis -> structural mucosal bleeding) and operates on a different time scale from the functional OS-driven metabolic chaos model; both case studies show normal occult blood despite significant OS burden; occult blood represents structural/acute pathology functioning as a medical referral gate, not a modifiable functional marker within the metabolic chaos model."
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Calprotectin and lactoferrin are neutrophil-derived markers of active GI inflammation; hepatic impairment does not directly drive neutrophil recruitment to the gut mucosa, and FDN case study data demonstrates dissociation between hepatic markers and calprotectin/lactoferrin elevation. Insufficient independent evidence at Relevant confidence."
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Anti-gliadin IgA",
+        "reason": "Anti-gliadin IgA is a mucosal immune response to gliadin peptides; hepatic impairment is not a direct driver of mucosal immune sensitization to gluten. The causal pathway requires too many intervening variables (liver function to gut permeability to gliadin exposure to mucosal sIgA response) without independent structural evidence."
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Secretory IgA — GI tract",
+        "reason": "FDN Module 1 source material positions liver congestion as downstream of reduced sIgA (sIgA reduction drives pathogen load which burdens the liver), not the reverse. Hepatic impairment driving sIgA deficiency is not supported by two independent evidence lines; the directional relationship is inverted relative to the validated FDN framework."
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Occult Blood",
+        "reason": "Occult blood indicates structural mucosal pathology (erosions, ulcers, parasitic damage); hepatic impairment does not produce occult blood directly as this requires mechanistically distinct structural pathology. Insufficient independent evidence at Relevant confidence band."
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Calprotectin and lactoferrin are markers of neutrophil-mediated GI inflammation; histamine primarily mediates eosinophil and mast cell responses (Th2 pathway). FDN case study data demonstrates dissociation between histamine markers and calprotectin/lactoferrin elevation. Insufficient independent evidence for a validated connection."
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Anti-gliadin IgA",
+        "reason": "Anti-gliadin IgA is a specific adaptive immune response to gliadin; histamine excess can increase gut permeability and expose mucosa to more gliadin, but the causal chain is indirect (histamine to permeability to gliadin exposure to mucosal sensitization to IgA production) and not supported by two independent evidence lines at Relevant confidence."
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Occult Blood",
+        "reason": "Occult blood indicates structural mucosal pathology mechanistically distinct from histamine-mediated inflammation; mast cell degranulation does not typically produce mucosal damage sufficient to generate occult blood. Mirrors the Histamine MBA to Occult Blood discarded pattern. Insufficient independent evidence at Relevant confidence band."
       }
     ]
   },
@@ -4468,6 +4526,160 @@
         "Systemic Oxidative Stress Cascade -> Occult Blood"
       ],
       "output_file": "session-outputs/2026-03-24-connection-validation-6.md"
+    },
+    {
+      "date": "2026-03-24T22:00:00Z",
+      "phase_executed": "connection_validation",
+      "variables_researched": [],
+      "connections_validated": [
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Gut-Brain-HPA Bidirectional Axis"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Reactive Food Burden — MRT"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "H. pylori"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Candida and Fungal Overgrowth"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Parasitic Load"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Dysbiotic and Opportunistic Bacteria"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Commensal Flora Balance"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Beta-glucuronidase"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Secretory IgA — SHP"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "HPA Axis Dysregulation Pattern"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Pregnenolone Steal and Steroidogenesis Disruption"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Cortisol — Diurnal Pattern"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "DHEA-S"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Cortisol-to-DHEA Ratio"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Estradiol"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Progesterone"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Testosterone"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Melatonin"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Dysbiosis-Intestinal Permeability Feedback Loop"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Mucosal Immune Tolerance and sIgA Function"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Gut-Brain-HPA Bidirectional Axis"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Reactive Food Burden — MRT"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "H. pylori"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Candida and Fungal Overgrowth"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Parasitic Load"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Dysbiotic and Opportunistic Bacteria"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Commensal Flora Balance"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Beta-glucuronidase"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Secretory IgA — GI tract"
+        }
+      ],
+      "connections_discarded": [
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Calprotectin and Lactoferrin"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Anti-gliadin IgA"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Secretory IgA — GI tract"
+        },
+        {
+          "from": "Hepatic Detoxification Impairment",
+          "to": "Occult Blood"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Calprotectin and Lactoferrin"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Anti-gliadin IgA"
+        },
+        {
+          "from": "Histamine-DAO Regulatory System",
+          "to": "Occult Blood"
+        }
+      ],
+      "output_file": "session-outputs/2026-03-24-connection-validation-7.md"
     }
   ]
 }
