@@ -3,7 +3,7 @@
   "phase": "connection_validation",
   "cycle_count": 0,
   "source_content_map_built": true,
-  "last_updated": "2026-03-24T06:11:53Z",
+  "last_updated": "2026-03-24T08:00:00Z",
   "user_lens_profile": {
     "approved_perspectives": [
       "first_principles_systems_thinking"
@@ -1076,9 +1076,2722 @@
     }
   },
   "connections": {
-    "validated": [],
-    "pending": [],
-    "discarded": []
+    "validated": [
+      {
+        "from": "Indican",
+        "to": "Urinary Bile Acids",
+        "type": "causal",
+        "explanation": "Protein maldigestion-driven dysbiosis generates excess indole requiring hepatic conjugation; the indole toxin load congests the liver, impairing first-pass bile acid clearance and producing UBA spillover into urine.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "8-OHdG",
+        "type": "causal",
+        "explanation": "Chronic dysbiosis signaled by Indican drives 8-OHdG elevation through two converging ROS pathways: pathogen-triggered neutrophil oxidative burst and hepatic CYP450 ROS generation during Phase I indole detoxification.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Zonulin",
+        "type": "causal",
+        "explanation": "SIBO (the primary condition producing elevated Indican) constitutes the bacterial small intestinal colonization that is Zonulin's primary physiological trigger, directly causing TJ disassembly and intestinal hyperpermeability.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Histamine — MBA",
+        "type": "architectural",
+        "explanation": "SIBO/dysbiosis is the shared upstream structural condition driving both: tryptophanase bacteria produce indole (Indican) while histamine-decarboxylase bacteria simultaneously produce excess histamine, making both markers co-indicators of the same dysbiotic ecology.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "DAO (Diamine Oxidase)",
+        "type": "causal",
+        "explanation": "Dysbiosis and leaky gut (signaled by Indican) destroy intestinal mucosal crypt epithelial cells, the exclusive production site of DAO; Indican elevation is mechanistically linked to mucosal architecture destruction that reduces DAO output, confirmed by the correlation between serum DAO and intestinal permeability.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Systemic Oxidative Stress Cascade",
+        "type": "causal",
+        "explanation": "Gut dysbiosis evidenced by Indican drives systemic ROS production through immune-mediated oxidative burst from pathogen load and through hepatic CYP450 ROS generation during Phase I processing of indole-derived xenobiotics.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Hepatic Detoxification Impairment",
+        "type": "causal",
+        "explanation": "Indole is a direct Phase II hepatic conjugation substrate; excess indole from dysbiosis constitutes an ongoing hepatic toxic load, and high-to-very-high Indican explicitly indicates liver dysfunction in FDN, directly contributing to Phase I/II processing impairment.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Histamine-DAO Regulatory System",
+        "type": "causal",
+        "explanation": "SIBO/dysbiosis (Indican) destabilizes the Histamine-DAO regulatory balance through two simultaneous mechanisms: histamine-producing SIBO bacteria increase production while dysbiosis-driven mucosal crypt destruction reduces DAO degradation capacity, creating a double-hit on the regulatory equilibrium.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Secretory IgA — SHP",
+        "type": "architectural",
+        "explanation": "Gut dysbiosis (Indican) chronically activates the HPA axis via the gut-brain axis, elevating cortisol, which directly suppresses sIgA production (the primary mechanism of sIgA SHP depletion); both variables are components of the gut-HPA-immune axis.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "HPA Axis Dysregulation Pattern",
+        "type": "causal",
+        "explanation": "Gut dysbiosis (Indican) generates pro-inflammatory cytokines and LPS that traverse the gut-brain-HPA axis to activate CRH/ACTH/cortisol signaling; FDN explicitly states protein maldigestion causes hormone imbalance, and GI dysbiosis is a named chronic stressor driving HPA dysregulation.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "type": "architectural",
+        "explanation": "Gut dysbiosis (Indican) drives HPA axis dysfunction, and HPA dysfunction drives steroidogenesis disruption by shifting adrenal production toward cortisol and away from DHEA/sex hormones; FDN explicitly states protein maldigestion causes hormone imbalance; both are components of the stress-hormone-metabolic chaos axis.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Cortisol — Diurnal Pattern",
+        "type": "causal",
+        "explanation": "Chronic gut dysbiosis (Indican) constitutes a persistent physiological stressor that activates HPA signaling, disrupting the cortisol diurnal pattern; FDN identifies gut pathogen load as a primary chronic stressor driving cortisol phase transitions.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "DHEA-S",
+        "type": "causal",
+        "explanation": "Dysbiosis (Indican) drives HPA activation and chronic cortisol elevation; elevated cortisol reciprocally suppresses DHEA-S production in the zona reticularis, shifting the adrenal axis toward catabolic dominance.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Cortisol-to-DHEA Ratio",
+        "type": "causal",
+        "explanation": "Gut dysbiosis (Indican) drives both cortisol elevation (HPA activation) and DHEA-S suppression (reciprocal cortisol-DHEA relationship), directly shifting the cortisol:DHEA ratio toward catabolic dominance; Indican research explicitly states adverse hormone imbalance as a consequence.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Estradiol",
+        "type": "architectural",
+        "explanation": "Dysbiosis (Indican) elevates Estradiol through two independent mechanisms: (1) dysbiotic bacteria produce beta-glucuronidase which deconjugates and reactivates excreted estrogens entering circulation; (2) SIBO-driven histamine production directly stimulates ovarian estradiol synthesis.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Progesterone",
+        "type": "causal",
+        "explanation": "Gut dysbiosis (Indican) activates HPA, elevating cortisol, which suppresses progesterone production through adrenal precursor competition and central negative feedback on the HPG axis; FDN identifies HPA-driven cortisol dominance as the primary mechanism of progesterone insufficiency.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Testosterone",
+        "type": "causal",
+        "explanation": "Gut dysbiosis (Indican) drives cortisol dominance via HPA activation; elevated cortisol suppresses testosterone through reduced DHEA substrate availability, HPG axis suppression, and increased aromatase activity.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Melatonin",
+        "type": "causal",
+        "explanation": "Gut dysbiosis and mucosal damage (both signaled by Indican) impair enterochromaffin cell function; the SHP melatonin marker specifically measures GI EC cell output (which produces 400x more melatonin than the pineal gland), making Indican-driven mucosal damage a direct cause of reduced noon melatonin.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "type": "architectural",
+        "explanation": "Indican is the urinary metabolite marker of the same dysbiosis that drives the Dysbiosis-Intestinal Permeability Feedback Loop; elevated Indican directly signals the LPS-producing bacterial overgrowth that initiates TJ compromise and the self-amplifying dysbiosis-permeability cycle.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "type": "causal",
+        "explanation": "Chronic dysbiosis (Indican) continuously deploys sIgA to neutralize dysbiotic organisms and translocated antigens; the SIBO, dysbiosis, and leaky gut generating elevated Indican progressively exhaust mucosal sIgA reserves, eroding mucosal immune tolerance.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "type": "architectural",
+        "explanation": "Indican-signaled gut dysbiosis IS the GI component activating the gut-to-HPA direction of the bidirectional axis; the dysbiotic LPS, pro-inflammatory cytokines, and microbial metabolites generated by Indican-confirmed dysbiosis are the molecular signals traversing the gut-brain-HPA pathway.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Reactive Food Burden — MRT",
+        "type": "causal",
+        "explanation": "Protein maldigestion and leaky gut (both signaled by Indican) allow partially digested food antigens to translocate systemically, creating the conditions for immune sensitization measurable by MRT; hypochlorhydria (indicated by high-to-very-high Indican) specifically leaves intact food proteins available as antigens.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "H. pylori",
+        "type": "architectural",
+        "explanation": "H. pylori causes hypochlorhydria through urease-mediated HCl neutralization; high-to-very-high Indican specifically indicates hypochlorhydria as an upstream cause; H. pylori is the upstream causal driver and elevated Indican is a downstream consequence, sharing hypochlorhydria as the structural node connecting them.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Candida and Fungal Overgrowth",
+        "type": "architectural",
+        "explanation": "FDN Module 4 explicitly states elevated Indican points toward fungal overgrowth; Candida and the bacteria producing indole (generating Indican) co-occupy the same dysbiotic ecological niche and are co-occurring components of the same GI microbial imbalance.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Parasitic Load",
+        "type": "architectural",
+        "explanation": "The dysbiotic, hypochlorhydric, mucosal-compromised GI environment signaled by Indican creates the ecological conditions for parasitic colonization; insufficient gastric acid (indicated by high Indican) reduces the protective barrier against ingested parasites.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "type": "causal",
+        "explanation": "Dysbiotic anaerobic bacteria with tryptophanase activity ARE the direct mechanism generating urinary Indican; elevated Indican is the specific metabolic output of these organisms acting on undigested tryptophan, making this a direct causal relationship.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Commensal Flora Balance",
+        "type": "causal",
+        "explanation": "Loss of commensal flora balance allows dysbiotic anaerobes to expand and generate tryptophanase-driven Indican elevation; reciprocally, elevated Indican signals the disrupted commensal balance that allows these organisms to dominate.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Calprotectin and Lactoferrin",
+        "type": "architectural",
+        "explanation": "Gut dysbiosis (Indican) generates mucosal inflammation via LPS, bacterial products, and immune activation; calprotectin is released by neutrophils recruited to this dysbiosis-driven mucosal inflammation, making both co-markers of the same GI inflammatory state.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Beta-glucuronidase",
+        "type": "architectural",
+        "explanation": "Both Indican and beta-glucuronidase are parallel metabolic outputs of the same dysbiotic bacterial populations: Indican from anaerobic tryptophanase activity and B-GUS from dysbiotic glucuronidase activity; co-elevation of both markers indicates the same underlying dysbiotic ecology.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Anti-gliadin IgA",
+        "type": "causal",
+        "explanation": "Hypochlorhydria and protein maldigestion (Indican) leave intact gliadin peptides available; leaky gut (Indican) allows these to translocate systemically, triggering the mucosal anti-gliadin IgA immune response.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Indican",
+        "to": "Secretory IgA — GI tract",
+        "type": "causal",
+        "explanation": "Chronic dysbiosis (Indican) continuously challenges GI sIgA production through ongoing microbial antigen burden; the same SIBO and dysbiotic overgrowth generating elevated Indican depletes and dysregulates the sIgA first-line mucosal defense.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "8-OHdG",
+        "type": "causal",
+        "explanation": "Hepatic dysfunction (elevated UBAs) impairs detoxification capacity, increasing CYP450-generated ROS during Phase I processing; bile acid recirculation also brings pro-oxidant toxins and xenobiotics back into hepatocytes, both driving 8-OHdG-generating oxidative DNA damage.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Zonulin",
+        "type": "causal",
+        "explanation": "Poor bile flow (very low UBAs) removes bile acids antimicrobial function in the small intestine, enabling bacterial overgrowth which is Zonulin's primary physiological trigger; bile acids also regulate epithelial TJ protein expression via FXR receptors, making bile flow disruption a direct structural cause of permeability changes.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Histamine — MBA",
+        "type": "architectural",
+        "explanation": "SIBO/dysbiosis is the shared upstream structural condition: SIBO bacteria produce histamine (driving Histamine MBA elevation) while also disrupting normal enterohepatic bile recycling (driving UBA abnormalities); both are co-markers of the SIBO/dysbiosis complex.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "DAO (Diamine Oxidase)",
+        "type": "architectural",
+        "explanation": "Both UBAs and DAO are co-depleted in the same structural disease states (IBD, Crohn's, UC): low UBAs indicate poor bile flow and IBD-related enterohepatic dysfunction while very low DAO reflects crypt cell destruction in these same conditions, making both co-markers of intestinal mucosal disease severity.",
+        "evidence_count": 2
+      }
+    ],
+    "pending": [
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Systemic Oxidative Stress Cascade",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Hepatic Detoxification Impairment",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Histamine-DAO Regulatory System",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Secretory IgA — SHP",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "HPA Axis Dysregulation Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Urinary Bile Acids",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Zonulin",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Histamine — MBA",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "DAO (Diamine Oxidase)",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Systemic Oxidative Stress Cascade",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Hepatic Detoxification Impairment",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Histamine-DAO Regulatory System",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Secretory IgA — SHP",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "HPA Axis Dysregulation Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "8-OHdG",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Histamine — MBA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "DAO (Diamine Oxidase)",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Systemic Oxidative Stress Cascade",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Hepatic Detoxification Impairment",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Histamine-DAO Regulatory System",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Secretory IgA — SHP",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "HPA Axis Dysregulation Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Zonulin",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "DAO (Diamine Oxidase)",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Systemic Oxidative Stress Cascade",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Hepatic Detoxification Impairment",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Histamine-DAO Regulatory System",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Secretory IgA — SHP",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "HPA Axis Dysregulation Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Systemic Oxidative Stress Cascade",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Hepatic Detoxification Impairment",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Histamine-DAO Regulatory System",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Secretory IgA — SHP",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "HPA Axis Dysregulation Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "DAO (Diamine Oxidase)",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Hepatic Detoxification Impairment",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Histamine-DAO Regulatory System",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Secretory IgA — SHP",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "HPA Axis Dysregulation Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Systemic Oxidative Stress Cascade",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Histamine-DAO Regulatory System",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Secretory IgA — SHP",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "HPA Axis Dysregulation Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Hepatic Detoxification Impairment",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Secretory IgA — SHP",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "HPA Axis Dysregulation Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Histamine-DAO Regulatory System",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "HPA Axis Dysregulation Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Cortisol — Diurnal Pattern",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "DHEA-S",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol — Diurnal Pattern",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Cortisol-to-DHEA Ratio",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "DHEA-S",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Estradiol",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Cortisol-to-DHEA Ratio",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Progesterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Estradiol",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Testosterone",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Progesterone",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Melatonin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Testosterone",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Melatonin",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Mucosal Immune Tolerance and sIgA Function",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Reactive Food Burden — MRT",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "H. pylori",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "H. pylori",
+        "to": "Candida and Fungal Overgrowth",
+        "evidence_count": 0
+      },
+      {
+        "from": "H. pylori",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "H. pylori",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "H. pylori",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "H. pylori",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "H. pylori",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "H. pylori",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "H. pylori",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "H. pylori",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Parasitic Load",
+        "evidence_count": 0
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "evidence_count": 0
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiotic and Opportunistic Bacteria",
+        "to": "Commensal Flora Balance",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiotic and Opportunistic Bacteria",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiotic and Opportunistic Bacteria",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiotic and Opportunistic Bacteria",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiotic and Opportunistic Bacteria",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Dysbiotic and Opportunistic Bacteria",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Commensal Flora Balance",
+        "to": "Calprotectin and Lactoferrin",
+        "evidence_count": 0
+      },
+      {
+        "from": "Commensal Flora Balance",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Commensal Flora Balance",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Commensal Flora Balance",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Commensal Flora Balance",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Calprotectin and Lactoferrin",
+        "to": "Beta-glucuronidase",
+        "evidence_count": 0
+      },
+      {
+        "from": "Calprotectin and Lactoferrin",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Calprotectin and Lactoferrin",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Calprotectin and Lactoferrin",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Beta-glucuronidase",
+        "to": "Anti-gliadin IgA",
+        "evidence_count": 0
+      },
+      {
+        "from": "Beta-glucuronidase",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Beta-glucuronidase",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Anti-gliadin IgA",
+        "to": "Secretory IgA — GI tract",
+        "evidence_count": 0
+      },
+      {
+        "from": "Anti-gliadin IgA",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      },
+      {
+        "from": "Secretory IgA — GI tract",
+        "to": "Occult Blood",
+        "evidence_count": 0
+      }
+    ],
+    "discarded": [
+      {
+        "from": "Indican",
+        "to": "Occult Blood",
+        "reason": "Evidence for a direct causal link between dysbiosis (Indican) and mucosal bleeding (Occult Blood) does not reach Relevant confidence (60+); elevated Indican indicates severe dysbiosis but does not specifically predict structural GI lesions causing mucosal bleeding; occult blood reflects distinct structural pathology beyond general dysbiotic mucosal irritation."
+      }
+    ]
   },
   "session_log": [
     {
@@ -1133,6 +3846,52 @@
       ],
       "connections_validated": [],
       "output_file": "session-outputs/2026-03-23-variable-research-2.md"
+    },
+    {
+      "date": "2026-03-24T08:00:00Z",
+      "phase_executed": "connection_validation",
+      "variables_researched": [],
+      "connections_validated": [
+        "Indican <-> Urinary Bile Acids",
+        "Indican <-> 8-OHdG",
+        "Indican <-> Zonulin",
+        "Indican <-> Histamine — MBA",
+        "Indican <-> DAO (Diamine Oxidase)",
+        "Indican <-> Systemic Oxidative Stress Cascade",
+        "Indican <-> Hepatic Detoxification Impairment",
+        "Indican <-> Histamine-DAO Regulatory System",
+        "Indican <-> Secretory IgA — SHP",
+        "Indican <-> HPA Axis Dysregulation Pattern",
+        "Indican <-> Pregnenolone Steal and Steroidogenesis Disruption",
+        "Indican <-> Cortisol — Diurnal Pattern",
+        "Indican <-> DHEA-S",
+        "Indican <-> Cortisol-to-DHEA Ratio",
+        "Indican <-> Estradiol",
+        "Indican <-> Progesterone",
+        "Indican <-> Testosterone",
+        "Indican <-> Melatonin",
+        "Indican <-> Dysbiosis-Intestinal Permeability Feedback Loop",
+        "Indican <-> Mucosal Immune Tolerance and sIgA Function",
+        "Indican <-> Gut-Brain-HPA Bidirectional Axis",
+        "Indican <-> Reactive Food Burden — MRT",
+        "Indican <-> H. pylori",
+        "Indican <-> Candida and Fungal Overgrowth",
+        "Indican <-> Parasitic Load",
+        "Indican <-> Dysbiotic and Opportunistic Bacteria",
+        "Indican <-> Commensal Flora Balance",
+        "Indican <-> Calprotectin and Lactoferrin",
+        "Indican <-> Beta-glucuronidase",
+        "Indican <-> Anti-gliadin IgA",
+        "Indican <-> Secretory IgA — GI tract",
+        "Urinary Bile Acids <-> 8-OHdG",
+        "Urinary Bile Acids <-> Zonulin",
+        "Urinary Bile Acids <-> Histamine — MBA",
+        "Urinary Bile Acids <-> DAO (Diamine Oxidase)"
+      ],
+      "connections_discarded": [
+        "Indican <-> Occult Blood"
+      ],
+      "output_file": "session-outputs/2026-03-24-connection-validation-1.md"
     }
   ]
 }
