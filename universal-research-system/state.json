@@ -3,7 +3,7 @@
   "phase": "connection_validation",
   "cycle_count": 0,
   "source_content_map_built": true,
-  "last_updated": "2026-03-24T12:00:00Z",
+  "last_updated": "2026-03-24T16:00:00Z",
   "user_lens_profile": {
     "approved_perspectives": [
       "first_principles_systems_thinking"
@@ -1573,6 +1573,251 @@
         "type": "causal",
         "explanation": "Oxidative stress (8-OHdG) damages adrenal steroidogenic enzymes and mitochondria (steroidogenesis is mitochondria-dependent), directly impairing pregnenolone synthesis and the downstream steroidogenic cascade; the chronic HPA stress activation from oxidative burden also drives pregnenolone steal away from DHEA and sex hormone pathways toward cortisol production.",
         "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Histamine — MBA",
+        "type": "architectural",
+        "explanation": "Histamine elevation directly triggers Zonulin release via lamina propria vascular permeability, while Zonulin-mediated intestinal permeability amplifies mast cell histamine release; both are co-markers of the shared mucosal barrier dysfunction system driven by the same dysbiotic ecology and cortisol-mast cell stress cascade.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "DAO (Diamine Oxidase)",
+        "type": "causal",
+        "explanation": "Zonulin-mediated intestinal hyperpermeability produces progressive mucosal crypt cell damage that directly reduces DAO output; serum DAO activity is confirmed to correlate with intestinal permeability, establishing Zonulin elevation as a causal driver of DAO depletion through mucosal architectural destruction.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Systemic Oxidative Stress Cascade",
+        "type": "causal",
+        "explanation": "Zonulin-mediated intestinal hyperpermeability allows LPS and microbial antigens to translocate into portal circulation, triggering Kupffer cell and systemic immune activation with neutrophil oxidative burst, directly generating the ROS cascade that drives 8-OHdG elevation and systemic oxidative stress.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Hepatic Detoxification Impairment",
+        "type": "causal",
+        "explanation": "Zonulin-driven intestinal hyperpermeability increases portal antigen and LPS translocation to the liver, overactivating Kupffer cells and producing hepatic inflammation that impairs Phase I/II/III detoxification processing capacity — the primary FDN mechanism linking leaky gut to liver congestion and elevated urinary bile acids.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Histamine-DAO Regulatory System",
+        "type": "architectural",
+        "explanation": "Zonulin elevation and histamine-DAO imbalance are bidirectionally connected through shared intestinal permeability mechanisms: elevated histamine drives Zonulin release while Zonulin-mediated permeability amplifies histamine accumulation; both share the same upstream dysbiotic and stress ecology drivers named explicitly in FDN course materials.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Secretory IgA — SHP",
+        "type": "architectural",
+        "explanation": "Both Zonulin elevation and sIgA (SHP) depletion are simultaneous co-consequences of chronic cortisol elevation: cortisol activates gut mast cells triggering histamine and Zonulin-mediated permeability, while simultaneously suppressing mucosal plasma cell sIgA production — making both markers co-outputs of the same stress-HPA cascade.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "HPA Axis Dysregulation Pattern",
+        "type": "architectural",
+        "explanation": "Zonulin and HPA dysregulation are bidirectionally connected structural components of the gut-HPA loop: gut permeability-derived cytokines and LPS activate HPA through the immune pathway, while HPA cortisol activation drives gut mast cell degranulation and Zonulin elevation — with Zonulin explicitly named as a node in the FDN Metabolic Chaos cascade.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "type": "architectural",
+        "explanation": "Zonulin-mediated gut inflammation generates systemic inflammatory cytokines (IL-6, TNF-alpha) that signal the zona reticularis to reduce DHEA synthesis while ACTH demand increases, producing the cortisol-dominant steroidogenesis disruption pattern — both Zonulin and steroidogenesis disruption are co-components of the chronic stress-adrenal cascade.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Cortisol — Diurnal Pattern",
+        "type": "architectural",
+        "explanation": "Zonulin and cortisol diurnal pattern are bidirectionally connected through the chronic stress-HPA-gut axis: cortisol activates gut mast cells driving Zonulin-mediated permeability, while Zonulin-generated gut cytokines feed back through the immune-HPA pathway to dysregulate the cortisol diurnal curve — with this bidirectional connection explicitly stated in FDN Zonulin research.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "DHEA-S",
+        "type": "causal",
+        "explanation": "Chronic gut immune activation from Zonulin-mediated permeability drives HPA cortisol dominance, which reciprocally suppresses DHEA-S output from the zona reticularis; additionally, gut inflammation-derived cytokines directly signal downregulation of zona reticularis DHEA synthesis when ACTH demand is elevated.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Cortisol-to-DHEA Ratio",
+        "type": "causal",
+        "explanation": "Zonulin-driven chronic gut stress simultaneously elevates cortisol (via gut-HPA immune pathway) and suppresses DHEA (via cytokine-driven zona reticularis downregulation), shifting the cortisol:DHEA ratio toward catabolic dominance through both components of the ratio moving in opposite directions.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Estradiol",
+        "type": "causal",
+        "explanation": "Zonulin elevation drives estradiol dysregulation through two converging pathways: co-elevated histamine stimulates ovarian H1/H2 receptors increasing estradiol production (histamine-estrogen loop), while Zonulin-mediated hepatic burden impairs glucuronidation and elimination of estrogens, causing recirculation and accumulation.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Progesterone",
+        "type": "causal",
+        "explanation": "Zonulin-mediated chronic gut stress drives HPA cortisol dominance, which suppresses pituitary LH surge amplitude (blunting corpus luteum formation and progesterone output) and competitively occupies progesterone receptors — the primary FDN mechanism linking chronic stress to progesterone insufficiency.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Testosterone",
+        "type": "causal",
+        "explanation": "Zonulin-driven HPA activation elevates cortisol, which suppresses testosterone through two converging pathways: pituitary LH/FSH suppression reducing gonadal testosterone production, and DHEA substrate depletion reducing androgen precursor availability for the DHEA-androstenedione-testosterone conversion cascade.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Melatonin",
+        "type": "causal",
+        "explanation": "Zonulin-indicated gut dysbiosis directly upregulates enterochromaffin cell melatonin production (400x the pineal output, elevated in dysbiosis), producing elevated noon melatonin on the SHP; simultaneously, Zonulin-driven HPA cortisol elevation suppresses nocturnal pineal melatonin production, creating bidirectional melatonin dysregulation.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "type": "architectural",
+        "explanation": "Zonulin is the primary biomarker of intestinal permeability and is explicitly named as one of two parallel TJ disruption pathways in the dysbiosis-permeability cycle alongside LPS-mediated TJ destruction; dysbiosis activates Zonulin while Zonulin-mediated permeability amplifies dysbiosis through reduced sIgA and increased antigen penetration.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Mucosal Immune Tolerance and sIgA Function",
+        "type": "architectural",
+        "explanation": "Zonulin measures physical barrier integrity while mucosal immune tolerance/sIgA measures the immune layer of that barrier; permeability failure (Zonulin) directly exposes the immune tolerance system to antigen burden that depletes sIgA through immune exhaustion, and low sIgA permits dysbiosis that triggers further Zonulin activation.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "type": "architectural",
+        "explanation": "Zonulin is explicitly named as a node in the FDN Metabolic Chaos cascade (Module 6: Chronic stress → HPA dysfunction → Elevated Zonulin → hyperpermeability → Metabolic Chaos) and disrupts the blood-brain barrier by the same TJ mechanism, making Zonulin a structural component of both the gut-to-HPA and gut-to-brain arms of this bidirectional axis.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Reactive Food Burden — MRT",
+        "type": "architectural",
+        "explanation": "Reactive food burden and Zonulin are bidirectionally connected: alpha-gliadin and other food antigens directly activate Zonulin signaling irrespective of autoimmune genetic status, while Zonulin-mediated permeability allows food antigens to access the immune system and generate new sensitivities — each amplifying the other in a self-reinforcing antigen-permeability cycle.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "H. pylori",
+        "type": "causal",
+        "explanation": "H. pylori neutralizes gastric HCl via urease, compromising the acid barrier against small intestinal bacterial overgrowth; SIBO resulting from reduced acid sterilization constitutes the bacterial small intestinal colonization that is Zonulin's primary physiological trigger, creating an indirect causal chain from H. pylori infection to Zonulin-mediated intestinal hyperpermeability.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Candida and Fungal Overgrowth",
+        "type": "architectural",
+        "explanation": "Zonulin-mediated intestinal hyperpermeability creates the structural access pathway Candida exploits for systemic dissemination (Candida hyphal form penetrates compromised mucosal surfaces), while the same dysbiotic ecology driving Zonulin elevation simultaneously creates the permissive environment for Candida overgrowth.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Parasitic Load",
+        "type": "architectural",
+        "explanation": "Parasitic organisms (especially Giardia) directly trigger Zonulin release and intestinal hyperpermeability as part of their pathogenic mechanism, while Zonulin-mediated mucosal immune compromise removes the first-line sIgA defense against parasitic colonization — making both bidirectionally connected components of the mucosal barrier dysfunction system.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "type": "architectural",
+        "explanation": "Gram-negative dysbiotic bacteria directly trigger Zonulin release through LPS-mediated TJ disruption and histamine-driven permeability, while Zonulin-mediated mucosal immune suppression creates the permissive ecology for dysbiotic bacterial overgrowth — both are structural components of the LPS-permeability-immune dysfunction system.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Commensal Flora Balance",
+        "type": "architectural",
+        "explanation": "Commensal bacteria produce SCFA/butyrate that directly upregulate tight junction protein synthesis (claudin-1, occludin), maintaining the barrier integrity that Zonulin modulates; commensal depletion removes butyrate-mediated TJ maintenance, allowing Zonulin-driven permeability to increase — commensal flora and Zonulin are co-components of mucosal barrier maintenance.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Calprotectin and Lactoferrin",
+        "type": "correlational",
+        "explanation": "Both Zonulin and calprotectin/lactoferrin are co-elevated in the Inflammatory Dysbiosis pattern (Module 6: high gram-negative bacteria + elevated calprotectin + elevated zonulin + low sIgA), reflecting parallel but mechanistically distinct GI immune responses to the same dysbiotic ecology — Zonulin measuring paracellular permeability and calprotectin measuring acute neutrophilic inflammation.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Beta-glucuronidase",
+        "type": "architectural",
+        "explanation": "Both Zonulin and beta-glucuronidase are explicitly co-listed as elevated markers in the Inflammatory Dysbiosis pattern (Module 6), driven by the same dysbiotic bacterial overgrowth — dysbiotic organisms simultaneously trigger Zonulin-mediated TJ disruption and produce beta-glucuronidase as parallel consequences of the same gut ecosystem failure.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Anti-gliadin IgA",
+        "type": "architectural",
+        "explanation": "Both Zonulin and Anti-gliadin IgA are co-markers of the mucosal immune response to gliadin: alpha-gliadin directly activates Zonulin signaling irrespective of autoimmune status while Zonulin-mediated permeability allows gliadin antigen access that drives AGA-IgA production — both are components of the gluten-gut-immune response system.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Zonulin",
+        "to": "Secretory IgA — GI tract",
+        "type": "architectural",
+        "explanation": "Zonulin measures physical barrier integrity while GI-tract sIgA measures the immune layer; both are co-components of mucosal defense linked through the same dysbiosis-permeability-immune feedback loop — low sIgA permits pathogen colonization triggering Zonulin, while Zonulin-mediated permeability creates the antigen burden that depletes sIgA.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "DAO (Diamine Oxidase)",
+        "type": "architectural",
+        "explanation": "Histamine and DAO are the two definitional components of the mucosal histamine regulatory system — histamine is the substrate requiring enzymatic degradation and DAO is the enzyme responsible for its clearance; the Histamine:DAO ratio captures their functional balance, making them architectural partners in the same enzymatic regulatory pair.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Systemic Oxidative Stress Cascade",
+        "type": "causal",
+        "explanation": "Elevated histamine drives systemic oxidative stress through H1/H2 receptor-mediated inflammatory cascade activation generating pro-inflammatory cytokines and neutrophil oxidative burst, and co-release of TNF-alpha during mast cell degranulation — both generating ROS that contribute to the systemic oxidative stress cascade measured by 8-OHdG.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Hepatic Detoxification Impairment",
+        "type": "causal",
+        "explanation": "Elevated histamine amplifies hepatic burden through histamine-driven vascular permeability increasing intestinal antigen translocation to the liver (antigen penetration → liver congestion per Module 1 cascade), while elevated histamine constitutes a biogenic amine load requiring hepatic HNMT processing that contributes to overall Phase I/II clearance demand.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Histamine-DAO Regulatory System",
+        "type": "architectural",
+        "explanation": "Histamine (MBA) is the production/accumulation component of the Histamine-DAO Regulatory System variable — the individual marker is a direct measurement of the system variable's primary component, making this an intrinsic architectural membership between the measurement and the system it quantifies.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Secretory IgA — SHP",
+        "type": "architectural",
+        "explanation": "Both elevated histamine (MBA) and depleted sIgA (SHP) are simultaneous co-consequences of chronic cortisol elevation: cortisol activates gut mast cells to release histamine (MBA elevation) while simultaneously suppressing GALT plasma cell sIgA production (SHP depletion) — both are co-outputs of the same cortisol effector pathway on the gut immune system.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "HPA Axis Dysregulation Pattern",
+        "type": "architectural",
+        "explanation": "Histamine is both a consequence of HPA cortisol activation (cortisol → mast cell degranulation → histamine) and a contributor to HPA activation (histamine-driven gut inflammation → cytokines → HPA stimulation); this bidirectional relationship makes elevated histamine and HPA dysregulation co-components of the same stress-gut-immune axis.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Histamine — MBA",
+        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "type": "architectural",
+        "explanation": "Elevated histamine drives steroidogenesis disruption through two pathways: the histamine-estrogen positive feedback loop (histamine stimulates ovarian estradiol production disrupting the sex hormone cascade), and co-released TNF-alpha during mast cell degranulation (a direct cytokine signal driving zona reticularis DHEA downregulation per FDN's updated steroidogenesis disruption mechanism).",
+        "evidence_count": 2
       }
     ],
     "pending": [
@@ -1679,186 +1924,6 @@
       {
         "from": "8-OHdG",
         "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Histamine — MBA",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "DAO (Diamine Oxidase)",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Systemic Oxidative Stress Cascade",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Hepatic Detoxification Impairment",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Histamine-DAO Regulatory System",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Secretory IgA — SHP",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "HPA Axis Dysregulation Pattern",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Cortisol — Diurnal Pattern",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "DHEA-S",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Cortisol-to-DHEA Ratio",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Estradiol",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Progesterone",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Testosterone",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Melatonin",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Reactive Food Burden — MRT",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "H. pylori",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Parasitic Load",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Beta-glucuronidase",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Zonulin",
-        "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine — MBA",
-        "to": "DAO (Diamine Oxidase)",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine — MBA",
-        "to": "Systemic Oxidative Stress Cascade",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine — MBA",
-        "to": "Hepatic Detoxification Impairment",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine — MBA",
-        "to": "Histamine-DAO Regulatory System",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine — MBA",
-        "to": "Secretory IgA — SHP",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine — MBA",
-        "to": "HPA Axis Dysregulation Pattern",
-        "evidence_count": 0
-      },
-      {
-        "from": "Histamine — MBA",
-        "to": "Pregnenolone Steal and Steroidogenesis Disruption",
         "evidence_count": 0
       },
       {
@@ -3862,6 +3927,11 @@
         "from": "Indican",
         "to": "Occult Blood",
         "reason": "Evidence for a direct causal link between dysbiosis (Indican) and mucosal bleeding (Occult Blood) does not reach Relevant confidence (60+); elevated Indican indicates severe dysbiosis but does not specifically predict structural GI lesions causing mucosal bleeding; occult blood reflects distinct structural pathology beyond general dysbiotic mucosal irritation."
+      },
+      {
+        "from": "Zonulin",
+        "to": "Occult Blood",
+        "reason": "No structural connection identified between Zonulin-mediated paracellular permeability and structural mucosal bleeding; they operate through different mechanisms, FDN case studies show both markers can dissociate (normal occult blood with elevated Zonulin markers), and FDN defines Occult Blood as a medical referral trigger for structural lesions rather than a modifiable metabolic marker."
       }
     ]
   },
@@ -4008,6 +4078,52 @@
         "8-OHdG → Pregnenolone Steal and Steroidogenesis Disruption"
       ],
       "output_file": "session-outputs/2026-03-24-connection-validation-2.md"
+    },
+    {
+      "date": "2026-03-24T16:00:00Z",
+      "phase_executed": "connection_validation",
+      "variables_researched": [],
+      "connections_validated": [
+        "Zonulin → Histamine — MBA",
+        "Zonulin → DAO (Diamine Oxidase)",
+        "Zonulin → Systemic Oxidative Stress Cascade",
+        "Zonulin → Hepatic Detoxification Impairment",
+        "Zonulin → Histamine-DAO Regulatory System",
+        "Zonulin → Secretory IgA — SHP",
+        "Zonulin → HPA Axis Dysregulation Pattern",
+        "Zonulin → Pregnenolone Steal and Steroidogenesis Disruption",
+        "Zonulin → Cortisol — Diurnal Pattern",
+        "Zonulin → DHEA-S",
+        "Zonulin → Cortisol-to-DHEA Ratio",
+        "Zonulin → Estradiol",
+        "Zonulin → Progesterone",
+        "Zonulin → Testosterone",
+        "Zonulin → Melatonin",
+        "Zonulin → Dysbiosis-Intestinal Permeability Feedback Loop",
+        "Zonulin → Mucosal Immune Tolerance and sIgA Function",
+        "Zonulin → Gut-Brain-HPA Bidirectional Axis",
+        "Zonulin → Reactive Food Burden — MRT",
+        "Zonulin → H. pylori",
+        "Zonulin → Candida and Fungal Overgrowth",
+        "Zonulin → Parasitic Load",
+        "Zonulin → Dysbiotic and Opportunistic Bacteria",
+        "Zonulin → Commensal Flora Balance",
+        "Zonulin → Calprotectin and Lactoferrin",
+        "Zonulin → Beta-glucuronidase",
+        "Zonulin → Anti-gliadin IgA",
+        "Zonulin → Secretory IgA — GI tract",
+        "Histamine — MBA → DAO (Diamine Oxidase)",
+        "Histamine — MBA → Systemic Oxidative Stress Cascade",
+        "Histamine — MBA → Hepatic Detoxification Impairment",
+        "Histamine — MBA → Histamine-DAO Regulatory System",
+        "Histamine — MBA → Secretory IgA — SHP",
+        "Histamine — MBA → HPA Axis Dysregulation Pattern",
+        "Histamine — MBA → Pregnenolone Steal and Steroidogenesis Disruption"
+      ],
+      "connections_discarded": [
+        "Zonulin → Occult Blood"
+      ],
+      "output_file": "session-outputs/2026-03-24-connection-validation-3.md"
     }
   ]
 }
