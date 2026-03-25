@@ -3,7 +3,7 @@
   "phase": "connection_validation",
   "cycle_count": 0,
   "source_content_map_built": true,
-  "last_updated": "2026-03-24T21:00:00Z",
+  "last_updated": "2026-03-24T22:00:00Z",
   "user_lens_profile": {
     "approved_perspectives": [
       "first_principles_systems_thinking"
@@ -3596,189 +3596,233 @@
         "type": "architectural",
         "explanation": "Progesterone and testosterone are co-outputs of the adrenal/gonadal steroidogenesis cascade: both require adequate DHEA substrate and HPA functional capacity; pituitary LH suppression from HPA catabolic dominance reduces both progesterone (via corpus luteum) and testosterone (via gonadal production) simultaneously. Module 3 steroidogenesis pathway shows both P4 and T as downstream products of the same precursor pool.",
         "evidence_count": 2
-      }
-    ],
-    "pending": [
+      },
       {
         "from": "Progesterone",
         "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Gut dysbiosis sustains HPA activation via LPS/cytokine signaling, suppressing GnRH/LH pulsatility and corpus luteum progesterone output; both are nodes in the HPA-gut-hormone Metabolic Chaos cascade.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
         "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Cortisol dominance from HPA dysfunction simultaneously suppresses LH/progesterone via pituitary and GALT sIgA via glucocorticoid receptor signaling; both deficiencies are co-manifestations of the same cortisol-dominant HPA state.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
         "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Progesterone deficiency results from HPA cortisol dominance suppressing LH/GnRH pulsatility; the Gut-Brain-HPA Axis is the structural mechanism through which gut dysbiosis activates HPA and drives progesterone deficiency — progesterone is a downstream hormonal output node of this axis.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
-        "to": "Reactive Food Burden â€” MRT",
-        "evidence_count": 0
+        "to": "Reactive Food Burden — MRT",
+        "type": "architectural",
+        "explanation": "Reactive food burden drives ongoing systemic mediator release as a chronic physiological stressor, activating HPA and suppressing LH/progesterone output; both are components of the inflammation-HPA-hormonal Metabolic Chaos cascade.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
         "to": "H. pylori",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "H. pylori sustains HPA activation through cytokine-driven CRH/ACTH signaling, suppressing GnRH/LH pulsatility and progesterone; FDN explicitly identifies GI pathogens as primary contributors to adrenal (HPA) dysfunction.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Cortisol dominance suppresses LH/progesterone while impairing immune clearance of Candida; Candida constitutes a chronic physiological stressor sustaining HPA activation and cortisol-dominant progesterone suppression.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
         "to": "Parasitic Load",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Parasitic load generates pro-inflammatory byproducts sustaining HPA activation and cortisol-dominant LH/progesterone suppression; cortisol-mediated immune suppression simultaneously permits parasitic persistence.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
         "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Dysbiotic bacteria produce LPS and histamine (Morganella, Klebsiella) driving HPA activation and cortisol-dominant LH/progesterone suppression through parallel cytokine and histamine pathways.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Progesterone",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Commensal depletion drives dysbiosis activating HPA and cortisol-dominant progesterone suppression; cortisol-mediated sIgA depletion further displaces commensals — both are co-components of the gut-HPA-hormone cascade.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Beta-glucuronidase deconjugates bile-excreted estrogens, recycling estradiol into circulation and worsening the Pg:E2 ratio; elevated B-GUS directly compounds progesterone insufficiency by elevating the competing estradiol concentration.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
         "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Cortisol dominance (suppressing LH/progesterone) also suppresses GALT sIgA, reducing AGA-IgA production capacity and producing false-negative AGA-IgA in clients with HPA-driven progesterone deficiency.",
+        "evidence_count": 2
       },
       {
         "from": "Progesterone",
-        "to": "Secretory IgA â€” GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Progesterone",
-        "to": "Occult Blood",
-        "evidence_count": 0
+        "to": "Secretory IgA — GI tract",
+        "type": "causal",
+        "explanation": "HPA cortisol dominance (suppressing LH and progesterone) directly suppresses GALT plasma cell activity via glucocorticoid receptors, reducing GI sIgA; low progesterone and low GI sIgA co-occur in both case study clients.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Melatonin",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Elevated noon melatonin signals gut dysbiosis driving HPA activation and cortisol-mediated HPG testosterone suppression; cortisol also suppresses pineal melatonin while gut EC cell melatonin rises from dysbiosis — both reflect the same HPA-gut dysregulation.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Gut dysbiosis drives HPA activation via LPS/cytokines, producing cortisol dominance that suppresses GnRH/LH and gonadal testosterone; cortisol-driven abdominal adiposity upregulates aromatase, further compounding testosterone reduction.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Cortisol dominance from HPA dysfunction simultaneously suppresses HPG testosterone via LH and GALT sIgA via glucocorticoid receptor signaling; both testosterone deficiency and sIgA depletion are co-manifestations of the same cortisol-dominant HPA state.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Testosterone deficiency is a downstream hormonal output of HPA cortisol dominance via HPG suppression; the Gut-Brain-HPA Axis is the structural mechanism through which gut dysbiosis drives HPA activation and testosterone suppression.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
-        "to": "Reactive Food Burden â€” MRT",
-        "evidence_count": 0
+        "to": "Reactive Food Burden — MRT",
+        "type": "architectural",
+        "explanation": "Reactive food burden drives ongoing systemic mediator release as a chronic stressor activating HPA, suppressing LH, and reducing testosterone; food-driven mucosal damage additionally drives pathogen colonization compounding HPA burden.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "H. pylori",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "H. pylori drives HPA activation via cytokine-mediated CRH stimulation, suppressing LH/testosterone through cortisol dominance; cortisol elevation additionally upregulates adipose aromatase, converting testosterone to estradiol via the male feminization pathway.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Candida overgrowth constitutes a chronic physiological stressor sustaining HPA activation and cortisol-driven HPG suppression of testosterone; cortisol-mediated immune suppression simultaneously impairs Candida clearance, perpetuating the cycle.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Parasitic Load",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Parasitic load sustains HPA activation through pro-inflammatory exudates, driving cortisol-dominant testosterone suppression; cortisol-driven immune suppression concurrently reduces parasitic clearance, perpetuating the stressor-testosterone cycle.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Dysbiotic bacteria produce LPS and histamine (Morganella, Klebsiella) that drive HPA activation and cortisol-mediated HPG testosterone suppression through two parallel pathways: LPS-driven cytokines and histamine inflammatory burden.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Testosterone",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Commensal depletion drives dysbiosis conditions activating HPA and suppressing testosterone through cortisol dominance; cortisol-mediated sIgA depletion creates permissive conditions for further commensal displacement.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Beta-glucuronidase deconjugates bile-excreted estrogens, elevating circulating estradiol and compressing the T:E2 ratio; upregulated aromatase from elevated estradiol further converts testosterone to estradiol — both mechanisms reduce functional testosterone.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
         "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Cortisol dominance (suppressing HPG testosterone) also suppresses GALT sIgA and AGA-IgA production capacity; both testosterone deficiency and false-negative AGA-IgA are co-manifestations of HPA-driven hormonal and immune suppression.",
+        "evidence_count": 2
       },
       {
         "from": "Testosterone",
-        "to": "Secretory IgA â€” GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Testosterone",
-        "to": "Occult Blood",
-        "evidence_count": 0
+        "to": "Secretory IgA — GI tract",
+        "type": "causal",
+        "explanation": "HPA cortisol dominance (suppressing LH and testosterone) directly suppresses GALT plasma cell activity via glucocorticoid receptors, reducing GI sIgA; testosterone abnormalities and low GI sIgA co-occur in both case study clients.",
+        "evidence_count": 2
       },
       {
         "from": "Melatonin",
         "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Gut dysbiosis drives EC cell melatonin upregulation via dysbiotic metabolites, producing elevated noon melatonin as a signal of the Feedback Loop state; melatonin's gut barrier-supportive and immune-modulating functions mean its dysregulation amplifies gut permeability by reducing mucosal protection.",
+        "evidence_count": 2
       },
       {
         "from": "Melatonin",
         "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Elevated noon melatonin and low sIgA form the explicitly documented FDN gut-immune disruption signature; melatonin modulates gut immunity and barrier function through mucosal immune cell interaction, directly impacting sIgA production and mucosal immune tolerance.",
+        "evidence_count": 2
       },
       {
         "from": "Melatonin",
         "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Melatonin is bidirectionally regulated by the HPA axis (cortisol suppresses pineal melatonin) while elevated noon melatonin signals gut dysbiosis driving HPA activation; melatonin is a measurable node in both limbs of the Gut-Brain-HPA Bidirectional Axis.",
+        "evidence_count": 2
       },
       {
         "from": "Melatonin",
-        "to": "Reactive Food Burden â€” MRT",
-        "evidence_count": 0
+        "to": "Reactive Food Burden — MRT",
+        "type": "architectural",
+        "explanation": "Reactive food burden drives mucosal inflammation contributing to dysbiosis conditions that upregulate EC cell melatonin; melatonin deficiency (nocturnal, from cortisol suppression) increases gut vulnerability to food antigen-driven immune activation.",
+        "evidence_count": 2
       },
       {
         "from": "Melatonin",
         "to": "H. pylori",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "H. pylori contributes to gut pathogen burden driving EC cell melatonin upregulation; H. pylori-generated oxidative stress (neutrophil burst producing 8-OHdG) intersects with melatonin antioxidant defense at the gastric mucosal level.",
+        "evidence_count": 2
       },
       {
         "from": "Melatonin",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Candida overgrowth contributes to gut dysbiosis upregulating EC cell melatonin; acetaldehyde and systemic toxicity from Candida drive hypometabolism and blood sugar dysregulation — two additional upstream drivers of elevated noon melatonin per FDN.",
+        "evidence_count": 2
       },
       {
         "from": "Melatonin",
         "to": "Parasitic Load",
-        "evidence_count": 0
-      },
+        "type": "architectural",
+        "explanation": "Parasitic load (especially Giardia driving Proteobacteria/LPS increase) contributes to the pro-inflammatory gut dysbiosis state upregulating EC cell melatonin; parasitic toxic exudates drive the physiological stress conditions associated with elevated noon melatonin.",
+        "evidence_count": 2
+      }
+    ],
+    "pending": [
       {
         "from": "Melatonin",
         "to": "Dysbiotic and Opportunistic Bacteria",
@@ -4450,6 +4494,26 @@
         "from": "Progesterone",
         "to": "Melatonin",
         "reason": "Progesterone deficiency produces sleep disruption through GABA-A receptor pathway (allopregnanolone binding) rather than through melatonin dysregulation. FDN source materials do not document a direct structural connection between progesterone levels and melatonin production or EC cell activity."
+      },
+      {
+        "from": "Progesterone",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Calprotectin measures acute neutrophilic mucosal inflammation independent from the chronic HPA-driven progesterone deficiency cascade; both case studies show normal calprotectin coexisting with progesterone deficiency."
+      },
+      {
+        "from": "Progesterone",
+        "to": "Occult Blood",
+        "reason": "Occult blood measures structural GI mucosal bleeding from structural lesions mechanistically independent from the HPA-driven hormonal cascade producing progesterone insufficiency."
+      },
+      {
+        "from": "Testosterone",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Calprotectin measures acute neutrophilic mucosal inflammation independent from the chronic HPA-driven HPG suppression causing testosterone deficiency; both case studies show normal calprotectin with testosterone abnormalities."
+      },
+      {
+        "from": "Testosterone",
+        "to": "Occult Blood",
+        "reason": "Occult blood measures structural GI mucosal bleeding from structural lesions independent from the HPA-HPG hormonal cascade producing testosterone deficiency."
       }
     ]
   },
@@ -5033,6 +5097,52 @@
         "Progesterone -> Melatonin"
       ],
       "output_file": "session-outputs/2026-03-24-connection-validation-11.md"
+    },
+    {
+      "date": "2026-03-24T22:00:00Z",
+      "phase_executed": "connection_validation",
+      "variables_researched": [],
+      "connections_validated": [
+        "Progesterone -> Dysbiosis-Intestinal Permeability Feedback Loop",
+        "Progesterone -> Mucosal Immune Tolerance and sIgA Function",
+        "Progesterone -> Gut-Brain-HPA Bidirectional Axis",
+        "Progesterone -> Reactive Food Burden — MRT",
+        "Progesterone -> H. pylori",
+        "Progesterone -> Candida and Fungal Overgrowth",
+        "Progesterone -> Parasitic Load",
+        "Progesterone -> Dysbiotic and Opportunistic Bacteria",
+        "Progesterone -> Commensal Flora Balance",
+        "Progesterone -> Beta-glucuronidase",
+        "Progesterone -> Anti-gliadin IgA",
+        "Progesterone -> Secretory IgA — GI tract",
+        "Testosterone -> Melatonin",
+        "Testosterone -> Dysbiosis-Intestinal Permeability Feedback Loop",
+        "Testosterone -> Mucosal Immune Tolerance and sIgA Function",
+        "Testosterone -> Gut-Brain-HPA Bidirectional Axis",
+        "Testosterone -> Reactive Food Burden — MRT",
+        "Testosterone -> H. pylori",
+        "Testosterone -> Candida and Fungal Overgrowth",
+        "Testosterone -> Parasitic Load",
+        "Testosterone -> Dysbiotic and Opportunistic Bacteria",
+        "Testosterone -> Commensal Flora Balance",
+        "Testosterone -> Beta-glucuronidase",
+        "Testosterone -> Anti-gliadin IgA",
+        "Testosterone -> Secretory IgA — GI tract",
+        "Melatonin -> Dysbiosis-Intestinal Permeability Feedback Loop",
+        "Melatonin -> Mucosal Immune Tolerance and sIgA Function",
+        "Melatonin -> Gut-Brain-HPA Bidirectional Axis",
+        "Melatonin -> Reactive Food Burden — MRT",
+        "Melatonin -> H. pylori",
+        "Melatonin -> Candida and Fungal Overgrowth",
+        "Melatonin -> Parasitic Load"
+      ],
+      "connections_discarded": [
+        "Progesterone -> Calprotectin and Lactoferrin",
+        "Progesterone -> Occult Blood",
+        "Testosterone -> Calprotectin and Lactoferrin",
+        "Testosterone -> Occult Blood"
+      ],
+      "output_file": "session-outputs/2026-03-24-connection-validation-12.md"
     }
   ]
 }
