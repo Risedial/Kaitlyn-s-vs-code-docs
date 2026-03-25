@@ -3,7 +3,7 @@
   "phase": "connection_validation",
   "cycle_count": 0,
   "source_content_map_built": true,
-  "last_updated": "2026-03-24T22:00:00Z",
+  "last_updated": "2026-03-25T04:00:00Z",
   "user_lens_profile": {
     "approved_perspectives": [
       "first_principles_systems_thinking"
@@ -2742,359 +2742,464 @@
         "type": "causal",
         "explanation": "Chronic mucosal mast cell activation from histamine excess suppresses IgA-producing B cell function by diverting mucosal immune resources toward IgE-mediated responses; DAO deficiency that allows sustained luminal histamine therefore depresses GI tract secretory IgA output.",
         "evidence_count": 2
-      }
-    ],
-    "pending": [
+      },
       {
         "from": "Secretory IgA — SHP",
         "to": "HPA Axis Dysregulation Pattern",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP and HPA Axis Dysregulation Pattern are reciprocal nodes in the stress-immune axis: cortisol dominance suppresses sIgA via GALT plasma cell downregulation (M2+1PP Page 16), while low sIgA enables dysbiosis that feeds inflammatory cytokines back to the HPA axis sustaining cortisol elevation. Module 1 Slide 38 positions them as adjacent Metabolic Chaos cascade nodes.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Pregnenolone Steal and Steroidogenesis Disruption",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP depletion and steroidogenesis disruption are co-consequences of the same HPA catabolic state: M2+1PP Page 16 lists both decreased sIgA AND decreased sex hormones/DHEA as parallel effects of elevated cortisol:DHEA ratio, from the same upstream adrenal axis shift.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Cortisol — Diurnal Pattern",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Cortisol diurnal pattern determines sIgA SHP trajectory: M2+1PP Page 65 lists sIgA suppression as a cortisol-phase downstream consequence; Ashley case study shows exhaustive-phase cortisol (1.9 ng/mL total) correlated with near-complete sIgA collapse (16 mcg/mL), documenting the direct cortisol-phase-to-sIgA relationship.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "DHEA-S",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP and DHEA-S are parallel downstream outputs of the cortisol:DHEA ratio: M2+1PP Page 16 lists both decreased sIgA AND decreased DHEA as co-consequences of HPA catabolic dominance; Module 1 Slide 38 confirms elevated cortisol:DHEA simultaneously predicts sIgA depletion and DHEA suppression.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Cortisol-to-DHEA Ratio",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "The cortisol:DHEA ratio is the primary determinant of sIgA SHP trajectory: Module 3 Audio identifies it as the 10th Fundamental Homeostatic Control and primary predictor of sIgA depletion; Module 1 Slide 38 traces the Metabolic Chaos cascade starting from elevated ratio directly to sIgA collapse and the full downstream sequence.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Estradiol",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Both sIgA SHP and estradiol dysregulation are co-consequences of HPA cortisol dominance: M2+1PP Page 16 lists decreased sIgA and decreased sex hormones (including estradiol) as parallel effects of elevated cortisol:DHEA; dysbiosis enabled by low sIgA also drives beta-glucuronidase elevation that recycles estrogens, amplifying E2 dysregulation.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Progesterone",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP and progesterone insufficiency are co-consequences of elevated cortisol:DHEA ratio: M2+1PP Page 16 lists both decreased sIgA and decreased sex hormones (including progesterone) as parallel downstream effects; Module 1 Slide 38 positions them as co-outputs of the same HPA catabolic state.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Testosterone",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP and testosterone suppression co-occur under elevated cortisol:DHEA dominance: M2+1PP Page 16 lists decreased sIgA and decreased sex hormones (including testosterone) as parallel effects of the same adrenal axis shift; Module 3 slides confirm DHEA substrate depletion reduces androgen precursor for testosterone.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Melatonin",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP and melatonin are co-regulated by cortisol phase: M2+1PP Page 65 lists both decreased sIgA and decreased melatonin as exhaustive-phase consequences; Module 2 Audio 3 explicitly associates low sIgA with chronic stress and elevated noon melatonin with gut dysfunction, both co-characterizing the same chronic stress state.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Low sIgA SHP removes the primary luminal antibody defense containing dysbiotic organisms, directly enabling the dysbiosis-permeability feedback loop: Module 1 Slide 38 traces low sIgA to low mucosal defense to more bad bacteria to dysbiosis to SIBO; Module 5 connects MBA sIgA depletion to the self-amplifying hyperpermeability cycle.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP and Mucosal Immune Tolerance represent complementary measurements of the same mucosal sIgA system: sIgA SHP captures HPA-driven suppression (Module 2/3); Module 6 transcript Slide 117 confirms GI sIgA shares identical upstream drivers with sIgA SHP (chronic stress, HPA cortisol), producing co-depletion across both compartments.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP is the mucosal immune link node within the Gut-Brain-HPA Bidirectional Axis: Module 6 Slides Page 6 cascade explicitly positions sIgA suppression as the connection between HPA dysfunction (SHP) and gut dysbiosis; Module 1 Slide 38 confirms low sIgA bridges cortisol:DHEA ratio to the full gut-HPA downstream cascade.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Reactive Food Burden — MRT",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Low sIgA SHP initiates the antigen-permeability pathway producing reactive food sensitization: Module 1 Slide 38 traces low sIgA through dysbiosis to antigen penetration; Module 6 cascade connects HPA-driven sIgA suppression to hyperpermeability enabling food antigen translocation and MRT reactivity development.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "H. pylori",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Low sIgA SHP indicates the immune-suppressed GI ecology enabling H. pylori colonization: Module 1 Slide 38 traces low sIgA to more bad bacteria; Module 6 transcript confirms H. pylori virulence factors suppress immune recognition, creating co-existing conditions where sIgA SHP depletion and H. pylori persistence co-occur and mutually sustain each other.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Low sIgA SHP removes mucosal antibody defense enabling Candida overgrowth: Module 1 Slide 38 traces low sIgA to dysbiosis including Candida; Module 6 Slides Page 60 states Candida is associated with IgA damage, confirming bidirectional sIgA-Candida causality within the same mucosal immune ecology.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Parasitic Load",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Low sIgA SHP indicates systemic immune suppression enabling parasitic colonization: Module 1 Slide 38 traces low sIgA to more bad bacteria and dysbiosis; Module 6 Audio 2 confirms pathogenic load contributes to metabolic chaos when immune function is compromised and mucosal barrier is weakened.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Low sIgA SHP directly enables dysbiotic and opportunistic bacterial expansion: Module 1 Slide 38 explicitly traces low sIgA to more bad bacteria than good then dysbiosis; Module 6 Slides Page 21 states bad bacteria deplete sIgA while good bacteria increase it, confirming the bidirectional causal sIgA-dysbiosis relationship.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Secretory IgA — SHP",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP and commensal flora balance are bidirectional co-regulators: Module 6 Slides Page 21 states good bacteria produce SCFAs that increase sIgA; Module 1 Slide 38 confirms low sIgA allows dysbiotic overgrowth displacing commensals, with each variable governing the other's trajectory.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Low sIgA SHP enables dysbiotic overgrowth of the B-GUS-producing organisms: Module 1 Slide 38 traces low sIgA to dysbiosis; Module 6 transcript Slide 119 identifies B. fragilis, E. coli, and Staph as primary B-GUS producers, the exact dysbiotic organisms whose overgrowth is directly enabled by the mucosal immune collapse signaled by sIgA SHP depletion.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP and AGA-IgA are co-outputs of the same mucosal sIgA production system: sIgA SHP depletion reflects global cortisol-driven mucosal IgA suppression (Modules 2/3); Module 6 transcript Slide 118 explicitly states insufficient sIgA suppresses AGA-IgA immune response to gliadin, making both markers co-dependent on the same sIgA production capacity.",
+        "evidence_count": 2
       },
       {
         "from": "Secretory IgA — SHP",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Secretory IgA — SHP",
-        "to": "Occult Blood",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "sIgA SHP (salivary) and sIgA GI tract (fecal) measure the same mucosal sIgA system in different compartments: both are suppressed by the same cortisol-driven mechanism (Modules 2/3); Module 6 transcript Slide 117 confirms GI sIgA shares identical upstream drivers with sIgA SHP, chronic stress and HPA cortisol.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Pregnenolone Steal and Steroidogenesis Disruption",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA axis dysregulation (chronic ACTH elevation and inflammatory cytokines) directly causes steroidogenesis disruption via regulatory downregulation of zona reticularis DHEA synthesis: M2+1PP Page 36 states zona reticularis downregulates DHEA production when ACTH is present under inflammatory stress; Module 3 Audio confirms cortisol:DHEA ratio shift as the clinical expression of this ACTH-driven steroidogenesis disruption.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Cortisol — Diurnal Pattern",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "HPA Axis Dysregulation Pattern and Cortisol Diurnal Pattern are definitionally interdependent: the four-point diurnal cortisol profile IS the measurement data used to classify HPA phase (Exhaustive <4.6, Compensatory 4.6-7.1, Acute >7.1 ng/mL sum per M2+1PP Pages 12-14); Module 2 Audio 3 confirms the five-stage HPA cascade model is staged by cortisol sum thresholds derived from the diurnal measurement.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "DHEA-S",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA axis dysregulation directly suppresses DHEA-S via ACTH/cytokine-driven zona reticularis downregulation: M2+1PP Page 16 lists elevated cortisol:DHEA as causally producing decreased DHEA; Module 3 slides Pages 68-70 show DHEA production in zona reticularis downregulated by chronic HPA ACTH activation, reducing the entire sex hormone precursor pool.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Cortisol-to-DHEA Ratio",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "HPA Axis Dysregulation Pattern and Cortisol:DHEA Ratio are two descriptions of the same adrenal axis balance at different resolutions: the ratio IS the quantitative clinical marker of HPA phase; Module 1 identifies it as the catabolic-vs-anabolic state indicator; Module 3 Audio calls it the 10th Fundamental Homeostatic Control measuring the same HPA system.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Estradiol",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA dysregulation drives bidirectional estradiol changes through phase-dependent mechanisms: acute/compensatory phase cortisol-driven adiposity increases peripheral aromatase elevating E2 (Module 3 Audio 2); exhaustive phase pituitary LH/FSH suppression reduces ovarian E2 production (M2+1PP Page 65 lists decreased sex hormones as cortisol-phase consequence).",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Progesterone",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA dysregulation causally suppresses progesterone through two confirmed mechanisms: Module 3 Audio 1 states cortisol competes with progesterone at the receptor level and suppresses LH surge causing luteal phase deficit; M2+1PP Page 65 lists decreased sex hormones (including progesterone) as downstream cortisol-phase consequence.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Testosterone",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA dysregulation suppresses testosterone through three converging mechanisms: Module 3 Audio 1 documents cortisol suppressing pituitary GnRH/LH output (documented in 18-year-old male case with testosterone 6 pg/mL from exhaustive cortisol); M2+1PP Page 65 lists sex hormone suppression as cortisol-phase consequence; DHEA depletion reduces androgen precursor substrate.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Melatonin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Chronic HPA hyperactivation elevates evening cortisol, competitively suppressing pineal melatonin synthesis; simultaneously HPA-driven sIgA suppression disrupts gut enterochromaffin cell daytime melatonin release, producing bidirectional melatonin deficit that worsens sleep-immune dysregulation.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
-        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
+        "to": "Dysbiosis—Intestinal Permeability Feedback Loop",
+        "type": "causal",
+        "explanation": "HPA hyperactivation suppresses sIgA and induces parasympathetic withdrawal, reducing mucosal defenses and intestinal motility; this enables dysbiosis and increased permeability which then feeds LPS-driven neuroinflammation back into HPA elevation, sustaining the feedback loop.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Elevated cortisol directly suppresses secretory IgA at mucosal surfaces and shifts Th1/Th2 balance away from mucosal tolerance; this impairs oral tolerance mechanisms and mucosal surveillance, as documented in Module 6 cascade and Module 1 Slide 38.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
-        "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "to": "Gut-Brain—HPA Bidirectional Axis",
+        "type": "architectural",
+        "explanation": "HPA dysregulation constitutes the central HPA arm of the gut-brain-HPA axis; the axis is structurally defined by HPA activity modulating gut function and gut-derived signals (LPS, SCFA, serotonin) modulating HPA output in return, making HPA dysregulation both a driver and component of the axis.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Reactive Food Burden — MRT",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA-driven intestinal permeability and sIgA suppression expose mucosal immune tissue to dietary antigens, triggering delayed hypersensitivity reactions measurable on MRT; chronic HPA elevation sustains the inflammatory phenotype that amplifies and perpetuates food reactivity burden.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "H. pylori",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "HPA dysregulation suppresses gastric acid and mucosal sIgA, creating the permissive environment for H. pylori colonization; H. pylori sustains systemic inflammation and can elevate HPA activation through cytokine signaling, making each a structural enabler of the other.",
+        "evidence_count": 2
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
+        "type": "architectural",
+        "explanation": "HPA dysregulation drives gut dysbiosis through cortisol-mediated suppression of secretory IgA and digestive secretions; dysbiosis independently reactivates HPA through LPS/cytokine gut-brain signaling; both are mutually reinforcing components of the same feedback architecture.",
+        "evidence_count": 2
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Gut-Brain-HPA Bidirectional Axis",
+        "type": "architectural",
+        "explanation": "The HPA Axis Dysregulation Pattern is the adrenal output expression of the Gut-Brain-HPA Bidirectional Axis — the axis architecture is the structural system, and HPA dysregulation is both a driver of (through top-down stress) and a product of (through bottom-up LPS/cytokine signals) the bidirectional axis operating under chronic stress conditions.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA dysregulation elevates cortisol which directly suppresses sIgA production (primary mucosal immune defense); low sIgA removes the first-line defense allowing Candida overgrowth; cortisol-driven suppression of digestive secretions (HCl, bile) removes additional natural antifungal mechanisms.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Parasitic Load",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA dysregulation suppresses two independent antiparasitic defense mechanisms: (1) cortisol-mediated sIgA depletion removes mucosal immune exclusion enabling parasite persistence, and (2) sympathetic dominance suppresses digestive secretions (HCl, bile) that constitute the chemical barrier against parasite colonization.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA dysregulation drives cortisol dominance → sIgA suppression → dysbiotic ecology shift enabling opportunistic organism overgrowth; the canonical FDN cascade ‘elevated cortisol:DHEA ratio → low sIgA → dysbiosis’ (Module 1 Slide 38) explicitly maps HPA to dysbiotic bacterial ecology.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "HPA Axis Dysregulation Pattern",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA dysregulation → cortisol → sIgA suppression → reduced immune modulation supporting commensals; cortisol-driven digestive suppression alters the gut environment producing dysbiosis as defined by commensal quantitative and qualitative depletion.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA dysregulation drives dysbiosis through the cortisol-sIgA cascade; dysbiosis produces elevated beta-glucuronidase because this enzyme is produced primarily by dysbiotic organisms; the two-step causal chain is documented across Module 1/2 (HPA-dysbiosis connection) and Module 6 (dysbiosis-B-GUS connection).",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "HPA-driven cortisol elevation suppresses sIgA production; insufficient sIgA creates false-negative AGA-IgA results; both variables are co-components of the mucosal immune system that must be interpreted together — HPA status is an essential interpretation modifier for AGA-IgA findings.",
+        "evidence_count": 2
       },
       {
         "from": "HPA Axis Dysregulation Pattern",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "HPA Axis Dysregulation Pattern",
-        "to": "Occult Blood",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "HPA dysregulation → cortisol dominance → sIgA suppression is one of FDN’s most direct connections; the canonical cascade (Module 1 Slide 38) places sIgA immediately downstream of the cortisol:DHEA ratio, and the GI-MAP sIgA marker explicitly lists chronic stress as a direct cause of low values.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Cortisol — Diurnal Pattern",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Steroidogenesis disruption and the cortisol diurnal pattern are two expressions of the same adrenal dysregulation — the regulatory downregulation (ACTH/cytokine signaling) generates both the abnormal cortisol output that produces diurnal pattern anomalies and the DHEA suppression that the pattern confirms.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "DHEA-S",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption IS the mechanism that directly causes DHEA-S suppression — ACTH and inflammatory cytokines signal the zona reticularis to reduce DHEA synthesis when cortisol demand is high; DHEA-S suppression in cortisol-dominant clinical cases (Joan 0.17 ng/mL) is the direct measured expression of this disruption.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Cortisol-to-DHEA Ratio",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "The cortisol:DHEA ratio is the direct quantitative measure of what steroidogenesis disruption describes — it captures both the elevated cortisol and suppressed DHEA produced by the same regulatory dysregulation, and is identified as the 10th Fundamental Homeostatic Control because it synthesizes steroidogenesis disruption into a single diagnostic value.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Estradiol",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Steroidogenesis disruption propagates to estradiol through two divergent pathways: (1) upstream DHEA/androgen substrate depletion reduces precursor availability for estradiol synthesis, and (2) cortisol-driven adiposity activates aromatase, increasing peripheral estrogen conversion; both pathways originate from the same adrenal dysregulation.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Progesterone",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption → cortisol dominance → pituitary LH surge suppression → inadequate corpus luteum formation → progesterone insufficiency; this is the primary documented driver of progesterone deficiency in premenopausal women in FDN.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Testosterone",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption reduces testosterone through three converging mechanisms: (1) DHEA substrate depletion (testosterone’s direct precursor), (2) pituitary LH/FSH suppression reducing gonadal production, and (3) cortisol-driven adiposity activating aromatase to convert available androgens to estrogens.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Melatonin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption drives cortisol dominance which inversely suppresses nocturnal pineal melatonin via the documented cortisol-melatonin inverse relationship; cortisol-driven gut dysbiosis also elevates noon enterochromaffin melatonin, the primary FDN melatonin measurement signal.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption → cortisol dominance → sIgA suppression → dysbiosis → intestinal permeability feedback loop activation; the canonical FDN cascade (cortisol:DHEA ratio → low sIgA → dysbiosis) documents the causal chain from steroidogenesis disruption to the gut-permeability feedback architecture.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption → cortisol excess → direct suppression of sIgA production → failed mucosal immune tolerance; sIgA depletion is the immediate downstream consequence of cortisol dominance and the primary mechanism through which steroidogenesis disruption impairs gut immune defense.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Steroidogenesis disruption is the adrenal downstream output of HPA axis activation, itself a structural node within the Gut-Brain-HPA bidirectional axis; the ACTH signaling that drives steroidogenesis disruption is the same HPA output that constitutes one arm of the bidirectional axis.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Reactive Food Burden — MRT",
-        "evidence_count": 0
-      },
-      {
-        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
-        "to": "H. pylori",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption → cortisol → sIgA suppression → mucosal immune failure → increased food antigen translocation → expanded reactive food burden; the reactive food burden cycle explicitly requires mucosal immune collapse (sIgA suppression) to initiate, and cortisol-driven steroidogenesis disruption is the primary driver of sIgA suppression.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption → cortisol dominance → sIgA suppression → Candida overgrowth permissiveness; IgA damage is specifically listed as an association with Candida overgrowth in FDN, and cortisol-driven steroidogenesis disruption is the primary driver of chronic sIgA suppression.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Parasitic Load",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption → cortisol dominance → (1) sIgA suppression removing mucosal immune exclusion, and (2) sympathetic dominance suppressing digestive secretions that provide chemical parasite exclusion; both antiparasitic defense mechanisms are impaired by cortisol excess from steroidogenesis disruption.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption → cortisol dominance → sIgA suppression → dysbiosis → dysbiotic organism overgrowth; the canonical FDN cascade places sIgA depletion from cortisol:DHEA ratio elevation as the primary driver of dysbiosis including dysbiotic bacterial overgrowth.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption → cortisol dominance → sIgA suppression → commensal flora depletion; sIgA provides the immune modulation that maintains commensal ecology, and cortisol-driven sIgA suppression is the documented pathway from HPA/steroidogenesis dysfunction to commensal dysbiosis.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Steroidogenesis disruption and B-GUS form a bidirectional architectural relationship: disruption → dysbiosis → elevated B-GUS (produced by dysbiotic organisms), while elevated B-GUS deconjugates estrogens recycling them back into circulation, amplifying estrogen dominance and hepatic burden that worsens steroidogenesis disruption.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Steroidogenesis disruption → cortisol → sIgA suppression → false-negative AGA-IgA; cortisol-driven sIgA depletion confounds AGA-IgA interpretation, requiring steroidogenesis status to be assessed alongside AGA-IgA findings — both are co-components of the mucosal immune assessment system.",
+        "evidence_count": 2
       },
       {
         "from": "Pregnenolone Steal and Steroidogenesis Disruption",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
-        "to": "Occult Blood",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Steroidogenesis disruption → cortisol dominance → GI-MAP sIgA suppression; the canonical FDN cascade (cortisol:DHEA ratio → low sIgA) directly connects adrenal steroidogenesis disruption to GI-tract sIgA depletion, and GI-MAP sIgA explicitly identifies chronic stress as a direct cause.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "DHEA-S",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol diurnal patterning and DHEA-S are the two arms of the adrenal axis; the exhaustive pattern produces DHEA depletion through regulatory downregulation, while compensatory/acute patterns show intermediate stages; Joan’s near-total DHEA depletion (0.17 ng/mL) alongside elevated cortisol is the direct clinical expression of this causal relationship.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Cortisol-to-DHEA Ratio",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "The cortisol diurnal pattern provides the daily sum (numerator of the ratio) and DHEA provides the denominator; the ratio is directly computed from diurnal pattern output and is the primary interpretation lens for the diurnal pattern itself — they are inseparable architectural components of the same SHP assessment.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Estradiol",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol dysregulation drives estradiol through two documented pathways: (1) cortisol excess suppresses pituitary LH/FSH reducing ovarian estradiol production, and (2) cortisol-driven adiposity activates aromatase converting androgens to estrogens in peripheral tissue — both documented in FDN Module 3.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Progesterone",
-        "evidence_count": 0
-      },
+        "type": "causal",
+        "explanation": "Cortisol diurnal pattern dysregulation → HPA cortisol dominance → pituitary LH surge suppression → inadequate corpus luteum formation → progesterone insufficiency; identified as the primary driver of progesterone deficiency in premenopausal women in FDN, with clinical expression in Joan (56 pg/mL) and Ashley (9:1 Pg:E2 ratio).",
+        "evidence_count": 2
+      }
+    ],
+    "pending": [
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Testosterone",
@@ -4196,6 +4301,41 @@
         "from": "Histamine-DAO Regulatory System",
         "to": "Occult Blood",
         "reason": "Occult blood indicates structural mucosal pathology mechanistically distinct from histamine-mediated inflammation; mast cell degranulation does not typically produce mucosal damage sufficient to generate occult blood. Mirrors the Histamine MBA to Occult Blood discarded pattern. Insufficient independent evidence at Relevant confidence band."
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "sIgA SHP (cortisol-driven first-line immune suppression) and calprotectin/lactoferrin (acute neutrophilic inflammation) are mechanistically independent and clinically dissociated in FDN: both case study clients show depleted sIgA SHP with normal calprotectin, demonstrating chronic dysbiosis from sIgA depletion can operate without triggering the acute neutrophilic signal measured by calprotectin."
+      },
+      {
+        "from": "Secretory IgA — SHP",
+        "to": "Occult Blood",
+        "reason": "sIgA SHP depletion (chronic mucosal immune suppression) and occult blood (structural mucosal bleeding from lesions) are mechanistically independent with no direct pathway: both FDN case study clients show depleted sIgA SHP with zero/undetectable occult blood, demonstrating extensive mucosal immune dysfunction can coexist with normal structural mucosal integrity."
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "HPA dysregulation drives cortisol dominance which suppresses neutrophilic inflammation (the physiological basis for calprotectin); FDN case data shows normal calprotectin in patients with significant HPA dysfunction, indicating no positive structural connection; cortisol is anti-inflammatory and expected to reduce rather than increase calprotectin."
+      },
+      {
+        "from": "HPA Axis Dysregulation Pattern",
+        "to": "Occult Blood",
+        "reason": "Occult Blood is a structural GI bleeding marker requiring medical referral — not a metabolically modifiable marker linked to HPA physiology; no mechanistic pathway from HPA dysregulation to structural GI bleeding is documented in FDN source material; both FDN case patients with HPA dysfunction show normal occult blood."
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "H. pylori",
+        "reason": "No validated structural connection — H. pylori acquisition and persistence are primarily determined by exposure and specific mucosal defense mechanisms; steroidogenesis disruption does not have documented mechanistic influence on H. pylori specifically in FDN source material; fewer than 2 independent evidence lines at Relevant confidence."
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Steroidogenesis disruption drives cortisol dominance which suppresses neutrophilic inflammation; FDN case data shows normal calprotectin in patients with significant steroidogenesis disruption; cortisol is anti-inflammatory and expected to reduce rather than increase calprotectin signals."
+      },
+      {
+        "from": "Pregnenolone Steal and Steroidogenesis Disruption",
+        "to": "Occult Blood",
+        "reason": "No validated structural connection — steroidogenesis disruption does not have a documented mechanistic pathway to structural GI bleeding in FDN source material; occult blood is a safety gate marker reflecting pathological structural lesions, not a metabolically modifiable marker driven by steroidogenesis disruption."
       }
     ]
   },
@@ -4680,6 +4820,14 @@
         }
       ],
       "output_file": "session-outputs/2026-03-24-connection-validation-7.md"
+    },
+    {
+      "date": "2026-03-24",
+      "phase_executed": "connection_validation",
+      "variables_researched": [],
+      "connections_validated": 34,
+      "connections_discarded": 2,
+      "output_file": "session-outputs/2026-03-24-connection-validation-8.md"
     }
   ]
 }
