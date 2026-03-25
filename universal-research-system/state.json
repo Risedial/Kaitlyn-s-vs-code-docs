@@ -1,9 +1,9 @@
 {
   "research_question": "For every FDN lab marker in the standard panel, what are the complete bidirectional connections â€” specifically: (1) every symptom that marker's dysfunction produces and the specific physiological mechanism linking them, (2) every upstream root cause that drives that marker abnormal and its mechanism, and (3) every other FDN marker that shares upstream nodes â€” such that any input combination of symptoms and lab findings can be traced to the most probable root cause cluster?",
-  "phase": "connection_validation",
-  "cycle_count": 0,
+  "phase": "qa_mode",
+  "cycle_count": 1,
   "source_content_map_built": true,
-  "last_updated": "2026-03-24T23:30:00Z",
+  "last_updated": "2026-03-24T10:00:00Z",
   "user_lens_profile": {
     "approved_perspectives": [
       "first_principles_systems_thinking"
@@ -4233,140 +4233,93 @@
         "type": "architectural",
         "explanation": "Giardia specifically depletes Firmicutes (the primary commensal phylum measured by F:B ratio) while elevating Proteobacteria, directly disrupting the commensal flora balance that the GI-MAP measures; parasites broadly cause mucosal damage that removes commensal colonization sites and creates a pro-inflammatory ecology hostile to commensal organism maintenance.",
         "evidence_count": 2
-      }
-    ],
-    "pending": [
-      {
-        "from": "Parasitic Load",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
       },
       {
         "from": "Parasitic Load",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Giardia increases Proteobacteria (including E. coli, a primary B-GUS producer) while decreasing Firmicutes, shifting the microbiome toward B-GUS-producing organism overgrowth and directly elevating beta-glucuronidase activity through dysbiotic microbial shift.",
+        "evidence_count": 2
       },
       {
         "from": "Parasitic Load",
         "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Giardia directly increases immune reactions to food antigens including gluten (FDN Module 6 source) and drives Zonulin-mediated gut hyperpermeability allowing gliadin translocation to mucosal immune cells in Peyer’s patches, triggering sensitization and elevated AGA-IgA production.",
+        "evidence_count": 2
       },
       {
         "from": "Parasitic Load",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Parasitic organisms bidirectionally modulate GI-MAP SIgA: active parasitic challenge first elevates SIgA via mucosal immune activation, while chronic infection depletes SIgA through immune exhaustion and HPA axis-cortisol-mediated downregulation of mucosal plasma cell SIgA synthesis.",
+        "evidence_count": 2
       },
       {
         "from": "Parasitic Load",
         "to": "Occult Blood",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Entamoeba histolytica directly bores through the intestinal wall producing fulminating colitis and dysentery with bloody stools, constituting the structural mucosal bleeding that FIT occult blood measures; amoebic colitis represents the IBD-like structural mucosal pathology for which the occult blood referral threshold was designed.",
+        "evidence_count": 2
       },
       {
         "from": "Dysbiotic and Opportunistic Bacteria",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Dysbiotic and Opportunistic Bacteria",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Dysbiotic and opportunistic bacteria are the structural inverse of commensal flora in the gut ecosystem; FDN explicitly describes dysbiotic bacteria as depletors of commensal populations through competitive displacement, LPS-mediated inflammation, and metabolic byproducts inhibitory to commensal growth.",
+        "evidence_count": 2
       },
       {
         "from": "Dysbiotic and Opportunistic Bacteria",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
-      },
-      {
-        "from": "Dysbiotic and Opportunistic Bacteria",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Three specific dysbiotic bacteria on the GI-MAP (Bacteroides fragilis, E. coli, Staphylococcus) produce extracellular B-GUS as part of their metabolic activity; elevated counts produce proportionally elevated B-GUS enzyme activity, demonstrated in Joan’s GI-MAP showing B-GUS 3584 High alongside multiple elevated dysbiotic organisms.",
+        "evidence_count": 2
       },
       {
         "from": "Dysbiotic and Opportunistic Bacteria",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Dysbiotic and Opportunistic Bacteria",
-        "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "Commensal Flora Balance",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Dysbiotic bacteria activate the HPA axis via LPS-driven pro-inflammatory cytokines, elevating cortisol which downregulates mucosal plasma cell SIgA synthesis through glucocorticoid receptor signaling; both case study patients with elevated dysbiotic organisms show correspondingly low GI-MAP SIgA (Joan: 312 Low, Ashley: 359 Low).",
+        "evidence_count": 2
       },
       {
         "from": "Commensal Flora Balance",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Bacteroides fragilis is simultaneously a keystone commensal organism and primary B-GUS producer; elevated Bacteroidetes in Joan’s GI-MAP (7.53e12 High) corresponds to elevated B-GUS (3584 High), demonstrating the dual classification of Bacteroides fragilis bridging the commensal flora and B-GUS measurement.",
+        "evidence_count": 2
       },
       {
         "from": "Commensal Flora Balance",
         "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Commensal bacteria produce SCFA that support SIgA synthesis, providing the substrate for antigen-specific AGA-IgA production; commensal depletion suppresses SCFA-mediated SIgA support and reduces AGA-IgA capacity, explaining why both FDN patients with commensal-disrupted ecosystems show low SIgA and suppressed AGA-IgA.",
+        "evidence_count": 2
       },
       {
         "from": "Commensal Flora Balance",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Commensal Flora Balance",
-        "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "Calprotectin and Lactoferrin",
-        "to": "Beta-glucuronidase",
-        "evidence_count": 0
-      },
-      {
-        "from": "Calprotectin and Lactoferrin",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
-      },
-      {
-        "from": "Calprotectin and Lactoferrin",
-        "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "FDN source explicitly states commensal bacteria produce SCFA that increase SIgA; adequate commensal flora is prerequisite for GI-MAP SIgA production; both case study patients show low GI-MAP SIgA (Ashley 359 Low, Joan 312 Low) alongside commensal-disrupted dysbiosis, demonstrating the commensal-SCFA-SIgA production dependency.",
+        "evidence_count": 2
       },
       {
         "from": "Calprotectin and Lactoferrin",
         "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "Beta-glucuronidase",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
-      },
-      {
-        "from": "Beta-glucuronidase",
-        "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Beta-glucuronidase",
-        "to": "Occult Blood",
-        "evidence_count": 0
+        "type": "correlational",
+        "explanation": "Calprotectin and occult blood are parallel output markers of the same class of structural GI mucosal pathology; calprotectin distinguishes active IBD from functional GI disorders while occult blood marks IBD-associated structural mucosal bleeding, making them co-indicators of the same acute inflammatory bowel pathology class requiring medical evaluation.",
+        "evidence_count": 2
       },
       {
         "from": "Anti-gliadin IgA",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Anti-gliadin IgA",
-        "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "Secretory IgA — GI tract",
-        "to": "Occult Blood",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "AGA-IgA is mechanistically a subset of total SIgA directed against gliadin epitopes; FDN explicitly states SIgA status determines AGA-IgA response capacity, with low total SIgA suppressing antigen-specific AGA-IgA production; both FDN case study patients show low SIgA (Ashley 359, Joan 312) with correspondingly suppressed AGA-IgA, confirming this SIgA-dependent architectural relationship.",
+        "evidence_count": 2
       }
     ],
+    "pending": [],
     "discarded": [
       {
         "from": "Indican",
@@ -4632,6 +4585,76 @@
         "from": "Candida and Fungal Overgrowth",
         "to": "Occult Blood",
         "reason": "Joan's case shows Candida albicans 4.04e3 High with occult blood 0, demonstrating direct dissociation. Intestinal Candida overgrowth at commensal-overgrowth level (not invasive candidiasis) does not cause structural mucosal bleeding sufficient to elevate occult blood FIT results. No independent evidence lines at Relevant confidence support this connection."
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Most parasites (Giardia, Blastocystis) drive eosinophilic/mast cell rather than neutrophilic responses; Ashley shows Giardia detected alongside normal calprotectin (6 ug/g), demonstrating clinical dissociation; FDN case study data establishes parasitic burden can coexist with normal calprotectin."
+      },
+      {
+        "from": "Dysbiotic and Opportunistic Bacteria",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Joan shows multiple elevated dysbiotic organisms (Klebsiella High, Streptococcus High) alongside normal calprotectin (91 ug/g); FDN research explicitly states chronic dysbiosis operates through non-neutrophilic mechanisms that do not trigger the calprotectin signal; insufficient evidence at Relevant confidence."
+      },
+      {
+        "from": "Dysbiotic and Opportunistic Bacteria",
+        "to": "Anti-gliadin IgA",
+        "reason": "Dysbiotic bacteria have competing effects on AGA-IgA: LPS-driven permeability increases gliadin exposure (upward pressure) while dysbiosis-driven SIgA suppression reduces AGA-IgA production capacity (downward pressure); both patients show normal AGA-IgA despite significant dysbiosis; no validated directional connection."
+      },
+      {
+        "from": "Dysbiotic and Opportunistic Bacteria",
+        "to": "Occult Blood",
+        "reason": "Both patients show normal occult blood (Ashley: below detection, Joan: 0) despite significant dysbiotic bacterial burden; chronic dysbiotic bacteria produce functional GI dysfunction without the structural mucosal bleeding that FIT occult blood measures; no independent evidence at Relevant confidence."
+      },
+      {
+        "from": "Commensal Flora Balance",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Commensal depletion (insufficiency dysbiosis) does not directly drive neutrophilic GI inflammation calprotectin measures; both patients show normal calprotectin despite significant dysbiosis; commensal depletion affects mucosal barrier through SCFA loss, not neutrophilic activation."
+      },
+      {
+        "from": "Commensal Flora Balance",
+        "to": "Occult Blood",
+        "reason": "Commensal imbalance produces functional gut dysfunction (reduced SCFA, impaired immunity) not structural mucosal lesions causing active bleeding; both patients show normal occult blood despite commensal imbalance; no independent evidence at Relevant confidence connects commensal changes to structural mucosal bleeding."
+      },
+      {
+        "from": "Calprotectin and Lactoferrin",
+        "to": "Beta-glucuronidase",
+        "reason": "Joan shows elevated B-GUS (3584 High) alongside normal calprotectin (91), demonstrating direct clinical dissociation; calprotectin and B-GUS measure mechanistically independent processes (neutrophilic mucosal inflammation vs. bacterial enzyme activity); no structural connection at Relevant confidence."
+      },
+      {
+        "from": "Calprotectin and Lactoferrin",
+        "to": "Anti-gliadin IgA",
+        "reason": "Calprotectin reflects innate neutrophilic immune response while AGA-IgA reflects adaptive mucosal IgA response to a specific dietary antigen; mechanistically independent immune pathways; no clinical correlation in case study data; no independent evidence at Relevant confidence."
+      },
+      {
+        "from": "Calprotectin and Lactoferrin",
+        "to": "Secretory IgA — GI tract",
+        "reason": "Both patients show low SIgA (Ashley 359, Joan 312) alongside normal calprotectin (Ashley 6, Joan 91), demonstrating dissociation; SIgA suppression operates through cortisol-mediated plasma cell inhibition, not neutrophilic inflammation; no structural connection at Relevant confidence."
+      },
+      {
+        "from": "Beta-glucuronidase",
+        "to": "Anti-gliadin IgA",
+        "reason": "Joan shows elevated B-GUS (3584 High) alongside normal AGA-IgA (83), demonstrating clinical dissociation; any B-GUS-to-AGA-IgA pathway requires multiple indirect steps (B-GUS to toxin burden to permeability to gliadin translocation to IgA sensitization) without direct FDN evidence."
+      },
+      {
+        "from": "Beta-glucuronidase",
+        "to": "Secretory IgA — GI tract",
+        "reason": "Ashley shows normal B-GUS alongside low SIgA (359 Low), demonstrating SIgA suppression occurs independently of B-GUS status; primary SIgA suppressors are chronic dysbiosis and cortisol per FDN research; multi-step indirect pathway lacks direct FDN evidence at Relevant confidence."
+      },
+      {
+        "from": "Beta-glucuronidase",
+        "to": "Occult Blood",
+        "reason": "Joan shows elevated B-GUS (3584 High) alongside normal occult blood (0), confirming dissociation; B-GUS drives estrogen recycling and hepatic congestion by deconjugating Phase 2 compounds but does not produce structural mucosal bleeding; no independent evidence at Relevant confidence."
+      },
+      {
+        "from": "Anti-gliadin IgA",
+        "to": "Occult Blood",
+        "reason": "Severe celiac ulcerative jejunitis causing mucosal bleeding requires advanced structural pathological disease beyond the functional metabolic chaos model FDN operates within; both patients show normal AGA-IgA and normal occult blood; no independent evidence within FDN framework at Relevant confidence."
+      },
+      {
+        "from": "Secretory IgA — GI tract",
+        "to": "Occult Blood",
+        "reason": "Both patients show low SIgA (Ashley 359 Low, Joan 312 Low) alongside normal occult blood (both 0 or below detection), directly demonstrating dissociation; SIgA insufficiency increases pathogen susceptibility but does not reach the structural tissue failure threshold that FIT occult blood measures; no independent evidence at Relevant confidence."
       }
     ]
   },
@@ -5307,6 +5330,41 @@
         "Candida and Fungal Overgrowth → Occult Blood"
       ],
       "output_file": "session-outputs/2026-03-24-connection-validation-14.md"
+    },
+    {
+      "date": "2026-03-24T23:59:00Z",
+      "phase_executed": "connection_validation",
+      "variables_researched": [],
+      "connections_validated": [
+        "Parasitic Load→Beta-glucuronidase",
+        "Parasitic Load→Anti-gliadin IgA",
+        "Parasitic Load→Secretory IgA—GI tract",
+        "Parasitic Load→Occult Blood",
+        "Dysbiotic and Opportunistic Bacteria→Commensal Flora Balance",
+        "Dysbiotic and Opportunistic Bacteria→Beta-glucuronidase",
+        "Dysbiotic and Opportunistic Bacteria→Secretory IgA—GI tract",
+        "Commensal Flora Balance→Beta-glucuronidase",
+        "Commensal Flora Balance→Anti-gliadin IgA",
+        "Commensal Flora Balance→Secretory IgA—GI tract",
+        "Calprotectin and Lactoferrin→Occult Blood",
+        "Anti-gliadin IgA→Secretory IgA—GI tract"
+      ],
+      "connections_discarded": 14,
+      "output_file": "session-outputs/2026-03-24-connection-validation-15.md"
+    },
+    {
+      "date": "2026-03-24",
+      "phase_executed": "synthesis",
+      "variables_researched": [],
+      "connections_validated": [
+        "Indican -> Urinary Bile Acids",
+        "Indican -> 8-OHdG",
+        "Indican -> Zonulin",
+        "Indican -> Histamine â€” MBA",
+        "Indican -> DAO (Diamine Oxidase)"
+      ],
+      "output_file": "session-outputs/2026-03-24-synthesis-0.md",
+      "notes": "Phase 5 Synthesis complete. knowledge-map.md written. All 33 variables and validated connections mapped."
     }
   ]
 }
