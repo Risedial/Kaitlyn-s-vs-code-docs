@@ -3,7 +3,7 @@
   "phase": "connection_validation",
   "cycle_count": 0,
   "source_content_map_built": true,
-  "last_updated": "2026-03-24T23:00:00Z",
+  "last_updated": "2026-03-24T23:30:00Z",
   "user_lens_profile": {
     "approved_perspectives": [
       "first_principles_systems_thinking"
@@ -4030,190 +4030,213 @@
         "type": "causal",
         "explanation": "HPA cortisol-mediated immune suppression creates the weakened immune state enabling parasitic colonization and persistence; parasites generate persistent immune activation through toxic exudates and inflammatory conditions sustaining cytokine-mediated HPA activation, completing the bidirectional GI pathogen-HPA connection explicitly documented in FDN Module 6 ('pathogens are obvious contributors to adrenal dysfunction').",
         "evidence_count": 2
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "type": "architectural",
+        "explanation": "HPA stress suppresses parasympathetic/ENS function, reducing HCl, bile, and enzymes to create the Digestive Dysfunction Dysbiosis pattern enabling dysbiotic bacterial overgrowth; conversely, dysbiotic LPS and pro-inflammatory cytokines independently stimulate CRH/ACTH, sustaining HPA dysregulation. GI pathogens are explicitly named as adrenal dysfunction drivers in FDN Module 6.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Commensal Flora Balance",
+        "type": "architectural",
+        "explanation": "HPA sympathetic dominance suppresses digestive secretions that sustain commensal flora ecology, producing the dysbiosis that disrupts commensal balance; depleted commensals remove SCFA and immune-regulatory signals buffering HPA stress, and the dysbiotic organisms filling the commensal vacuum produce LPS/cytokines that independently reactivate CRH/ACTH signaling.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Beta-glucuronidase",
+        "type": "architectural",
+        "explanation": "HPA-driven Digestive Dysfunction Dysbiosis (hypochlorhydria, insufficient bile, reduced enzymes) creates the ecological conditions for B-GUS-producing dysbiotic organisms to expand; the recirculating toxins from elevated B-GUS constitute a chronic physiological stressor sustaining HPA activation through immune and toxic burden pathways. Both are components of the same chronic metabolic stress architecture.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Anti-gliadin IgA",
+        "type": "architectural",
+        "explanation": "HPA cortisol suppresses GI SIgA production, directly impairing AGA-IgA response capacity and producing false-negative results in gluten-sensitive clients with HPA dysregulation; HPA-driven gut permeability allows gliadin translocation that can elevate AGA-IgA when SIgA is not fully suppressed. Both markers are embedded within the same gut-HPA metabolic chaos cascade explicitly mapped in FDN Module 6.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Secretory IgA — GI tract",
+        "type": "architectural",
+        "explanation": "HPA cortisol elevation directly suppresses GI SIgA through glucocorticoid receptor signaling on mucosal plasma cells; depleted GI SIgA permits pathogen colonization that reactivates HPA through cytokine-mediated CRH stimulation, creating a self-reinforcing bidirectional loop explicitly documented in FDN Module 6 and confirmed in both case study patients (Ashley SIgA 359 Low, Joan SIgA 312 Low).",
+        "evidence_count": 2
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "H. pylori",
+        "type": "architectural",
+        "explanation": "Reactive food-driven villous damage depletes SIgA, collapsing the mucosal immunity that normally prevents H. pylori colonization; H. pylori is explicitly named in FDN research as an organism proliferating when reactive food burden-driven SIgA collapses. Bidirectionally, H. pylori hypochlorhydria impairs protein digestion, leaving intact food proteins available as antigens and expanding reactive food burden.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Candida and Fungal Overgrowth",
+        "type": "architectural",
+        "explanation": "Reactive food-driven villous damage depletes enterocytes and SIgA, creating the mucosal immune vacuum for Candida colonization; Candida is explicitly named in FDN as a sequela of reactive food-driven mucosal damage. Bidirectionally, Candida causes IgA damage and acetaldehyde toxin burden that maintains mucosal vulnerability, perpetuating and expanding reactive food burden.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Parasitic Load",
+        "type": "architectural",
+        "explanation": "Reactive food-driven SIgA depletion collapses mucosal defense against parasitic colonization; Giardia directly expands reactive food burden by increasing immune reactivity to food antigens including gluten and driving gut hyperpermeability that enables ongoing food antigen translocation and sensitization. Both share the same collapsed mucosal immune ecosystem.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "type": "architectural",
+        "explanation": "Reactive food-driven mucosal damage and SIgA depletion create the ecological vacuum for dysbiotic bacterial overgrowth (explicitly named in FDN as a consequence of reactive food burden); dysbiotic LPS increases gut permeability enabling food antigen translocation that expands MRT-measurable reactive food burden in a reinforcing cycle.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Commensal Flora Balance",
+        "type": "architectural",
+        "explanation": "Reactive food-driven villous damage produces dysbiosis disrupting commensal flora balance (explicitly named in FDN); depleted commensal SCFA production and SIgA-supporting signals remove the mucosal protection against food antigen translocation and sensitization, perpetuating reactive food burden through continued mucosal vulnerability.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Beta-glucuronidase",
+        "type": "architectural",
+        "explanation": "Reactive food-driven mucosal damage produces dysbiosis enabling B-GUS-producing dysbiotic organisms (E. coli, B. fragilis, Staphylococcus) to expand; both elevated B-GUS and reactive food burden co-occur in the same disrupted mucosal ecosystem where dysbiosis has removed competitive exclusion barriers against these enzymatically active organisms.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Anti-gliadin IgA",
+        "type": "architectural",
+        "explanation": "Reactive food burden explicitly includes gluten reactivity measurable by AGA-IgA; reactive food-driven gut permeability allows gliadin translocation that drives AGA-IgA elevation. FDN explicitly directs practitioners to consider MRT food sensitivity testing when AGA-IgA is elevated, pairing the two as clinically correlated markers of the same mucosal immune-food antigen response system.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Secretory IgA — GI tract",
+        "type": "causal",
+        "explanation": "Continued consumption of reactive foods drives villous atrophy, reduced enterocytes, and directly depleted SIgA — explicitly documented in FDN Module 7; depleted GI SIgA in turn removes the mucosal exclusion barrier against food antigens, allowing continued antigen translocation that perpetuates the reactive food burden in a self-amplifying cycle.",
+        "evidence_count": 2
+      },
+      {
+        "from": "H. pylori",
+        "to": "Candida and Fungal Overgrowth",
+        "type": "architectural",
+        "explanation": "H. pylori hypochlorhydria (urease-mediated HCl neutralization) removes the fungicidal gastric acid barrier against Candida; hypochlorhydria is explicitly listed in FDN as a primary driver of Candida elevation. Both share the same hypochlorhydric, immune-compromised gastric ecology created by H. pylori's dual mechanism of local acid neutralization and immune evasion.",
+        "evidence_count": 2
+      },
+      {
+        "from": "H. pylori",
+        "to": "Parasitic Load",
+        "type": "architectural",
+        "explanation": "H. pylori-caused hypochlorhydria reduces the gastric acid bactericidal and parasiticidal barrier, enabling orally ingested parasites to survive gastric passage and colonize the intestinal tract; H. pylori's immune-evasion virulence factors suppress mucosal immune recognition, further reducing clearance of parasitic organisms exploiting the weakened host.",
+        "evidence_count": 2
+      },
+      {
+        "from": "H. pylori",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "type": "architectural",
+        "explanation": "H. pylori acid-barrier disruption (urease-mediated hypochlorhydria) allows bacteria normally killed in the stomach to reach and colonize the small intestine, enabling dysbiotic bacterial overgrowth; FDN explicitly mandates H. pylori be treated first because its immune-evasion and acid-barrier disruption amplify all other GI pathogen colonization including dysbiotic bacteria.",
+        "evidence_count": 2
+      },
+      {
+        "from": "H. pylori",
+        "to": "Commensal Flora Balance",
+        "type": "architectural",
+        "explanation": "H. pylori hypochlorhydria creates the Digestive Dysfunction Dysbiosis pattern (disrupted commensal flora balance driven by impaired digestive secretions); H. pylori inflammatory virulence factors generate gastric inflammation that propagates downstream ecological disruption affecting commensal flora composition throughout the GI tract.",
+        "evidence_count": 2
+      },
+      {
+        "from": "H. pylori",
+        "to": "Beta-glucuronidase",
+        "type": "architectural",
+        "explanation": "H. pylori hypochlorhydria allows B-GUS-producing organisms (E. coli and others) to survive gastric passage and colonize the intestines in elevated numbers; H. pylori's compromised gastric acid barrier is the upstream structural driver enabling the dysbiotic bacterial ecosystem that produces elevated B-GUS enzymatic activity.",
+        "evidence_count": 2
+      },
+      {
+        "from": "H. pylori",
+        "to": "Anti-gliadin IgA",
+        "type": "architectural",
+        "explanation": "H. pylori hypochlorhydria leaves intact gliadin peptides undigested; low HCl is explicitly named in FDN as a driver of AGA-IgA elevation, establishing H. pylori as an upstream cause. H. pylori-driven mucosal inflammation also increases intestinal permeability that allows intact gliadin translocation, further elevating AGA-IgA immune response.",
+        "evidence_count": 2
+      },
+      {
+        "from": "H. pylori",
+        "to": "Secretory IgA — GI tract",
+        "type": "architectural",
+        "explanation": "H. pylori virulence factors (cagA, vacA) cause progressive mucosal damage to SIgA-producing enterocytes and plasma cells; H. pylori's chronic immune demand depletes SIgA reserves through sustained secretory immunoglobulin deployment against an organism specifically evolved to evade immune recognition, creating a net SIgA depletion pattern.",
+        "evidence_count": 2
+      },
+      {
+        "from": "H. pylori",
+        "to": "Occult Blood",
+        "type": "causal",
+        "explanation": "H. pylori progression to peptic ulceration (the primary structural outcome of untreated infection) produces the mucosal bleeding that elevates FIT occult blood; FDN research explicitly states untreated H. pylori progresses toward peptic ulceration, and FIT occult blood explicitly includes bleeding ulcers as a cause in the >50 ug/g severity category.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Parasitic Load",
+        "type": "architectural",
+        "explanation": "Both Candida and parasitic organisms share the same permissive ecological conditions: hypochlorhydria, depleted commensal flora, suppressed SIgA, and immune compromise; FDN research explicitly lists parasitic infections as a co-driver of Candida overgrowth, confirming they co-occur in the same disrupted mucosal immune environment.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "type": "architectural",
+        "explanation": "Candida and dysbiotic bacteria co-occupy the same disrupted mucosal ecology; pathogenic overgrowth of opportunistic bacteria is explicitly named as a driver of Candida overgrowth in FDN, and Candida disrupts commensal flora that would normally suppress dysbiotic bacteria through competitive exclusion. Both are co-indicators of the same collapsed commensal barrier.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Commensal Flora Balance",
+        "type": "architectural",
+        "explanation": "Candida is one of the first organisms to proliferate when commensal flora balance is disrupted (explicitly stated in FDN); commensal bacteria maintain competitive exclusion barriers against Candida through bacteriocin production, SCFA-mediated luminal acidification, and receptor-site occupation — their depletion directly enables Candida expansion into vacated ecological niches.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Beta-glucuronidase",
+        "type": "architectural",
+        "explanation": "Candida overgrowth and B-GUS elevation co-occur as parallel outputs of the same dysbiotic ecology where disrupted commensal flora have removed competitive exclusion against both Candida and B-GUS-producing bacteria; Joan's case confirms co-elevation (Candida 4.04e3 High + B-GUS 3584 High), and Candida die-off toxin burden amplifies the hepatic congestion that drives the B-GUS recirculation cycle.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Anti-gliadin IgA",
+        "type": "architectural",
+        "explanation": "Candida causes IgA damage (explicitly stated in FDN research), directly suppressing the SIgA production capacity that AGA-IgA depends on for antigen-specific gliadin responses; Joan's case confirms this mechanism (Candida High + SIgA 312 Low + AGA-IgA 83 falsely normal), establishing Candida IgA damage as the structural bridge producing AGA-IgA false-negative results.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Secretory IgA — GI tract",
+        "type": "causal",
+        "explanation": "Candida causes IgA damage (explicitly documented in FDN research); Candida acetaldehyde toxin impairs mucosal cell function and the anti-fungal IgA deployment depletes overall SIgA reserves; Joan's case shows Candida 4.04e3 High with GI SIgA 312 Low, confirming this direct causal relationship between Candida overgrowth and GI SIgA suppression.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Dysbiotic and Opportunistic Bacteria",
+        "type": "architectural",
+        "explanation": "Giardia specifically increases the Proteobacteria phylum (LPS-producing dysbiotic bacteria) and decreases Firmicutes (protective commensals), directly shifting microbiome composition toward dysbiotic bacterial dominance; parasite-driven mucosal damage and commensal depletion create the ecological conditions enabling dysbiotic bacteria to expand into vacated niches.",
+        "evidence_count": 2
+      },
+      {
+        "from": "Parasitic Load",
+        "to": "Commensal Flora Balance",
+        "type": "architectural",
+        "explanation": "Giardia specifically depletes Firmicutes (the primary commensal phylum measured by F:B ratio) while elevating Proteobacteria, directly disrupting the commensal flora balance that the GI-MAP measures; parasites broadly cause mucosal damage that removes commensal colonization sites and creates a pro-inflammatory ecology hostile to commensal organism maintenance.",
+        "evidence_count": 2
       }
     ],
     "pending": [
       {
-        "from": "Gut-Brain-HPA Bidirectional Axis",
-        "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
-      },
-      {
-        "from": "Gut-Brain-HPA Bidirectional Axis",
-        "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Gut-Brain-HPA Bidirectional Axis",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
-      },
-      {
-        "from": "Gut-Brain-HPA Bidirectional Axis",
-        "to": "Beta-glucuronidase",
-        "evidence_count": 0
-      },
-      {
-        "from": "Gut-Brain-HPA Bidirectional Axis",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
-      },
-      {
-        "from": "Gut-Brain-HPA Bidirectional Axis",
-        "to": "Secretory IgA â€” GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Gut-Brain-HPA Bidirectional Axis",
-        "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "H. pylori",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "Parasitic Load",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "Beta-glucuronidase",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "Secretory IgA â€” GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Reactive Food Burden â€” MRT",
-        "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "H. pylori",
-        "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
-      },
-      {
-        "from": "H. pylori",
-        "to": "Parasitic Load",
-        "evidence_count": 0
-      },
-      {
-        "from": "H. pylori",
-        "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
-      },
-      {
-        "from": "H. pylori",
-        "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "H. pylori",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
-      },
-      {
-        "from": "H. pylori",
-        "to": "Beta-glucuronidase",
-        "evidence_count": 0
-      },
-      {
-        "from": "H. pylori",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
-      },
-      {
-        "from": "H. pylori",
-        "to": "Secretory IgA â€” GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "H. pylori",
-        "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "Candida and Fungal Overgrowth",
-        "to": "Parasitic Load",
-        "evidence_count": 0
-      },
-      {
-        "from": "Candida and Fungal Overgrowth",
-        "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
-      },
-      {
-        "from": "Candida and Fungal Overgrowth",
-        "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
-        "from": "Candida and Fungal Overgrowth",
-        "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
-      },
-      {
-        "from": "Candida and Fungal Overgrowth",
-        "to": "Beta-glucuronidase",
-        "evidence_count": 0
-      },
-      {
-        "from": "Candida and Fungal Overgrowth",
-        "to": "Anti-gliadin IgA",
-        "evidence_count": 0
-      },
-      {
-        "from": "Candida and Fungal Overgrowth",
-        "to": "Secretory IgA â€” GI tract",
-        "evidence_count": 0
-      },
-      {
-        "from": "Candida and Fungal Overgrowth",
-        "to": "Occult Blood",
-        "evidence_count": 0
-      },
-      {
-        "from": "Parasitic Load",
-        "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
-      },
-      {
-        "from": "Parasitic Load",
-        "to": "Commensal Flora Balance",
-        "evidence_count": 0
-      },
-      {
         "from": "Parasitic Load",
         "to": "Calprotectin and Lactoferrin",
         "evidence_count": 0
@@ -4230,7 +4253,7 @@
       },
       {
         "from": "Parasitic Load",
-        "to": "Secretory IgA â€” GI tract",
+        "to": "Secretory IgA — GI tract",
         "evidence_count": 0
       },
       {
@@ -4260,7 +4283,7 @@
       },
       {
         "from": "Dysbiotic and Opportunistic Bacteria",
-        "to": "Secretory IgA â€” GI tract",
+        "to": "Secretory IgA — GI tract",
         "evidence_count": 0
       },
       {
@@ -4285,7 +4308,7 @@
       },
       {
         "from": "Commensal Flora Balance",
-        "to": "Secretory IgA â€” GI tract",
+        "to": "Secretory IgA — GI tract",
         "evidence_count": 0
       },
       {
@@ -4305,7 +4328,7 @@
       },
       {
         "from": "Calprotectin and Lactoferrin",
-        "to": "Secretory IgA â€” GI tract",
+        "to": "Secretory IgA — GI tract",
         "evidence_count": 0
       },
       {
@@ -4320,7 +4343,7 @@
       },
       {
         "from": "Beta-glucuronidase",
-        "to": "Secretory IgA â€” GI tract",
+        "to": "Secretory IgA — GI tract",
         "evidence_count": 0
       },
       {
@@ -4330,7 +4353,7 @@
       },
       {
         "from": "Anti-gliadin IgA",
-        "to": "Secretory IgA â€” GI tract",
+        "to": "Secretory IgA — GI tract",
         "evidence_count": 0
       },
       {
@@ -4339,7 +4362,7 @@
         "evidence_count": 0
       },
       {
-        "from": "Secretory IgA â€” GI tract",
+        "from": "Secretory IgA — GI tract",
         "to": "Occult Blood",
         "evidence_count": 0
       }
@@ -4574,6 +4597,41 @@
         "from": "Mucosal Immune Tolerance and sIgA Function",
         "to": "Occult Blood",
         "reason": "sIgA depletion enables pathogen colonization and mucosal immune dysfunction but does not specifically produce structural mucosal bleeding; both FDN case patients show depleted sIgA with zero/normal occult blood; structural pathology (polyps, ulcers, cancer) causing occult blood is mechanistically distinct from sIgA-mediated mucosal immune dysfunction; mirrors established Occult Blood discard pattern."
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "HPA cortisol elevation exerts anti-inflammatory glucocorticoid effects suppressing neutrophilic mucosal activation — the opposite of what calprotectin elevation requires; FDN case studies show normal calprotectin in both patients despite HPA dysregulation markers, demonstrating dissociation. Chronic HPA stress drives non-neutrophilic mucosal dysfunction that does not trigger the calprotectin signal."
+      },
+      {
+        "from": "Gut-Brain-HPA Bidirectional Axis",
+        "to": "Occult Blood",
+        "reason": "HPA-driven dysbiosis and cortisol dysregulation produce metabolic mucosal dysfunction but not specifically the structural lesions (polyps, ulcers, IBD, cancer) required to produce occult blood. Both FDN case study patients show normal occult blood despite extensive HPA dysregulation markers, demonstrating that HPA-driven metabolic stress does not predict structural GI hemorrhage."
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Reactive food burden drives non-neutrophilic mediator release (mast cells, basophils, T-cells); calprotectin specifically measures acute neutrophilic intestinal inflammation. FDN case studies show normal calprotectin despite significant reactive food burden indicators, confirming that food sensitivity-driven mediator release does not reliably trigger the neutrophilic calprotectin signal."
+      },
+      {
+        "from": "Reactive Food Burden — MRT",
+        "to": "Occult Blood",
+        "reason": "Reactive food-driven mucosal damage is immune-mediated (villous damage, SIgA depletion) rather than structural mucosal hemorrhage; both FDN case study patients show normal occult blood (Ashley below detection, Joan 0) despite extensive reactive food burden markers, demonstrating that reactive food pathology does not produce structural GI bleeding."
+      },
+      {
+        "from": "H. pylori",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "H. pylori causes gastric (not intestinal) mucosal inflammation; stool calprotectin measures intestinal neutrophilic inflammation. FDN case studies show normal calprotectin in patients with multiple GI dysbiotic markers; the gastric-to-intestinal inflammatory signal from H. pylori does not reliably elevate intestinal calprotectin at Relevant confidence threshold."
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Calprotectin and Lactoferrin",
+        "reason": "Joan's case demonstrates direct dissociation: Candida albicans 4.04e3 High with calprotectin 91 (normal). Intestinal Candida overgrowth at GI-MAP-detectable levels drives acetaldehyde toxicity and IgA damage through non-neutrophilic mechanisms that do not trigger the acute calprotectin signal. No independent evidence lines at Relevant confidence support this connection."
+      },
+      {
+        "from": "Candida and Fungal Overgrowth",
+        "to": "Occult Blood",
+        "reason": "Joan's case shows Candida albicans 4.04e3 High with occult blood 0, demonstrating direct dissociation. Intestinal Candida overgrowth at commensal-overgrowth level (not invasive candidiasis) does not cause structural mucosal bleeding sufficient to elevate occult blood FIT results. No independent evidence lines at Relevant confidence support this connection."
       }
     ]
   },
@@ -5203,6 +5261,52 @@
         "Testosterone -> Occult Blood"
       ],
       "output_file": "session-outputs/2026-03-24-connection-validation-12.md"
+    },
+    {
+      "date": "2026-03-24T23:30:00Z",
+      "phase_executed": "connection_validation",
+      "variables_researched": [],
+      "connections_validated": [
+        "Gut-Brain-HPA Bidirectional Axis → Dysbiotic and Opportunistic Bacteria",
+        "Gut-Brain-HPA Bidirectional Axis → Commensal Flora Balance",
+        "Gut-Brain-HPA Bidirectional Axis → Beta-glucuronidase",
+        "Gut-Brain-HPA Bidirectional Axis → Anti-gliadin IgA",
+        "Gut-Brain-HPA Bidirectional Axis → Secretory IgA — GI tract",
+        "Reactive Food Burden — MRT → H. pylori",
+        "Reactive Food Burden — MRT → Candida and Fungal Overgrowth",
+        "Reactive Food Burden — MRT → Parasitic Load",
+        "Reactive Food Burden — MRT → Dysbiotic and Opportunistic Bacteria",
+        "Reactive Food Burden — MRT → Commensal Flora Balance",
+        "Reactive Food Burden — MRT → Beta-glucuronidase",
+        "Reactive Food Burden — MRT → Anti-gliadin IgA",
+        "Reactive Food Burden — MRT → Secretory IgA — GI tract",
+        "H. pylori → Candida and Fungal Overgrowth",
+        "H. pylori → Parasitic Load",
+        "H. pylori → Dysbiotic and Opportunistic Bacteria",
+        "H. pylori → Commensal Flora Balance",
+        "H. pylori → Beta-glucuronidase",
+        "H. pylori → Anti-gliadin IgA",
+        "H. pylori → Secretory IgA — GI tract",
+        "H. pylori → Occult Blood",
+        "Candida and Fungal Overgrowth → Parasitic Load",
+        "Candida and Fungal Overgrowth → Dysbiotic and Opportunistic Bacteria",
+        "Candida and Fungal Overgrowth → Commensal Flora Balance",
+        "Candida and Fungal Overgrowth → Beta-glucuronidase",
+        "Candida and Fungal Overgrowth → Anti-gliadin IgA",
+        "Candida and Fungal Overgrowth → Secretory IgA — GI tract",
+        "Parasitic Load → Dysbiotic and Opportunistic Bacteria",
+        "Parasitic Load → Commensal Flora Balance"
+      ],
+      "connections_discarded_this_session": [
+        "Gut-Brain-HPA Bidirectional Axis → Calprotectin and Lactoferrin",
+        "Gut-Brain-HPA Bidirectional Axis → Occult Blood",
+        "Reactive Food Burden — MRT → Calprotectin and Lactoferrin",
+        "Reactive Food Burden — MRT → Occult Blood",
+        "H. pylori → Calprotectin and Lactoferrin",
+        "Candida and Fungal Overgrowth → Calprotectin and Lactoferrin",
+        "Candida and Fungal Overgrowth → Occult Blood"
+      ],
+      "output_file": "session-outputs/2026-03-24-connection-validation-14.md"
     }
   ]
 }
