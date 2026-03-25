@@ -3,7 +3,7 @@
   "phase": "connection_validation",
   "cycle_count": 0,
   "source_content_map_built": true,
-  "last_updated": "2026-03-25T04:00:00Z",
+  "last_updated": "2026-03-25T03:52:40Z",
   "user_lens_profile": {
     "approved_perspectives": [
       "first_principles_systems_thinking"
@@ -3197,189 +3197,261 @@
         "type": "causal",
         "explanation": "Cortisol diurnal pattern dysregulation → HPA cortisol dominance → pituitary LH surge suppression → inadequate corpus luteum formation → progesterone insufficiency; identified as the primary driver of progesterone deficiency in premenopausal women in FDN, with clinical expression in Joan (56 pg/mL) and Ashley (9:1 Pg:E2 ratio).",
         "evidence_count": 2
-      }
-    ],
-    "pending": [
+      },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Testosterone",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol diurnal phase suppresses testosterone via pituitary LH/FSH inhibition (M2 Chronic Stress Cascade) and DHEA substrate depletion (M3 steroidogenesis); M3 audio documents low testosterone in cortisol-dominant cases via both pathways.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Melatonin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Elevated cortisol suppresses nocturnal pineal melatonin (M2+1PP exhaustive phase list: decreased melatonin); acute-phase elevated evening cortisol independently disrupts circadian melatonin onset timing.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol activates gut mast cells triggering Zonulin-mediated TJ opening (M5 hyperpermeability cycle) and suppresses sIgA enabling dysbiosis (M1 Slide 38 cascade); two independent mechanisms initiating the loop.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol directly suppresses sIgA (M2 Chronic Stress Cascade Page 16) and drives Th2 dominance reducing mucosal IgA-producing pathways (M2 audio); two mechanistically distinct suppressors documented independently.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "Cortisol Diurnal Pattern IS the measurable HPA output arm of the bidirectional axis; the four-point diurnal curve documents HPA-to-gut cortisol signaling, making both variables structurally co-defined components of one system.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Reactive Food Burden — MRT",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol enables food antigen translocation through mast cell/Zonulin pathway (M5) and sIgA suppression/dysbiosis-permeability cascade (M1); both independently create conditions for MRT-measurable food immune sensitization.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "H. pylori",
-        "evidence_count": 0
+        "type": "correlational",
+        "explanation": "Cortisol-driven sIgA suppression (M2 Chronic Stress Cascade) and Th1/Th2 shift (M2 audio) create permissive mucosal conditions for H. pylori persistence via two independent immune suppression mechanisms.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol drives Candida through elevated blood glucose feeding fungal growth (M2 Page 16) and Th1 suppression removing anti-fungal cellular immune surveillance (M2 audio); two independent pro-Candida mechanisms.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Parasitic Load",
-        "evidence_count": 0
+        "type": "correlational",
+        "explanation": "Cortisol-driven NK cell suppression (M2 Chronic Stress Cascade) and Th1/Th2 imbalance (M2 audio) impair anti-parasitic immunity through two independent immune effector mechanisms enabling parasitic colonization.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol suppresses sIgA enabling dysbiotic expansion (M1 Slide 38) and drives hyperglycemia feeding dysbiotic organisms (M2 Page 16); two independent pathways simultaneously promoting opportunistic bacterial overgrowth.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol disrupts commensal balance via sIgA suppression allowing dysbiotic dominance (M1) and NK cell/Th1 impairment removing immune surveillance (M2 Page 16); two independent mucosal defense failures documented.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol-driven dysbiosis via sIgA suppression (M1) and mast cell activation via M5 hyperpermeability cycle both independently recruit mucosal neutrophils, generating calprotectin and lactoferrin as co-inflammatory markers.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol suppresses sIgA (M1) and NK cells (M2 Page 16), allowing dysbiotic bacteria including beta-glucuronidase-producing species to expand; two independent immune pathways both permitting B-GUS producer proliferation.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol enables gliadin translocation via mast cell/Zonulin pathway (M5) and sIgA-mediated dysbiosis-permeability cascade (M1); both independently allow gliadin access through the mucosal barrier triggering anti-gliadin IgA.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "Cortisol directly suppresses GI sIgA production (M2 Chronic Stress Cascade) and drives Th2 dominance shifting mucosal immune response away from sIgA (M2 audio); two mechanistically distinct sIgA suppression pathways.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol — Diurnal Pattern",
         "to": "Occult Blood",
-        "evidence_count": 0
+        "type": "correlational",
+        "explanation": "Cortisol-driven mast cell activation increases mucosal vascular permeability creating microhemorrhage conditions (M5) while exhaustive-phase cortisol collapse impairs mucosal repair capacity (M2 catabolic effects); both enable occult blood.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Cortisol-to-DHEA Ratio",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "DHEA-S is the mathematical denominator of the cortisol:DHEA ratio (the 10th Fundamental Homeostatic Control per Wolcott); any DHEA change directly and mechanically changes the ratio value.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Estradiol",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "DHEA is the direct steroidogenic precursor to estradiol via DHEA→androstenedione→testosterone→estradiol (M3 slides steroidogenesis pathway); DHEA depletion directly reduces estradiol synthesis substrate availability.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Progesterone",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "DHEA and progesterone share pregnenolone as the upstream steroidogenesis branch point; both co-deplete under HPA-driven pregnenolone steal toward cortisol (M3 slides + M3 audio), co-components of the same steroidogenesis disruption.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Testosterone",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "DHEA is the direct steroidogenic precursor to testosterone (M3 slides: DHEA→androstenedione→testosterone); DHEA depletion reduces androgen substrate; M3 audio documents low testosterone in DHEA-depleted cortisol-dominant cases.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Melatonin",
-        "evidence_count": 0
+        "type": "correlational",
+        "explanation": "DHEA and melatonin co-decline in HPA exhaustive phase (M2+1PP exhaustive effects list documents both suppressed simultaneously); both co-vary as concurrent markers of the same advanced HPA dysfunction in clinical cases.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Dysbiosis-Intestinal Permeability Feedback Loop",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "DHEA is explicitly named in M5 stress-induced hyperpermeability cycle; low DHEA removes protective counter-regulation of cortisol-driven mast cell activation, directly enabling the dysbiosis-permeability feedback loop.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Mucosal Immune Tolerance and sIgA Function",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "DHEA's anti-inflammatory function (M2+1PP) and explicit role in M5 hyperpermeability cycle both document mucosal immune protection; DHEA depletion removes counter-regulation of cortisol-driven sIgA suppression through both pathways.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Gut-Brain-HPA Bidirectional Axis",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "DHEA is the anabolic counter-regulatory arm of HPA axis output (M2+1PP) and modifies gut hyperpermeability via mast cell counter-regulation (M5 audio); DHEA is structurally embedded as a key regulator of the Gut-Brain-HPA axis.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Reactive Food Burden — MRT",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "DHEA depletion removes counter-regulation of cortisol-driven barrier disruption via M5 mast cell pathway and M2 mucosal defense failure; both independently enable food antigen translocation and MRT-measurable sensitization.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "H. pylori",
-        "evidence_count": 0
+        "type": "correlational",
+        "explanation": "DHEA depletion removes anti-inflammatory mucosal protection (M2) and mast cell counter-regulation in gut hyperpermeability (M5), creating permissive conditions for H. pylori persistence via two independent mucosal defense failures.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Candida and Fungal Overgrowth",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "DHEA's anti-inflammatory immune support (M2) and mast cell counter-regulation (M5) maintain anti-fungal mucosal defenses; DHEA depletion simultaneously removes both protective mechanisms enabling Candida overgrowth.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Parasitic Load",
-        "evidence_count": 0
+        "type": "correlational",
+        "explanation": "DHEA depletion removes anti-inflammatory counter-regulation (M2) and barrier protection via M5 hyperpermeability, impairing anti-parasitic immunity and enabling parasitic colonization through two independent mucosal defense failures.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Dysbiotic and Opportunistic Bacteria",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "DHEA depletion allows cortisol-driven sIgA suppression unchecked (M2 anti-inflammatory failure) and mucosal barrier disruption (M5), both independently enabling dysbiotic and opportunistic bacterial expansion.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Commensal Flora Balance",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "DHEA depletion removes mucosal defense counter-regulation via M2 anti-inflammatory failure and M5 hyperpermeability barrier disruption; both independent pathways allow dysbiotic bacteria to outcompete commensals.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Calprotectin and Lactoferrin",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "DHEA depletion allows cortisol-driven mucosal inflammation via unopposed mast cell activation (M5) and anti-inflammatory failure (M2), both independently recruiting neutrophils and generating calprotectin and lactoferrin.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Beta-glucuronidase",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "DHEA depletion enables dysbiotic expansion through failed mucosal defense (M2 anti-inflammatory failure) and barrier disruption (M5 hyperpermeability), allowing B-GUS-producing dysbiotic bacteria to proliferate via both pathways.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Anti-gliadin IgA",
-        "evidence_count": 0
+        "type": "architectural",
+        "explanation": "DHEA depletion enables gliadin translocation via two independent pathways: mast cell counter-regulation failure (M5) and mucosal barrier defense impairment (M2), both allowing gliadin access triggering anti-gliadin IgA responses.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Secretory IgA — GI tract",
-        "evidence_count": 0
+        "type": "causal",
+        "explanation": "DHEA's anti-inflammatory immune support (M2+1PP) and mast cell counter-regulation in hyperpermeability cycle (M5 audio) both protect sIgA production; DHEA depletion removes both protective mechanisms simultaneously.",
+        "evidence_count": 2
       },
       {
         "from": "DHEA-S",
         "to": "Occult Blood",
-        "evidence_count": 0
+        "type": "correlational",
+        "explanation": "DHEA depletion allows cortisol-driven mucosal vascular permeability via mast cell pathway (M5) and impairs mucosal repair in catabolic DHEA-depleted states (M2); both create conditions for microhemorrhage and occult blood.",
+        "evidence_count": 2
       },
       {
         "from": "Cortisol-to-DHEA Ratio",
         "to": "Estradiol",
-        "evidence_count": 0
-      },
+        "type": "causal",
+        "explanation": "Elevated C:DHEA ratio drives estradiol dysregulation via cortisol-driven abdominal adiposity increasing aromatase activity (M3 slides Page 77); M3 audio 48-year-old male case independently demonstrates estradiol elevation from adipose aromatase in cortisol-dominant ratio state.",
+        "evidence_count": 2
+      }
+    ],
+    "pending": [
       {
         "from": "Cortisol-to-DHEA Ratio",
         "to": "Progesterone",
@@ -4828,6 +4900,51 @@
       "connections_validated": 34,
       "connections_discarded": 2,
       "output_file": "session-outputs/2026-03-24-connection-validation-8.md"
+    },
+    {
+      "date": "2026-03-25T03:52:40Z",
+      "phase_executed": "connection_validation",
+      "variables_researched": [],
+      "connections_validated": [
+        "Cortisol — Diurnal Pattern -> Testosterone",
+        "Cortisol — Diurnal Pattern -> Melatonin",
+        "Cortisol — Diurnal Pattern -> Dysbiosis-Intestinal Permeability Feedback Loop",
+        "Cortisol — Diurnal Pattern -> Mucosal Immune Tolerance and sIgA Function",
+        "Cortisol — Diurnal Pattern -> Gut-Brain-HPA Bidirectional Axis",
+        "Cortisol — Diurnal Pattern -> Reactive Food Burden — MRT",
+        "Cortisol — Diurnal Pattern -> H. pylori",
+        "Cortisol — Diurnal Pattern -> Candida and Fungal Overgrowth",
+        "Cortisol — Diurnal Pattern -> Parasitic Load",
+        "Cortisol — Diurnal Pattern -> Dysbiotic and Opportunistic Bacteria",
+        "Cortisol — Diurnal Pattern -> Commensal Flora Balance",
+        "Cortisol — Diurnal Pattern -> Calprotectin and Lactoferrin",
+        "Cortisol — Diurnal Pattern -> Beta-glucuronidase",
+        "Cortisol — Diurnal Pattern -> Anti-gliadin IgA",
+        "Cortisol — Diurnal Pattern -> Secretory IgA — GI tract",
+        "Cortisol — Diurnal Pattern -> Occult Blood",
+        "DHEA-S -> Cortisol-to-DHEA Ratio",
+        "DHEA-S -> Estradiol",
+        "DHEA-S -> Progesterone",
+        "DHEA-S -> Testosterone",
+        "DHEA-S -> Melatonin",
+        "DHEA-S -> Dysbiosis-Intestinal Permeability Feedback Loop",
+        "DHEA-S -> Mucosal Immune Tolerance and sIgA Function",
+        "DHEA-S -> Gut-Brain-HPA Bidirectional Axis",
+        "DHEA-S -> Reactive Food Burden — MRT",
+        "DHEA-S -> H. pylori",
+        "DHEA-S -> Candida and Fungal Overgrowth",
+        "DHEA-S -> Parasitic Load",
+        "DHEA-S -> Dysbiotic and Opportunistic Bacteria",
+        "DHEA-S -> Commensal Flora Balance",
+        "DHEA-S -> Calprotectin and Lactoferrin",
+        "DHEA-S -> Beta-glucuronidase",
+        "DHEA-S -> Anti-gliadin IgA",
+        "DHEA-S -> Secretory IgA — GI tract",
+        "DHEA-S -> Occult Blood",
+        "Cortisol-to-DHEA Ratio -> Estradiol"
+      ],
+      "connections_discarded": [],
+      "output_file": "session-outputs/2026-03-24-connection-validation-10.md"
     }
   ]
 }
