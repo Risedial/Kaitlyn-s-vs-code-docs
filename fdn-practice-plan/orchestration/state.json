@@ -16,11 +16,10 @@
     "step-12-add-screen-section-html",
     "step-13-add-css-classes",
     "step-14-add-event-delegation",
-    "step-15-add-badge-logic"
-  ],
-  "pendingSteps": [
+    "step-15-add-badge-logic",
     "step-16-verify-build"
   ],
+  "pendingSteps": [],
   "artifacts": {
     "itemCount": 15,
     "filesWritten": [
@@ -29,7 +28,8 @@
       "fdn-practice-plan/orchestration/context/state-verification.md",
       "fdn-practice-plan/orchestration/context/practices-diet-rest-supplement.md",
       "fdn-practice-plan/orchestration/context/practices-exercise-stress.md",
-      "fdn-practice-plan/orchestration/context/practices-final.js"
+      "fdn-practice-plan/orchestration/context/practices-final.js",
+      "fdn-pwa/index.html"
     ]
   },
   "dataChunks": {
@@ -55,6 +55,6 @@
     "cssClassesAdded": true,
     "eventDelegationUpdated": true,
     "badgeLogicAdded": true,
-    "buildVerified": false
+    "buildVerified": true
   }
 }

@@ -780,14 +780,14 @@ p, h1, h2, h3, h4 {
 .practice-card {
   background: var(--bg-secondary);
   border-radius: var(--radius-md);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-2);
   overflow: hidden;
 }
 .practice-card-header {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
-  padding: var(--space-md);
+  gap: var(--space-2);
+  padding: var(--space-4);
   min-height: 44px;
   cursor: pointer;
   user-select: none;
@@ -823,14 +823,14 @@ p, h1, h2, h3, h4 {
   padding: 0;
 }
 .practice-card-body {
-  padding: 0 var(--space-md) var(--space-md);
-  border-top: 1px solid var(--border-subtle);
+  padding: 0 var(--space-4) var(--space-4);
+  border-top: 1px solid var(--separator);
 }
 .practice-card-body p {
   color: var(--text-primary);
   font-size: var(--text-sm);
   line-height: 1.5;
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-1);
 }
 .practice-what-label,
 .practice-why-label {
@@ -839,7 +839,7 @@ p, h1, h2, h3, h4 {
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  margin-top: var(--space-sm);
+  margin-top: var(--space-2);
 }
 .cluster-dot {
   width: 8px;
@@ -869,11 +869,11 @@ p, h1, h2, h3, h4 {
   background: var(--bg-secondary);
   border-radius: var(--radius-md);
   padding: 2px;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-2);
 }
 .mode-btn {
   flex: 1;
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-1) var(--space-2);
   border-radius: calc(var(--radius-md) - 2px);
   font-size: var(--text-sm);
   font-weight: 500;
@@ -891,25 +891,25 @@ p, h1, h2, h3, h4 {
 .mode-explainer {
   font-size: var(--text-xs);
   color: var(--text-secondary);
-  margin-bottom: var(--space-md);
-  padding: 0 var(--space-xs);
+  margin-bottom: var(--space-4);
+  padding: 0 var(--space-1);
 }
-.dress-section { margin-bottom: var(--space-sm); }
+.dress-section { margin-bottom: var(--space-2); }
 .dress-section-header {
   font-weight: 600;
   color: var(--text-primary);
   font-size: var(--text-md);
-  padding: var(--space-sm) 0;
+  padding: var(--space-2) 0;
   cursor: pointer;
   list-style: none;
 }
-.dress-section-body { padding-top: var(--space-xs); }
-.plan-header { margin-bottom: var(--space-md); }
+.dress-section-body { padding-top: var(--space-1); }
+.plan-header { margin-bottom: var(--space-4); }
 .plan-header h2 {
   font-size: var(--text-xl);
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-1);
 }
 .nav-badge {
   display: none;
@@ -926,8 +926,8 @@ p, h1, h2, h3, h4 {
   background: var(--bg-secondary);
   border-left: 3px solid var(--cluster-e);
   border-radius: var(--radius-md);
-  padding: var(--space-md);
-  margin-bottom: var(--space-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
   color: var(--text-primary);
   font-size: var(--text-sm);
   line-height: 1.5;
@@ -935,15 +935,15 @@ p, h1, h2, h3, h4 {
 .banner-notice {
   background: var(--bg-secondary);
   border-radius: var(--radius-md);
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-2) var(--space-4);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-4);
   font-size: var(--text-sm);
   color: var(--text-secondary);
 }
-.practice-list { padding-bottom: var(--space-lg); }
+.practice-list { padding-bottom: var(--space-8); }
   </style>
 </head>
 <body>
@@ -1006,7 +1006,9 @@ p, h1, h2, h3, h4 {
         <span>Clusters</span>
       </button>
       <button
-        class="nav-tab"
+        class="tab-item"
+        role="tab"
+        aria-selected="false"
         data-tab="plan"
         data-action="navigate-tab"
         aria-label="My Plan"
