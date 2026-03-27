@@ -1,132 +1,291 @@
 # Parameter Extraction Algorithm
-**Purpose:** Universal algorithm for extracting every parameter at every level from any artifact in this project
-**Date:** 2026-03-22
+**Purpose:** Universal algorithm for extracting every parameter at every level from any artifact type
+**Date:** 2026-03-26
 
 ---
 
-## What "Parameter" Means in This Project
+## CORE PRINCIPLE
 
-A parameter is any variable that:
-- Controls a behavior, output, or condition
-- Can take different values in different instances
-- Must be specified before a task can execute correctly
-
-Parameters exist at every layer. Failing to extract micro-micro parameters is the most common source of incomplete work.
+Parameter extraction is a systematic audit, not a reading comprehension exercise. The algorithm forces extraction at all five layers (meta-meta, meta, macro, micro, micro-micro) and surfaces both explicit parameters (directly stated) and implicit parameters (required but unstated — inferrable from structure and constraints).
 
 ---
 
-## Universal Algorithm
+## THE UNIVERSAL EXTRACTION ALGORITHM
 
-### Pass 1 — Structural Scan
+Apply to any artifact: a prompt, a command, a context file, a specification document, a state file, a README.
 
-Read the artifact once. For each element, record:
-1. What it is (component type)
-2. What it does (function)
-3. What controls it (its inputs)
-4. What it produces (its outputs)
-5. What it fails to do if missing (failure mode)
+### Phase 1: Identify Artifact Type and Role
 
-**Output:** rough inventory list — not structured yet
+```
+What type is this artifact?
+  → Command (e.g., /prompt, /refinep)
+  → Specification document (e.g., nnnn.md)
+  → Prompt file (e.g., prompt-NN.md)
+  → Context file (e.g., data-inventory.md)
+  → State file (state.json)
+  → Index/README
+
+What role does this artifact play in the pipeline?
+  → Input to which stage?
+  → Output of which stage?
+  → Consumed by which other artifacts?
+  → Produces which other artifacts?
+```
+
+### Phase 2: Extract Layer by Layer
+
+**Do not skip layers. Do not merge layers.**
+
+#### Layer 1: meta-meta (governing rules)
+Extract items that govern HOW the artifact works — its own self-referential logic.
+
+Questions to ask:
+- What rules does this artifact impose on itself?
+- What constraints define what this artifact can and cannot be?
+- What beliefs or first principles govern its design?
+- What would violate its architectural integrity?
+- What terms does it define that carry special meaning?
+
+Explicit: Look for "must", "never", "always", "mandatory", "no exceptions", "verbatim", "cardinal"
+Implicit: Look for structural patterns that encode unstated rules (e.g., an append-only array implies immutability of past state)
+
+#### Layer 2: meta (purpose architecture)
+Extract items that define WHY this artifact exists and how it connects to other components.
+
+Questions to ask:
+- What problem does this artifact solve?
+- What failure mode does it prevent?
+- What contract does it fulfill for other components?
+- What does it consume? What does it produce?
+- What happens if this artifact is absent?
+
+Explicit: Look for stated purpose, "prevents", "solves", "enables", "required by"
+Implicit: Look for what other artifacts reference this one — that reference defines an implicit contract
+
+#### Layer 3: macro (outcome categories)
+Extract the major deliverables and cross-file workflows this artifact participates in.
+
+Questions to ask:
+- What does this artifact contribute to the overall workflow?
+- Which stages does it participate in?
+- What are the major categories of work it covers?
+- What checkpoints or gates does it create?
+
+Explicit: Look for phase names, stage names, output declarations
+Implicit: Look for references from other artifacts that reveal what this one produces
+
+#### Layer 4: micro (discrete operations)
+Extract every specific operation this artifact performs or defines.
+
+Questions to ask:
+- What exactly does this file do, step by step?
+- What sections does it contain? What does each section do?
+- What operations does it enable or require?
+- What transformations occur?
+
+Explicit: Look for numbered steps, section headers, operation descriptions
+Implicit: Look for implied operations (e.g., a "Prerequisites" section implies a "read state.json and check flags" operation before any task)
+
+#### Layer 5: micro-micro (all parameters)
+Extract every individual parameter, variable, naming convention, decision condition, and edge case.
+
+Questions to ask:
+- What are the exact values? (not ranges — exact values)
+- What are the naming conventions? (format strings, prefix/suffix patterns)
+- What are the valid values for each field?
+- What are the decision conditions at every branch?
+- What are the edge cases and how are they handled?
+- What is forbidden? (specific words, patterns, structures)
+
+Explicit: Look for exact numbers, exact strings, format patterns, enumerated values
+Implicit: Look for constraints that imply forbidden alternatives (e.g., "append-only" implies deletion is forbidden even if not stated)
+
+### Phase 3: Extract Explicit vs Implicit
+
+For every parameter found, classify it:
+
+**Explicit:** Directly stated in the artifact. Can be quoted verbatim.
+Label: `EXPLICIT: "[quoted text]"`
+
+**Implicit:** Required by the artifact's structure, relationships, or constraints — but not stated directly.
+Label: `IMPLICIT: [inferred requirement] — [reasoning: "because [observable structure/constraint]"]`
+
+**Inferred:** A reasonable conclusion from multiple explicit facts.
+Label: `[Inferred: reasoning]` — Use this label as used in source material to signal uncertainty.
+
+### Phase 4: Map Relationships
+
+For every parameter found, ask:
+- Which other parameters does this one constrain?
+- Which other artifacts does this parameter affect?
+- What happens downstream if this parameter changes?
+
+Build a parameter dependency map for any parameter with downstream effects.
 
 ---
 
-### Pass 2 — Layer Assignment
+## EXTRACTION TEMPLATES BY ARTIFACT TYPE
 
-For each item from Pass 1, assign it to a layer:
+### Template: Command Extraction
 
-| Layer | Test |
-|---|---|
-| meta-meta | Does it govern the entire system? Does it constrain other rules? |
-| meta | Does it define component roles or inter-component contracts? |
-| macro | Does it define a major outcome or cross-file workflow? |
-| micro | Does it define what one file or component does? |
-| micro-micro | Is it a specific value, variable, condition, or edge case? |
+```
+ARTIFACT: [Command name]
+TYPE: Command
+ROLE IN PIPELINE: [Stage N input/output]
 
-Rule: when uncertain, assign to the lower (more specific) layer.
+META-META PARAMETERS:
+- Governing rule: [rule]
+- Self-referential constraint: [constraint]
+- Architectural belief: [belief]
+
+META PARAMETERS:
+- Problem solved: [problem]
+- Failure mode prevented: [failure mode]
+- Input contract: [what it consumes]
+- Output contract: [what it produces]
+- Absent behavior: [what fails if this command doesn't exist]
+
+MACRO PARAMETERS:
+- Stages participated in: [list]
+- Major deliverables: [list]
+- Gates created: [list]
+
+MICRO PARAMETERS:
+- Phases/sections: [ordered list]
+- Operations per phase: [list per phase]
+- Trigger conditions: [when each operation fires]
+
+MICRO-MICRO PARAMETERS:
+- Input format: [exact format]
+- Output format: [exact format]
+- Exact values: [list with values]
+- Naming conventions: [patterns]
+- Forbidden content: [list]
+- Edge case handling: [case → handling]
+- Decision conditions: [condition → branch]
+```
+
+### Template: Prompt File Extraction
+
+```
+ARTIFACT: prompt-NN.md
+TYPE: Prompt file
+ROLE: Stage 7 execution unit
+
+META-META:
+- Atomicity constraint: [one verifiable unit — what is that unit?]
+- Hard constraints: [all 5, verbatim]
+- Cardinal failure mode: [what must never happen in this prompt]
+
+META:
+- Step ID: [exact step ID]
+- What this prompt does: [one sentence]
+- What it prevents: [failure mode]
+
+MACRO:
+- Stage: 7 (sequential execution)
+- Session type: fresh chat (mandatory)
+- Dependency on prior steps: [list]
+- Enables for subsequent steps: [list]
+
+MICRO:
+- Prerequisites section content: [exact flags and files]
+- Task section: [exact instruction]
+- Verification checks: [all checks listed]
+- State mutations: [all mutations listed]
+
+MICRO-MICRO:
+- File path written: [exact path]
+- Format of output: [exact format]
+- Exact counts (if data batch): [N entries]
+- Flags set: [exact flag names]
+- Counters incremented: [exact amounts]
+- Files recorded in filesWritten: [exact paths]
+```
+
+### Template: Context File Extraction
+
+```
+ARTIFACT: context/[filename].[ext]
+TYPE: Context file
+ROLE: Domain reference for sub-agents
+
+META-META:
+- Immutability constraint: immutable during implementation
+- Redundancy rule: [which critical values are redundantly present]
+- Source of truth for: [what domain values]
+
+META:
+- Failure mode prevented: [specific failure mode]
+- Consumed by prompts: [list of prompt numbers]
+- Dependency position in graph: [upstream / mid / downstream]
+
+MACRO:
+- Stage written: 6 (context file preparation)
+- Stage consumed: 7 (sequential execution)
+
+MICRO:
+- Sections present: [list]
+- Copy-paste code blocks: [list]
+- Enumeration completeness: [is the list complete? expected count?]
+
+MICRO-MICRO:
+- Exact values: [list all canonical values with their identifiers]
+- Naming conventions: [all naming patterns defined]
+- Ordering constraints: [any required ordering]
+- Format requirements: [exact format of entries]
+```
+
+### Template: State File Extraction
+
+```
+ARTIFACT: state.json
+TYPE: State file
+ROLE: Cross-session continuity mechanism
+
+META-META:
+- Initialization rule: pendingSteps fully populated at init (never extended)
+- Append-only constraint: completedSteps never shrinks
+- Immutability: past state (completedSteps) is never modified, only appended
+
+META:
+- Problem solved: continuity across isolated sessions
+- Replaces: conversation memory (which is excluded by design)
+- Source of truth for: build progress
+
+MACRO:
+- Written by: initialization prompt (prompt-01) + every subsequent session
+- Read by: every session at start
+
+MICRO:
+- Fields: version, buildTarget, completedSteps, pendingSteps, artifacts, dataChunks, flags
+- Mutations per session: append to completedSteps, remove from pendingSteps, set flags, increment counters
+
+MICRO-MICRO:
+- version: string "1.0.0"
+- buildTarget: exact output directory path (trailing slash required)
+- Step ID format: "step-NN-descriptive-name"
+- Flag naming: past-participle pattern (e.g., "stateInitialized", "designTokensWritten")
+- Completion condition: pendingSteps.length === 0 AND completedSteps.length === total_steps
+```
 
 ---
 
-### Pass 3 — Explicit vs. Implicit Extraction
+## PARAMETER COMPLETENESS AUDIT
 
-For every item, determine:
+After extraction, run this audit to confirm no parameters were missed:
 
-**Explicit** — stated directly in the artifact
-- Extract verbatim where possible
-- Preserve exact values (numbers, names, conditions)
+```
+For each parameter extracted, ask:
+  1. Is this the exact value or an approximation? → Exact values only
+  2. Is this parameter's downstream effect documented? → Map it if not
+  3. Is there an implicit counterpart? → State it explicitly (e.g., if X is required, Y is forbidden)
+  4. Is there an edge case? → State how the edge case is handled
+  5. Is this parameter's naming convention documented? → Extract the pattern
 
-**Implicit** — required but not stated
-- Inferred from structure: what must be true for this to work?
-- Inferred from relationships: what must the input be for this output to occur?
-- Inferred from constraints: what is ruled out by what IS stated?
-
-Rule: implicit parameters are often more important than explicit ones. Do not skip this pass.
-
----
-
-### Pass 4 — Dependency Mapping
-
-For each parameter:
-1. Does it require another parameter to be set first?
-2. Does it constrain any other parameters?
-3. If it changes, what else must change?
-
-**Output:** dependency chain per parameter
-
----
-
-### Pass 5 — Edge Case Identification
-
-For each parameter:
-- What happens at the boundary values (minimum, maximum, zero, null)?
-- What happens if this parameter is set incorrectly?
-- Is there a conflict condition (two parameters that cannot be set simultaneously)?
-
----
-
-### Pass 6 — Validation Rules
-
-For each parameter:
-- What is the valid range or set of values?
-- What confirms this parameter is set correctly?
-- What observable output confirms the parameter is working as intended?
-
----
-
-## Application to This Project's Artifact Types
-
-### Applying to a Marker Upstream Map
-| Layer | What to Extract |
-|---|---|
-| meta-meta | Governing rule for the marker (e.g., "SIgA is sensitive but non-specific") |
-| meta | The node sequence; the relationship between nodes |
-| macro | The clinical outcome of the full map |
-| micro | Per-node: name, function, upstream vulnerabilities |
-| micro-micro | Per-vulnerability: stressor name, mechanism sentence, root cause category, FDN marker correlate, BCMO1/bile/etc. modifiers |
-
-### Applying to an HTML Widget
-| Layer | What to Extract |
-|---|---|
-| meta-meta | Design constraints that must hold across all states |
-| meta | Component architecture; state management contract |
-| macro | User interaction flow; what the user can accomplish |
-| micro | Per-component: structure, states, interactions |
-| micro-micro | Color hex values; font sizes; border-radius values; filter logic operators; tooltip trigger conditions |
-
-### Applying to a Clinical Decision Framework
-| Layer | What to Extract |
-|---|---|
-| meta-meta | What makes this framework valid (e.g., "every claim must trace to a mechanism") |
-| meta | Decision tree structure; input → output contract |
-| macro | Outcome categories (proximal failure, upstream failure, compound failure) |
-| micro | Per-rule: condition(s), consequence, intervention |
-| micro-micro | Exact marker thresholds; OR vs. AND logic between conditions; null condition handling |
-
----
-
-## Algorithm Output Format
-
-After all 6 passes, produce a parameter table:
-
-| Parameter Name | Layer | Type (Explicit/Implicit) | Value or Range | Dependencies | Edge Cases | Validation Rule |
-|---|---|---|---|---|---|---|
-| [Name] | [Layer] | E / I | [Value] | [Deps] | [Cases] | [Rule] |
+For the artifact as a whole, ask:
+  1. Have I extracted parameters at ALL five layers? → Confirm each layer covered
+  2. Have I extracted both explicit AND implicit parameters? → Confirm both extracted
+  3. Have I mapped this artifact's relationships to all others it touches? → Confirm mapped
+  4. Are there any "it depends" answers? → Resolve the dependency — what does it depend on?
+```

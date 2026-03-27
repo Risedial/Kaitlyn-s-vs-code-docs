@@ -1,101 +1,106 @@
-# FDN Methodology — Brain Dump Extraction
-**Source:** `raw context/claude conversation.md`
-**Created:** 2026-03-22
+# BDE Extraction — Claude Code Methodology
+**Source:** `claude-code-methodology.md`
+**Date:** 2026-03-26
 
 ---
 
-## What This Folder Is
+## START HERE
 
-This folder contains the complete operationalized extraction of a Claude conversation about building an FDN-based health transformation methodology. Every file here was built by following the BDE protocol on that conversation.
+1. Open `00-inventory/system-map.md` — read the full pipeline dependency graph at the bottom. This gives you a complete map of how all components connect.
 
-**End goal:** A complete practitioner methodology with an interactive visual diagram, a nodal reasoning framework, and a written document — all grounded in specific mechanisms, not generalizations.
-
----
-
-## Start Here
-
-**Step 1.** Open [00-inventory/system-map.md](00-inventory/system-map.md) and read Section 1 through Section 3.
-This is the source-of-truth map of everything in the brain dump. Read it before touching anything else.
-
-**Step 2.** Open [01-outcomes/outcome-registry.md](01-outcomes/outcome-registry.md) and identify which outcome you want to work on next.
-Each outcome has a classification, a dependency list, and a "Fresh Chat or Chain" indicator.
-
-**Step 3.** Check the outcome's dependencies.
-If an outcome shows "Depends on: Outcomes X, Y" → confirm those are complete before proceeding. If NOT complete → go to Step 2 and work on those first.
-
-**Step 4.** Open [01-outcomes/fresh-chat-vs-chain-map.md](01-outcomes/fresh-chat-vs-chain-map.md) and find your outcome.
-If it says CHAIN → continue in this conversation or the conversation where the source research happened. If it says FRESH CHAT → go to Step 5.
-
-**Step 5 (Fresh Chat only).** Open [02-reverse-engineered/](02-reverse-engineered/) and find the execution plan for your outcome.
-The execution plan tells you the exact steps, decision tree, and handoff prompt to use.
-
-**Step 6 (Fresh Chat only).** Open [03-templates/fresh-chat-prompt-template.md](03-templates/fresh-chat-prompt-template.md).
-Fill in the template using the handoff prompt at the bottom of the execution plan from Step 5. Paste the assembled prompt into a new conversation.
-
-**Step 7 (Research tasks).** For any marker research task, open [03-templates/marker-upstream-map-template.md](03-templates/marker-upstream-map-template.md).
-Use this template for every marker file produced. Do not skip the validation checklist at the bottom.
-
-**Step 8 (Build tasks — HTML).** For any HTML widget build, open [03-templates/html-widget-spec-template.md](03-templates/html-widget-spec-template.md).
-Use the design system and component specs defined there. All HTML widgets must follow this spec.
-
-**Step 9.** When a task produces output files, save them to the correct location.
-If it's a research file → `02-reverse-engineered/[cluster-name]/`. If it's a completed deliverable → `bd-extraction/deliverables/` (create this folder when needed).
-
-**Step 10.** Update the status header in the execution plan file for the outcome you just completed.
-Change `NOT STARTED` to `COMPLETE` and list the output files produced.
+2. Decide what you want to do:
+   - If you want to **use the methodology** → go to step 3
+   - If you want to **understand the methodology** → open `04-meta-system/orchestration-spec.md`
+   - If you want **templates to fill in** → go to step 8
 
 ---
 
-## Decision Points
+## USING THE METHODOLOGY
 
-**The output file I need doesn't exist yet.**
-→ Go to Step 2. Find what produces that file. Work on that outcome first.
+3. Open `01-outcomes/outcome-registry.md`. Find the outcome that matches your goal. Note its "Fresh Chat vs Chain" classification.
 
-**I'm not sure which outcome to work on next.**
-→ Open [01-outcomes/fresh-chat-vs-chain-map.md](01-outcomes/fresh-chat-vs-chain-map.md) and follow the "Execution Order Recommendation" at the bottom of that file. Phase 1 items can be started immediately.
+4. Is your goal: optimize a single prompt?
+   - **YES → go to step 5**
+   - **NO, I'm running a large multi-session project → go to step 6**
 
-**The research for a marker cluster is too large for one chat.**
-→ Open [02-reverse-engineered/marker-research-execution-plan.md](02-reverse-engineered/marker-research-execution-plan.md) and find the cluster split table. Use one fresh chat per cluster row.
+5. Single prompt optimization path:
+   - Open `02-reverse-engineered/prompt-engineering-pipeline-execution-plan.md`
+   - Follow "STEP SEQUENCE: /prompt Application" (Steps 1–4)
+   - If production-grade: continue to "/refinep Application" (Steps 1–7)
+   - If task in refined-prompt.md is large/complex → go to step 6
+   - **DONE.**
 
-**I found a mechanism I'm not sure about.**
-→ Do NOT guess. Flag it as a research gap. Open [04-meta-system/system-integrity-rules.md](04-meta-system/system-integrity-rules.md) Rule 05 for the exact protocol.
+6. Multi-session project path:
+   - Open `02-reverse-engineered/orchestration-decomposition-execution-plan.md`
+   - Follow Steps 1–9 in order. Do not skip Step 1 (catalog units — mandatory pre-write).
+   - **If YES, completed orchestration package → go to step 7**
 
-**I want to build the HTML visual map but not all marker research is done.**
-→ Stop. Open [04-meta-system/orchestration-spec.md](04-meta-system/orchestration-spec.md) Rule S1. The HTML build is gated on all upstream maps being complete. Complete the research first.
-
-**I want to understand how all the files connect.**
-→ Open [04-meta-system/orchestration-spec.md](04-meta-system/orchestration-spec.md) and read the Component Map and Sequencing Rules sections.
-
----
-
-## Recommended First Session (Phase 1)
-
-These three outcomes can be completed by chaining from the existing conversation — no new research needed:
-
-1. **Outcome 06 — Vitamin A Axis Reference** → chain from existing conversation → save to `deliverables/vitamin-a-reference.md`
-2. **Outcome 03 — SIgA Axis Reference** → chain from existing conversation → save to `deliverables/siga-axis-reference.md`
-3. **Outcome 04 — Cortisol/DHEA Reference** → chain from existing conversation → save to `deliverables/cortisol-dhea-reference.md`
-
-After these three are complete, Phase 1 research is done and Phase 2 (fresh chats for remaining clusters) can begin.
+7. Execution path:
+   - Open `02-reverse-engineered/context-state-system-execution-plan.md`
+   - Follow "STAGE 6: CONTEXT FILE WRITING" (Steps 1–5)
+   - Then follow "STAGE 7: SEQUENTIAL EXECUTION" — Per-Session Protocol (Steps 1–12)
+   - Each sub-prompt runs in a fresh chat. No exceptions.
+   - When `state.json.pendingSteps` is empty → follow "STAGE 8: COMPLETION VERIFICATION"
+   - **DONE.**
 
 ---
 
-## Folder Index
+## USING TEMPLATES
 
-| Folder / File | What It Contains |
-|---|---|
-| [00-inventory/system-map.md](00-inventory/system-map.md) | Complete inventory of all entities, mechanisms, and relationships in the brain dump |
-| [01-outcomes/outcome-registry.md](01-outcomes/outcome-registry.md) | All 8 outcomes with classifications, layers, and dependency maps |
-| [01-outcomes/fresh-chat-vs-chain-map.md](01-outcomes/fresh-chat-vs-chain-map.md) | Routing decision for each outcome + execution order recommendation |
-| [02-reverse-engineered/visual-map-execution-plan.md](02-reverse-engineered/visual-map-execution-plan.md) | Step-by-step plan for building the HTML visual map |
-| [02-reverse-engineered/nodal-reasoning-execution-plan.md](02-reverse-engineered/nodal-reasoning-execution-plan.md) | Step-by-step plan for building the nodal reasoning framework |
-| [02-reverse-engineered/marker-research-execution-plan.md](02-reverse-engineered/marker-research-execution-plan.md) | Step-by-step plan for all marker cluster research (6 clusters) |
-| [02-reverse-engineered/methodology-document-execution-plan.md](02-reverse-engineered/methodology-document-execution-plan.md) | Step-by-step plan for the capstone methodology document |
-| [03-templates/marker-upstream-map-template.md](03-templates/marker-upstream-map-template.md) | Template for every marker research file |
-| [03-templates/fresh-chat-prompt-template.md](03-templates/fresh-chat-prompt-template.md) | Template for every fresh chat prompt |
-| [03-templates/html-widget-spec-template.md](03-templates/html-widget-spec-template.md) | Design system and component specs for all HTML widgets |
-| [03-templates/cluster-research-workflow.md](03-templates/cluster-research-workflow.md) | Session protocol for marker cluster research |
-| [04-meta-system/approach-selection-decision-tree.md](04-meta-system/approach-selection-decision-tree.md) | How to select the right approach for any sub-task |
-| [04-meta-system/parameter-extraction-algorithm.md](04-meta-system/parameter-extraction-algorithm.md) | Universal algorithm for extracting parameters at all layers |
-| [04-meta-system/system-integrity-rules.md](04-meta-system/system-integrity-rules.md) | Non-overridable constraints for this project |
-| [04-meta-system/orchestration-spec.md](04-meta-system/orchestration-spec.md) | How all components connect; sequencing rules; handoff contracts |
+8. What do you need?
+
+   - Sub-prompt file (prompt-NN.md) → `03-templates/sub-prompt-schema-template.md`
+   - state.json initialization → `03-templates/state-schema-template.md`
+   - context/ directory file → `03-templates/context-file-template.md`
+   - README.md execution index → `03-templates/readme-index-template.md`
+   - Quality gate checklists (8-rule, 15-item, sub-prompt, package) → `03-templates/prompt-engineering-checklist.md`
+
+---
+
+## DECISION POINTS
+
+9. Not sure which path to take?
+   - Open `04-meta-system/approach-selection-decision-tree.md` → start at "PRIMARY DECISION TREE: WHAT DO I DO WITH THIS TASK?"
+   - Follow branches. Every branch has a binary YES/NO. No "it depends" without resolution.
+
+10. Not sure if something is fresh chat or chain?
+    - Open `01-outcomes/fresh-chat-vs-chain-map.md` → find your operation in the table.
+    - If still uncertain → go to the DECISION TREE section in that file.
+
+11. A constraint or rule is being violated — what takes precedence?
+    - Open `04-meta-system/system-integrity-rules.md` → find the rule in TIER 1 (non-overridable) or TIER 2 (strong)
+    - Tier 1 rules cannot be overridden. Use the "compliance-while-responsive pattern" to accomplish the user's goal within the constraint.
+
+---
+
+## DIRECTORY REFERENCE
+
+| Folder | Contents | When to Open |
+|---|---|---|
+| `00-inventory/` | `system-map.md` — complete inventory of all 38 components across 5 layers | Start here for orientation |
+| `01-outcomes/` | `outcome-registry.md` — 10 outcomes classified and layered | Find your goal |
+| `01-outcomes/` | `fresh-chat-vs-chain-map.md` — binary session strategy for every operation | Decide session type |
+| `02-reverse-engineered/` | `prompt-engineering-pipeline-execution-plan.md` — Stages 1–4 | Single prompt work |
+| `02-reverse-engineered/` | `orchestration-decomposition-execution-plan.md` — Stage 5 | Complex project decomposition |
+| `02-reverse-engineered/` | `context-state-system-execution-plan.md` — Stages 6–8 | Context files, execution, completion |
+| `03-templates/` | `sub-prompt-schema-template.md` | Writing prompt-NN.md files |
+| `03-templates/` | `state-schema-template.md` | Writing state.json |
+| `03-templates/` | `context-file-template.md` | Writing context/ files |
+| `03-templates/` | `readme-index-template.md` | Writing orchestration README.md |
+| `03-templates/` | `prompt-engineering-checklist.md` | Quality gates (A, B, C, D, E) |
+| `04-meta-system/` | `approach-selection-decision-tree.md` | Choosing the right approach |
+| `04-meta-system/` | `parameter-extraction-algorithm.md` | Extracting parameters from any artifact |
+| `04-meta-system/` | `system-integrity-rules.md` | Rules that cannot be overridden |
+| `04-meta-system/` | `orchestration-spec.md` | Full component interaction map + handoff contracts |
+
+---
+
+## QUICK REFERENCE: CARDINAL RULES
+
+These five rules cannot be violated. If you are tempted to violate any of them, read `04-meta-system/system-integrity-rules.md` first.
+
+1. **Every Stage 7 session = fresh chat.** No chaining. No exceptions.
+2. **pendingSteps fully populated at initialization.** Never add steps mid-execution.
+3. **Hard constraints verbatim in every prompt.** Copy-paste. No paraphrasing.
+4. **One atomic task per prompt.** Combining two tasks = cardinal failure mode.
+5. **State.json updated before session exit.** State update is the mandatory final step, conditional only on Verification passing.

@@ -1,0 +1,116 @@
+/* ============================================================
+   FDN PWA DESIGN TOKENS
+   Source: /context/ui-design-system.md (iOS UIColor dark mode,
+   Apple HIG 2026 Liquid Glass, FDN color system)
+   Generated: March 2026 — zero placeholder values
+   ============================================================ */
+
+:root {
+
+  /* ── Safe Areas ── */
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-right:  env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left, 0px);
+
+  /* ── Backgrounds (iOS UIColor dark mode equivalents) ── */
+  --bg-primary:   #000000;               /* UIColor.systemBackground (dark) */
+  --bg-secondary: #1C1C1E;               /* UIColor.secondarySystemBackground (dark) */
+  --bg-tertiary:  #2C2C2E;               /* UIColor.tertiarySystemBackground (dark) */
+  --bg-glass:     rgba(28, 28, 30, 0.72); /* Liquid Glass frosted surface */
+
+  /* ── Text / Labels ── */
+  --text-primary:   rgba(255, 255, 255, 1.0);   /* UIColor.label (dark) */
+  --text-secondary: rgba(255, 255, 255, 0.55);  /* UIColor.secondaryLabel (dark) */
+  --text-tertiary:  rgba(255, 255, 255, 0.35);  /* UIColor.tertiaryLabel (dark) */
+
+  /* ── Separators ── */
+  --separator:        rgba(255, 255, 255, 0.12); /* translucent — UIColor.separator (dark) */
+  --separator-opaque: #3A3A3C;                   /* solid — UIColor.opaqueSeparator (dark) */
+
+  /* ── System Accent Colors ── */
+  --accent:             #007AFF; /* UIColor.systemBlue */
+  --accent-destructive: #FF3B30; /* UIColor.systemRed */
+
+  /* ── FDN Panel Colors (preserve exactly — clinical identity encoding) ── */
+  --panel-mwp:   #e07c3a; /* MWP — Metabolic Wellness Panel — amber */
+  --panel-mba:   #3abde0; /* MBA — Mucosal Barrier Assessment — teal */
+  --panel-shp:   #8b5cf6; /* SHP — Stress Hormone Panel — purple */
+  --panel-gimap: #22c55e; /* GI-MAP — green */
+  --panel-cross: #94a3b8; /* Cross-panel constructs — slate */
+
+  /* ── FDN Cluster Colors (preserve exactly — clinical identity encoding) ── */
+  --cluster-a: #ef4444; /* Cluster A — GI Ecosystem Collapse — red */
+  --cluster-b: #f97316; /* Cluster B — HPA-Immune Loop — orange */
+  --cluster-c: #ec4899; /* Cluster C — Estrogen Recycling Loop — pink */
+  --cluster-d: #06b6d4; /* Cluster D — Mucosal Barrier Breakdown — cyan */
+  --cluster-e: #fbbf24; /* Cluster E — Structural GI Pathology — amber/warning */
+
+  /* ── Typography ── */
+  --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+                 'Helvetica Neue', Arial, sans-serif;
+
+  /* Size scale (rem, base = 16px) */
+  --text-xs:   0.6875rem; /*  11px — captions, badges */
+  --text-sm:   0.8125rem; /*  13px — secondary labels, pills */
+  --text-base: 1rem;      /*  16px — body text */
+  --text-md:   1.0625rem; /*  17px — iOS default body size */
+  --text-lg:   1.25rem;   /*  20px — subheadings */
+  --text-xl:   1.5rem;    /*  24px — section titles */
+  --text-2xl:  2rem;      /*  32px — large display headings */
+
+  /* Weights */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* Letter spacing */
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.03em;
+  --tracking-caps:    0.06em;
+
+  /* ── Spacing (4px base grid) ── */
+  --space-1:  0.25rem;  /*  4px */
+  --space-2:  0.5rem;   /*  8px */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-8:  2rem;     /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+
+  /* ── Border Radius ── */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  /* ── Shadows (dark-background-optimized) ── */
+  --shadow-0: none;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4),
+              0 0px 1px rgba(0, 0, 0, 0.3);
+  --shadow-2: 0 4px 12px rgba(0, 0, 0, 0.5),
+              0 1px  3px rgba(0, 0, 0, 0.4);
+  --shadow-3: 0 16px 40px rgba(0, 0, 0, 0.6),
+              0  4px 12px rgba(0, 0, 0, 0.5),
+              0  1px  3px rgba(0, 0, 0, 0.4);
+
+  /* ── Motion / Easing ── */
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);  /* iOS spring overshoot */
+  --ease-snap:     cubic-bezier(0.25, 0.46, 0.45, 0.94); /* iOS nav push/pop */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);        /* standard smooth */
+
+  --duration-fast:   150ms; /* micro-interactions, icon state changes */
+  --duration-normal: 300ms; /* navigation, accordion, tab switches */
+  --duration-slow:   450ms; /* bottom sheet open/close with spring */
+
+  /* ── Layout ── */
+  --touch-target:  44px;   /* Apple HIG minimum touch target */
+  --max-width:    430px;   /* mobile-first max container width */
+  --nav-height:   calc(60px + var(--safe-bottom));   /* bottom tab bar total height */
+  --header-height: calc(52px + var(--safe-top));     /* top header total height */
+}

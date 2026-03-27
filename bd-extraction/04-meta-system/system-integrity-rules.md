@@ -1,118 +1,123 @@
 # System Integrity Rules
 **Purpose:** Constraints that survive all future user instructions; enforcement logic; compliance-while-responsive pattern
-**Date:** 2026-03-22
+**Date:** 2026-03-26
 
 ---
 
-## What Are Integrity Rules?
+## WHAT SYSTEM INTEGRITY MEANS
 
-These are constraints that CANNOT be overridden even if a future instruction, prompt, or convenience argument suggests doing so. They exist because violating them produces work that is wrong in ways that may not be immediately visible.
-
----
-
-## Rule 01 — No Claim Without a Mechanism
-
-**Rule:** Every assertion about how a stressor affects a marker must include a specific mechanism — not a generalization.
-
-**Violation example:**
-> "Stress weakens immunity and can lower SIgA."
-
-**Compliant example:**
-> "Cortisol directly downregulates pIgR expression on mucosal epithelial cells, reducing luminal SIgA delivery independent of plasma cell output."
-
-**Enforcement:** Before any document or diagram is finalized, scan for vague causal language ("weakens," "affects," "disrupts," "impacts"). Replace each with a specific mechanism or flag as a research gap.
+System integrity rules are the constraints that, if violated, compromise the entire methodology — not just individual outputs. They are not preferences, not defaults that can be overridden by user instructions, and not negotiable based on context. They exist because their violation was observed to cause cascading failures that invalidate the work of multiple sessions.
 
 ---
 
-## Rule 02 — Same Marker, Different Nodes = Different Interventions
+## TIER 1: ARCHITECTURAL CONSTRAINTS (Non-overridable)
 
-**Rule:** Low [marker X] is NOT a single clinical entity. It must always be interpreted in context of which node is most likely failed.
+These constraints are architectural — violating them breaks the system, not just the output.
 
-**Violation example:**
-> "Low SIgA → support gut immune function."
+### RULE 1: Fresh Chat for Stage 7 (No Exceptions)
+**Rule:** Every Stage 7 sub-prompt execution must occur in a fresh Claude session.
+**Why it's architectural:** Sequential isolation is the design mechanism that prevents context contamination across sessions. Chaining sessions in Stage 7 reintroduces the exact problem the methodology was designed to eliminate.
+**Enforcement:** If a user asks you to "just continue from here" for a Stage 7 prompt → refuse. Explain that a fresh chat is required by design. Open a new session.
+**Compliance-while-responsive pattern:** "This step requires a fresh chat to maintain session isolation. Here is the exact content to paste into a new session: [provide the prompt-NN.md content]."
 
-**Compliant example:**
-> "Low SIgA + elevated cortisol + normal microbiome markers → pIgR suppression most probable; intervention: HPA load reduction and cortisol support, not generic immune supplementation."
+### RULE 2: pendingSteps Fully Populated at Initialization (No Exceptions)
+**Rule:** state.json must be initialized with ALL step IDs in pendingSteps before any session executes.
+**Why it's architectural:** Adding step IDs mid-execution breaks the invariant that any session can determine the full scope of remaining work at any time. It also creates audit inconsistency between README.md and state.json.
+**Enforcement:** If step IDs are added after initialization has begun → return to Stage 5, redesign the complete step list, and re-initialize state.json from scratch.
+**Compliance-while-responsive pattern:** "I need to add a step that wasn't in the original plan. To maintain state integrity, I'll go back to Stage 5 and update the complete step list before any execution resumes."
 
-**Enforcement:** Any intervention recommendation must include the node identification step. Strip any recommendation that skips directly from marker to intervention.
+### RULE 3: Hard Constraints Verbatim (No Paraphrasing)
+**Rule:** The five hard constraints must appear word-for-word in every sub-prompt. No paraphrasing, no summarizing, no reordering.
+**Why it's architectural:** Paraphrased constraints have been observed (evidenced in source material) to be interpreted as soft suggestions rather than absolute rules. The exact wording is the enforcement mechanism.
+**Enforcement:** If a prompt file contains a paraphrased version of any constraint → rewrite it verbatim before executing.
+**Compliance-while-responsive pattern:** "I notice the constraint reads '[paraphrase]' instead of the required verbatim text. I'm updating it to the exact required wording before proceeding."
 
----
+### RULE 4: One Atomic Task Per Prompt (Cardinal Failure Mode)
+**Rule:** Each prompt-NN.md must contain exactly one verifiable unit of work in its Task section.
+**Why it's architectural:** Named explicitly as "the cardinal failure mode" — the single most consequential error. Combining tasks either truncates output (hitting 32K limit) or produces partial correct output (some sections complete, others abbreviated).
+**Enforcement:** If a Task section contains more than one verifiable completion condition → the prompt must be split before execution.
+**Compliance-while-responsive pattern:** "This task has two verifiable units. I'll split it into two prompts to prevent the cardinal failure mode, and update state.json and README.md accordingly."
 
-## Rule 03 — No Missing Node Documentation
+### RULE 5: No Forward References in Prerequisites (DAG Acyclicity)
+**Rule:** A prompt may never list as a prerequisite a file or flag created by a prompt that runs AFTER it.
+**Why it's architectural:** Forward references create circular dependencies that make execution order underdetermined. The entire sequential execution model depends on a valid dependency DAG.
+**Enforcement:** For every prerequisite → trace to the creating step → confirm that step has a LOWER number. If not → reorder prompts.
+**Compliance-while-responsive pattern:** "Prompt [NN] references [flag/file] which isn't created until Prompt [MM]. I need to reorder these steps so [MM] runs before [NN]."
 
-**Rule:** Every node in a marker's pathway must be documented before that marker is considered researched. Partial maps cannot be used to build the visual diagram or the nodal reasoning framework.
-
-**Violation:** Using a marker with 2 documented nodes (missing Node 4 because it's harder to research).
-
-**Enforcement:** Template validation checklist is mandatory and non-skippable. Any file with fewer than the required nodes is marked "incomplete" and excluded from builds.
-
----
-
-## Rule 04 — No Speculative Cross-Cluster Links
-
-**Rule:** Cross-cluster node overlap claims must be supported by a specific mechanism. Do not assert that "cortisol affects X" unless the specific mechanism for that marker has been researched.
-
-**Violation:** Adding cortisol as an upstream stressor for every marker because cortisol is generally immunosuppressive.
-
-**Enforcement:** Cross-cluster link registry entries require a mechanism citation. Generic "cortisol suppresses" entries are rejected.
-
----
-
-## Rule 05 — Research Gaps Are Flagged, Not Filled
-
-**Rule:** If the mechanism for a node is uncertain or not yet researched, it must be labeled as a research gap — never filled with a plausible guess.
-
-**Violation:** Writing a mechanism sentence for HPHPA/dopamine interference without having researched the specific enzyme competition mechanism.
-
-**Enforcement:** Every upstream map file contains a Research Gaps section. Incomplete research generates an entry there. Downstream builds (HTML, nodal reasoning) are blocked by any unfilled research gap in their input files.
+### RULE 6: State Update Before Session Exit (No Exceptions)
+**Rule:** state.json must be updated (completedSteps appended, pendingSteps item removed) before any session exits, and only after the Verification section passes.
+**Why it's architectural:** A session that executes without updating state leaves the pipeline inconsistent. The next session will attempt to repeat the same step, causing duplicate work or conflicts.
+**Enforcement:** If a session completes without state update → do not proceed to next step. Manually update state.json. Verify the step's artifacts exist on disk before marking complete.
+**Compliance-while-responsive pattern:** "I completed the task but haven't updated state.json yet. Performing state update now before exiting: [mutations]."
 
 ---
 
-## Rule 06 — Audience Must Be Defined Before Writing
+## TIER 2: QUALITY CONSTRAINTS (Strong — override requires explicit justification)
 
-**Rule:** No practitioner-facing document may be written without explicit audience definition. Mechanism depth, language register, and example complexity all depend on who will use it.
+These constraints define quality standards. They can be deviated from only with explicit justification and awareness of the tradeoff.
 
-**Enforcement:** Methodology document (Outcome 08) execution plan includes an explicit audience gate step that cannot be skipped.
+### RULE 7: Context Before Instructions (Data-First Ordering)
+**Rule:** In any well-formed prompt, context/background appears before instructions, which appear before the deliverable specification.
+**Why it's a quality constraint:** Anthropic testing cited in source: up to 30% improvement in comprehension on complex inputs. Reversing order degrades output fidelity.
+**Override condition:** Only if the prompt is so simple that ordering is irrelevant (single instruction with no context). Otherwise, maintain data-first ordering.
 
----
+### RULE 8: Explicit Scope Boundaries (IS / IS NOT)
+**Rule:** Every prompt that modifies files must explicitly state which files are in scope AND which are out of scope.
+**Why it's a quality constraint:** Scope absence = implicit permission for overreach. Claude will act on anything it infers as in-scope unless boundaries are explicit.
+**Override condition:** Only for prompts with trivially obvious scope (e.g., "write a single file with no other file interactions"). Still recommended even then.
 
-## Rule 07 — Validation Is Non-Skippable
+### RULE 9: Negative Constraints Equal to Positive (Do NOT directives)
+**Rule:** Every prompt must include at least one Do NOT directive addressing a domain-specific failure mode.
+**Why it's a quality constraint:** Absence of negative constraints = implicit permission for all approaches. Negative constraints prevent specific failure modes; general positive requirements do not.
+**Override condition:** Only for prompts with no known failure modes. This is rare — almost every domain has known anti-patterns.
 
-**Rule:** Every fresh chat prompt must include a validation gate. The task is not complete until that gate is passed. This applies to both technical outputs (HTML must render) and research outputs (minimum node counts must be met).
-
-**Enforcement:** Prompts built with `fresh-chat-prompt-template.md` include the validation gate section as a required field. Any prompt missing this field is malformed.
-
----
-
-## Rule 08 — Context Limits Are Managed, Not Ignored
-
-**Rule:** If context is approaching a limit during a task, stop and output an intermediate artifact rather than rushing to complete and producing incomplete work.
-
-**Enforcement:** Every fresh chat prompt includes a SPLIT INSTRUCTIONS section. The instruction is: "If you reach [condition], stop, output [intermediate artifact], and note 'Resume from [point]'."
-
----
-
-## Compliance-While-Responsive Pattern
-
-The integrity rules above may sometimes appear to conflict with a user request for speed or simplicity. The correct response is:
-
-1. **Complete the user's immediate request** to the extent that integrity rules permit
-2. **Flag the constraint** that prevents full compliance: "I can complete [X] but [Y] requires [missing input] before it can be done correctly"
-3. **Offer the path forward**: "To complete [Y], the next step is [specific action]"
-
-This is NOT:
-- Refusing the task entirely
-- Producing work that violates the rules while noting the violation
-- Deferring the task indefinitely without a forward path
+### RULE 10: Sub-Agents Receive Complete Self-Contained Instructions
+**Rule:** Sub-agent instructions must embed all necessary context — no references to "as discussed" or "prior analysis" or any implied shared context.
+**Why it's a quality constraint:** Sub-agents do not share memory with parent agent. Any reference to prior context is invisible to the sub-agent and will cause hallucination or errors.
+**Override condition:** None. Sub-agents always require self-contained instructions.
 
 ---
 
-## Integrity Rule Conflict Resolution
+## TIER 3: PROCESS STANDARDS (Recommended — deviation reduces quality)
 
-If two rules appear to conflict:
+### RULE 11: Ideation Complete Before Prompt Formulation
+**Standard:** Do not begin prompt formulation until all design decisions are locked (nnnn.md equivalent complete).
+**Consequence of deviation:** Prompts will contain implicit decisions that Claude must resolve, introducing uncertainty and increasing error rate.
 
-| Rule Priority | Example |
-|---|---|
-| Rule 05 (no speculation) > Rule 03 (all nodes documented) | Better to flag a gap than to fill it with a guess |
-| Rule 01 (specific mechanism) > Rule 06 (audience language) | Mechanism must be correct even if simplified for audience |
-| Rule 04 (no speculative cross-links) > Rule 02 (node interpretation) | Don't identify a node if the cross-link that suggests it is speculative |
+### RULE 12: Context Files Written Before Stage 7 Begins
+**Standard:** All context files for a project must exist in context/ before any Stage 7 session executes.
+**Consequence of deviation:** Sub-agents will infer domain values that should have been pre-written, producing incorrect output.
+
+### RULE 13: Over-Splitting Preferred to Under-Splitting
+**Standard:** When uncertain about atomicity, split into smaller units.
+**Consequence of deviation:** Under-split prompts risk truncation or combined errors that are harder to diagnose and correct.
+
+---
+
+## COMPLIANCE-WHILE-RESPONSIVE PATTERNS
+
+When a user instruction appears to conflict with a Tier 1 rule, use this pattern:
+
+1. **Acknowledge the request:** "I understand you want to [user's request]."
+2. **Name the constraint:** "This conflicts with [Rule N] because [reason the rule exists]."
+3. **Offer the compliant alternative:** "I can accomplish the same goal by [compliant approach]."
+4. **Explain the consequence of violating:** "Without [the rule], the risk is [specific failure mode]."
+
+**Example:**
+> User: "Just add step 12 to the list and keep going."
+> Response: "I understand you want to add step 12. Adding step IDs after initialization violates Rule 2 (pendingSteps fully populated at init) because any session that already ran may have made decisions based on the prior step count being final. To do this safely, I'll update state.json by inserting the new step ID in the correct position in pendingSteps, and update README.md with a new row. No sessions need to be re-run; the new step will be picked up at the correct execution point."
+
+---
+
+## INTEGRITY AUDIT
+
+Before beginning Stage 7 execution, run this audit:
+
+| Rule | Check | Pass Condition |
+|---|---|---|
+| Rule 1 | Is Stage 7 execution planned for fresh chats? | YES |
+| Rule 2 | Are all step IDs in pendingSteps now? | YES — count matches total prompts |
+| Rule 3 | Do all prompts contain verbatim hard constraints? | YES — spot-check 3 random prompts |
+| Rule 4 | Does every Task section contain exactly one unit? | YES — each has one Verification sentence |
+| Rule 5 | Do all prerequisites point backward (not forward)? | YES — traced all prerequisites |
+| Rule 6 | Does every State Update section exist and is complete? | YES — all five mutation types accounted for |

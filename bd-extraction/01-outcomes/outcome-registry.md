@@ -1,209 +1,270 @@
 # Outcome Registry
-**Source:** `00-inventory/system-map.md` + `raw context/claude conversation.md`
-**Date:** 2026-03-22
+**Source:** `00-inventory/system-map.md`
+**Date:** 2026-03-26
+**Step:** 01 — Outcome Decomposition
 
 ---
 
-## Outcome 01 — Complete FDN Marker Root Cause Visual Map
+## REGISTRY FORMAT
 
-**Precise Name:** Interactive HTML diagram mapping every FDN lab marker to its upstream root causes, organized by failure category
+Each outcome is classified, layered across all five extraction levels, dependency-mapped, and flagged for session strategy.
 
-**Classification:** Deliverable (interactive HTML artifact)
+---
 
-**Five Layers:**
+## OUTCOME-01: Single Optimized Prompt
+
+**Classification:** deliverable
+**Description:** A raw prompt transformed into a precise, scoped, constrained, executable prompt via the 8-rule optimization process.
+
+### Five-Layer Breakdown
 | Layer | Content |
 |---|---|
-| meta-meta | Governing rule: each marker is a terminal output of a multi-node pathway; root causes must be categorized by mechanism type, not just listed |
-| meta | Component roles: FDN markers as terminal outputs; root cause categories as the organizing taxonomy; color-coded pill system for visual scanning; filter logic for cross-cutting patterns |
-| macro | Outcome: practitioner can look at any FDN marker and immediately see all plausible upstream failure nodes, organized by category |
-| micro | Per-marker: list all root causes; assign each to a category (Nutrient/Mineral, Hormonal/HPA, Neurotransmitter, Microbiome/Gut, Structural/Barrier, Immune, Metabolic); implement in interactive HTML |
-| micro-micro | Pill parameters: label text, category color, click behavior; filter parameters: category name, toggle state; marker parameters: name, description, failure node count |
+| **meta-meta** | Belief: precision is a property of the prompt artifact, not Claude's inference capability. Vague language = information destruction. |
+| **meta** | `/prompt` command is the mechanism. Analyzes explicit AND implicit intent before applying 8 rules. Output is single code block — no commentary. |
+| **macro** | Workflow: user provides raw prompt → command applies 8 rules → returns one optimized prompt → user executes or pipes to `/refinep` |
+| **micro** | 8 rules applied in sequence: (1) Lead with Outcome, (2) Specify Scope, (3) Name Constraints, (4) Break Compound Tasks, (5) Anticipate Edge Cases, (6) Use Claude Code Conventions, (7) Avoid Vagueness, (8) State Output Format |
+| **micro-micro** | Rule triggers: compound verbs → numbered steps; "improve/fix/update" → observable actions; implicit scope → explicit file list; missing output spec → exact path + format + structure |
 
-**Dependencies:**
-- Requires: Complete FDN marker list (not fully enumerated in conversation — needs external source or practitioner knowledge)
-- Requires: Root cause taxonomy (7 categories — defined in conversation)
-- Requires: Mechanism research per marker (SIgA and Cortisol/DHEA fully researched; others implied but not detailed)
-- Depends on: Outcomes 04 (nodal reasoning) and 05 (upstream stressor maps) to populate remaining markers
+### Dependencies
+- Input: raw prompt (any quality level)
+- Tools: none (stateless)
+- Implicit dependency: user must have at least implicit intent
 
-**Fresh chat or chain:** FRESH CHAT — context-heavy HTML build; requires complete marker list as input; best executed as dedicated prompt after research is complete
+### Fresh Chat vs Chain
+**CHAIN** — stateless; no context accumulation required; fast transformation
 
 ---
 
-## Outcome 02 — Nodal Reasoning Framework
+## OUTCOME-02: Production-Grade Refined Prompt
 
-**Precise Name:** Clinical decision framework for localizing dysfunction by reading patterns across multiple FDN markers rather than interpreting each marker in isolation
+**Classification:** deliverable
+**Description:** A fully engineered prompt in `refined-prompt.md` that passes all 15 Phase 5 verification items, with complete Refinement Report.
 
-**Classification:** System (clinical reasoning methodology)
-
-**Five Layers:**
+### Five-Layer Breakdown
 | Layer | Content |
 |---|---|
-| meta-meta | Governing rule: same marker value (e.g. low SIgA) can originate from different failed nodes with different intervention implications; pattern reading is the diagnostic act, not single-marker reading |
-| meta | Components: marker pattern inputs → node probability mapping → ranked intervention targets; the framework must distinguish between markers that share upstream nodes |
-| macro | Outcome: practitioner receives a prioritized list of most likely compromised nodes given the full pattern of findings across all markers |
-| micro | Per-marker-combination: define which node is most implicated when markers X and Y are both abnormal vs. only X vs. only Y |
-| micro-micro | Variables: cortisol level, DHEA level, SIgA level, OAT metabolite levels, sex hormone levels; conditions: "If cortisol high AND DHEA low AND SIgA low → pIgR suppression most likely proximal cause" |
+| **meta-meta** | A "perfectly engineered" prompt is defined by 11 observable, testable conditions. Self-verification is a release condition, not an audit. |
+| **meta** | `/refinep` command executes 6-phase pipeline. Domain research is mandatory regardless of user request. Output file is `refined-prompt.md`. Displays summary in chat. |
+| **macro** | Workflow: RAW_PROMPT → 25-item diagnostic → web research → 25-technique application → 15-item self-verification → file write + chat summary |
+| **micro** | Phase 2 scores 25 diagnostic items Adequate/Partial/Not at all. Phase 4 applies applicable techniques from categories A→G in order. Phase 5 iterates until all 15 items pass. |
+| **micro-micro** | Technique selection logic: judgment-based — only techniques that add value applied; simple prompt may use 3–4 sections; complex prompt may use 8+. Revision loop in Phase 5: fail any item → revise → re-verify → repeat. |
 
-**Dependencies:**
-- Requires: Outcome 01 (complete marker-to-root-cause map)
-- Requires: Outcome 05 (upstream stressor maps per marker)
-- Requires: Logic for node overlap (which nodes are shared across multiple markers)
+### Dependencies
+- Input: RAW_PROMPT (from `$ARGUMENTS`, file path, or AskUserQuestion)
+- Upstream: OUTCOME-01 (optimized prompt fed in; optional but recommended)
+- Tools: web search (Phase 3), file write (Phase 6)
+- Implicit: web search capability must be available
 
-**Fresh chat or chain:** FRESH CHAT — requires complete marker map as context; decision tree logic is complex enough to warrant dedicated build prompt
+### Fresh Chat vs Chain
+**CHAIN** for straightforward prompts — the refinement is self-contained.
+**FRESH CHAT recommended** for complex, domain-heavy tasks where Phase 3 web research is extensive — reduces context contamination.
 
 ---
 
-## Outcome 03 — SIgA Axis Complete Reference
+## OUTCOME-03: Fully Decomposed Orchestration Package
 
-**Precise Name:** Structured reference document for the 7-node SIgA production axis with all upstream variables at each node
+**Classification:** deliverable
+**Description:** Complete orchestration directory containing state.json (all pendingSteps populated), prompt-01.md through prompt-NN.md (atomic sub-prompts), and README.md index.
 
-**Classification:** System (reference document + educational content)
-
-**Five Layers:**
+### Five-Layer Breakdown
 | Layer | Content |
 |---|---|
-| meta-meta | Governing rule: SIgA is sensitive but non-specific; the value of the document is in localizing which node is most likely failed given the clinical context |
-| meta | Components: node sequence (1–7); upstream vulnerability per node; FDN-relevant stressor mapping per node; clinical pattern matching |
-| macro | Outcome: practitioner can trace low SIgA to most probable upstream failure given the full clinical picture |
-| micro | Per node: name, function, upstream vulnerabilities, FDN stressor category, clinical indicators, intervention implications |
-| micro-micro | Node 6 (pIgR): cortisol threshold for suppression; Node 2 (class switching): retinoic acid, TGF-β, APRIL, BAFF; Node 3 (homing): α4β7, CCR9, retinoic acid dependency; Node 5 (plasma cell output): mitochondrial demand, oxidative stress vulnerability |
+| **meta-meta** | Cardinal failure mode: combining two atomic tasks into one prompt. Atomicity principle is non-negotiable. "Be obsessive" about decomposition — over-split preferred to under-split. |
+| **meta** | meta-prompt.md strategy governs decomposition. 30–45 target range for medium-large projects. state.json must be fully populated at initialization — never extended mid-execution. |
+| **macro** | Workflow: refined-prompt.md → catalog all discrete verifiable units → group into data batches (≤20 entries each) → write state.json → write README.md → write prompt-NN.md files |
+| **micro** | File naming: `prompt-NN.md` (zero-padded two-digit). Titles: `# Prompt [NN]: [Action Title in imperative form]`. Data batch naming: use category names, not batch numbers. Each prompt: 5 required sections (Prerequisites, Hard Constraints, Task, Verification, State Update). |
+| **micro-micro** | State.json initialization: pendingSteps = ALL step IDs in execution order; completedSteps = []; flags all false; artifacts all zero. Hard constraints: verbatim text, no paraphrasing. Prerequisites: must trace each resource to the step that creates it. |
 
-**Dependencies:**
-- Requires: Conversation content (fully present)
-- Depends on: Outcome 06 (Vitamin A reference) for Node 2 and Node 3 detail
-- Depends on: Outcome 07 (HPA/cortisol reference) for Node 6 detail
+### Dependencies
+- Input: `refined-prompt.md` (OUTCOME-02)
+- Input: `meta-prompt.md` (strategy document)
+- Tool: file write (multiple files)
+- Implicit: full task specification must be complete before decomposition begins
 
-**Fresh chat or chain:** CAN CHAIN — all source material present in conversation
+### Fresh Chat vs Chain
+**FRESH CHAT** — context-heavy; produces many files; decomposition strategy requires full attention; context contamination risk from prior refinement conversation
 
 ---
 
-## Outcome 04 — Cortisol/DHEA Ratio Complete Reference
+## OUTCOME-04: Domain Context File Set
 
-**Precise Name:** Structured reference for the cortisol/DHEA ratio — upstream inputs, HPA mechanics, three ratio patterns, downstream consequences, and intervention differentiation logic
+**Classification:** system
+**Description:** Pre-written domain reference files in `context/` directory that sub-agents load before executing assigned tasks.
 
-**Classification:** System (reference document + intervention logic)
-
-**Five Layers:**
+### Five-Layer Breakdown
 | Layer | Content |
 |---|---|
-| meta-meta | Governing rule: ratio must be interpreted by pattern (which component is elevated/depleted) not just as a single number; same ratio value can require opposite interventions |
-| meta | Components: upstream stressor inputs (7+ categories) → HPA axis mechanics → three ratio patterns → downstream consequence cascade → intervention logic per pattern |
-| macro | Outcome: practitioner can read the ratio pattern and reason toward both proximal mechanism AND upstream stressor cluster |
-| micro | Three patterns: (1) high cortisol/low DHEA → load reduction + adrenal support; (2) low cortisol/low DHEA → cautious approach, feedback suppressed; (3) oscillating → pattern instability, may indicate phase transition |
-| micro-micro | Feedback loops: gut permeability → HPA load; blood sugar instability → HPA load; neurotransmitter depletion → stress resilience impairment → HPA load; progesterone steal → sex hormone cascade disruption |
+| **meta-meta** | Principle: every piece of domain knowledge sub-agents would need to infer, guess, or hallucinate must be pre-written. Context files are the architectural solution to Claude's inability to reliably reconstruct domain-specific knowledge from prompts alone. |
+| **meta** | Files are immutable during implementation. Changes require re-evaluation of all dependents. Critical information redundantly present across multiple files (insurance for isolated access). |
+| **macro** | Dependency graph: data files upstream → architecture files mid → build files downstream. All files written before Stage 7 begins. Sub-agents must explicitly reference files by name. |
+| **micro** | Naming convention: `[domain-prefix]-[descriptor].[type]`. Domain prefixes: app-, build-, data-, ui-, pwa-. Descriptor types: -architecture, -manifest, -inventory, -design-system, -technical, .css. |
+| **micro-micro** | Warrant for creating a context file vs embedding in prompt: (a) too large to embed repeatedly, (b) immutable during implementation, (c) referenced by multiple prompts, OR (d) domain-specific enough that Claude would need to infer it. |
 
-**Dependencies:**
-- Requires: Conversation content (substantially present)
-- Requires: Progesterone steal mechanism detail (stated but not fully elaborated)
-- Requires: IDO → kynurenine shunting detail (stated, needs expansion)
+### Dependencies
+- Input: `nnnn.md` specification (Stage 1 artifact — contains exact values)
+- Must precede: Stage 7 (sequential execution)
+- Tool: file write
 
-**Fresh chat or chain:** CAN CHAIN — core content present; elaboration needed on two sub-mechanisms
+### Fresh Chat vs Chain
+**CHAIN** (if domain knowledge already in context from refinement session) OR **FRESH CHAT** (if starting fresh from specification document)
 
 ---
 
-## Outcome 05 — Upstream Stressor Map Per FDN Marker (Full Panel)
+## OUTCOME-05: Initialized State File
 
-**Precise Name:** Exhaustive upstream stressor maps for the complete FDN lab marker panel, covering markers not yet detailed in the conversation
+**Classification:** system
+**Description:** `state.json` with all step IDs pre-populated in `pendingSteps` before first execution session begins.
 
-**Classification:** System (research + documentation set)
-
-**Five Layers:**
+### Five-Layer Breakdown
 | Layer | Content |
 |---|---|
-| meta-meta | Governing rule: each marker gets the same treatment as SIgA — a multi-node pathway analysis, not a simple list of causes |
-| meta | Components: complete FDN marker list (to be sourced); research protocol per marker; root cause taxonomy applied consistently |
-| macro | Outcome: every FDN marker has a structured upstream map; collective maps populate Outcome 01 |
-| micro | Per marker: identify all nodes in the production/regulation pathway; identify which nodes are vulnerable to which FDN-relevant stressors; map to root cause categories |
-| micro-micro | For each node: upstream inputs; stressor threshold (when does this node fail?); FDN marker correlates; intervention implications |
+| **meta-meta** | Initialization rule: pendingSteps MUST be fully populated at init. Empty pendingSteps = explicitly forbidden. This is architectural — not stylistic. |
+| **meta** | State file is the only thread connecting isolated sessions. Conversation memory explicitly excluded from architecture. Source of truth for build progress. |
+| **macro** | Created by initialization prompt (prompt-01.md, first in execution order). All subsequent sessions read this file to determine what to do and confirm their step is pending. |
+| **micro** | Schema: version, buildTarget, completedSteps[], pendingSteps[all IDs], artifacts{itemCount, filesWritten[]}, dataChunks{}, flags{all false} |
+| **micro-micro** | pendingSteps ordering: exact execution sequence. Step ID format: "step-NN-descriptive-name" or similar. flags: boolean toggles for setup prerequisites. dataChunks: category-keyed object. |
 
-**Dependencies:**
-- Requires: Complete FDN marker panel list (NOT fully present in conversation — needs sourcing)
-- Builds on: SIgA and Cortisol/DHEA as templates
-- Feeds into: Outcome 01 and Outcome 02
+### Dependencies
+- Input: complete list of all step IDs (from OUTCOME-03 orchestration package)
+- Tool: file write
+- Implicit: ALL step IDs must be known before initialization
 
-**Fresh chat or chain:** FRESH CHAT — requires external FDN marker list; large scope; best split by marker cluster (adrenal panel, sex hormone panel, thyroid panel, gut panel, metabolic panel, neurotransmitter panel)
+### Fresh Chat vs Chain
+**CHAIN** within OUTCOME-03 — state file initialized as part of orchestration decomposition session
 
 ---
 
-## Outcome 06 — Vitamin A Axis Reference
+## OUTCOME-06: Sequential Execution of One Atomic Step
 
-**Precise Name:** Reference document for vitamin A's role as a cross-systemic immune regulator — sources, conversion constraints, failure modes, and intervention logic
+**Classification:** process
+**Description:** One micro-prompt executed in a fresh session, completing its single task with verification and state update.
 
-**Classification:** Process (sub-reference feeding into Outcomes 01, 03, 05)
-
-**Five Layers:**
+### Five-Layer Breakdown
 | Layer | Content |
 |---|---|
-| meta-meta | Governing rule: vitamin A deficiency is immune disorganization, not simple immunosuppression; effects are bidirectional (suppression + inappropriate activation) |
-| meta | Components: retinol sources → absorption pathway → conversion pathway → active form (retinoic acid) → five immune functions → hidden deficiency risk factors |
-| macro | Outcome: practitioner can identify hidden vitamin A insufficiency and understand its multi-system immune consequences |
-| micro | Five functions: (1) epithelial barrier, (2) IgA class switching + homing, (3) Treg induction, (4) Th1/Th17 balance, (5) innate immune maturation |
-| micro-micro | BCMO1 polymorphism impact; bile/lipase absorption dependency; self-reinforcing deficiency loop; animal vs. plant source comparison; food list with relative potency |
+| **meta-meta** | Sequential isolation is architectural choice. Fresh chats eliminate accumulated context noise. State file is the only information passing between sessions. |
+| **meta** | Protocol: read state.json → confirm step in pendingSteps → execute Task → run Verification → update state.json → exit. |
+| **macro** | Each session is fully independent. Sub-agents may be spawned within a session (PARALLEL-designated prompts). State update is the final mandatory step before exit. |
+| **micro** | Verification checks: measurable, binary pass/fail. State update mutations: append to completedSteps, remove from pendingSteps, set flags, increment counters, record filesWritten. |
+| **micro-micro** | Guard condition: if step ID NOT in pendingSteps → do not execute (either already done or state inconsistent). Parallel sub-agents within session: only write non-overlapping state portions (separate flags, separate dataChunk keys). |
 
-**Dependencies:**
-- Fully present in conversation
-- Feeds into: Outcome 01, 03, 05
+### Dependencies
+- Input: specific prompt-NN.md file
+- Input: state.json (must be readable at session start)
+- Input: context files (those named in Prerequisites section)
+- Tool: read (state.json, context files), write (output files + state.json update)
 
-**Fresh chat or chain:** CAN CHAIN
+### Fresh Chat vs Chain
+**MUST FRESH CHAT** — by design. This is the foundational architectural constraint of Stage 7.
 
 ---
 
-## Outcome 07 — Neurotransmitter Root Cause Map (IDO/Kynurenine + HPHPA/Dopamine)
+## OUTCOME-07: Sub-Agent Instruction (Unambiguous)
 
-**Precise Name:** Reference document for the two key microbially-mediated neurotransmitter disruption pathways identified in the conversation
+**Classification:** template
+**Description:** An instruction for a sub-agent that is self-contained, precisely bounded, and produces a defined output with a verification condition.
 
-**Classification:** System (mechanistic reference)
-
-**Five Layers:**
+### Five-Layer Breakdown
 | Layer | Content |
 |---|---|
-| meta-meta | Governing rule: these are mechanistically specific pathways, not metaphorical "gut-brain connections" — microbial metabolites compete at enzyme level |
-| meta | Components: IDO pathway (cortisol-driven); Clostridia/HPHPA pathway (dysbiosis-driven); convergence with FDN neurotransmitter markers (OAT) |
-| macro | Outcome: practitioner understands how gut status and HPA status directly produce neurotransmitter dysfunction |
-| micro | IDO: cortisol → IDO activation → tryptophan → kynurenine (not serotonin) → neuroinflammatory metabolites; HPHPA: Clostridia overgrowth → HPHPA → dopamine pathway enzyme competition |
-| micro-micro | OAT markers that reflect each pathway; intervention targets per pathway; distinguishing features (which pattern predominates?) |
+| **meta-meta** | Sub-agents do not share memory with parent agent. Everything the sub-agent needs must be explicitly embedded. References to prior conversation are invisible to sub-agents. |
+| **meta** | Criteria for spawning: (1) parallelization benefit, (2) context isolation benefit, (3) specialization benefit. Do NOT spawn when: simpler inline, depends on current session state, coordination overhead > parallelization benefit. |
+| **macro** | Structure: (1) bounded task statement, (2) complete context, (3) explicit file access scope, (4) expected output format + path, (5) verification condition, (6) reporting instructions |
+| **micro** | Read scope: only assigned context files. Write scope: only assigned output files. Task scope: ends when specified output produced — no adjacent tasks, no cleanup, no optimization. |
+| **micro-micro** | Aggregation (parallel sub-agents): collect outputs, combine as specified, conflict resolution = preserve both + note discrepancy (neither silently dropped), write to specified aggregate location. |
 
-**Dependencies:**
-- Partially present in conversation (stated but not elaborated)
-- Requires: OAT marker list for kynurenine and HPHPA — needs sourcing or elaboration
-- Feeds into: Outcome 01, 05
+### Dependencies
+- Input: parent prompt's task definition
+- Input: context files (explicitly named, explicitly loaded)
+- Tool: depends on sub-task (read, write)
 
-**Fresh chat or chain:** FRESH CHAT — needs elaboration beyond what's in conversation
+### Fresh Chat vs Chain
+**FRESH CHAT** — sub-agents always operate in isolated context by definition
 
 ---
 
-## Outcome 08 — Methodology Document (Integration Layer)
+## OUTCOME-08: Constraint-Engineered Prompt Section
 
-**Precise Name:** Written methodology for the health transformation framework — how FDN's multi-marker approach, the nodal reasoning layer, and the mechanistic physiology integrate into a coherent practitioner tool
+**Classification:** template
+**Description:** The `<constraints>` section of a prompt, containing IS, IS NOT, and Do NOT statements addressing specific failure modes.
 
-**Classification:** Deliverable (written framework document)
-
-**Five Layers:**
+### Five-Layer Breakdown
 | Layer | Content |
 |---|---|
-| meta-meta | Governing rule: the methodology must be both mechanistically credible and practically executable; it extends FDN rather than replacing it |
-| meta | Components: FDN foundation (markers + HIDDEN stressors) + nodal reasoning layer (Outcome 02) + mechanistic reference library (Outcomes 03–07) + visual tool (Outcome 01) |
-| macro | Outcome: complete practitioner-facing methodology document |
-| micro | Sections: FDN baseline, what's missing, the nodal reasoning extension, how to use the visual map, marker pattern examples, intervention logic |
-| micro-micro | Audience: FDN-trained practitioners; tone: clinically precise; format: TBD (written document, course module, reference guide?) |
+| **meta-meta** | Constraint absence = implicit permission. Negative constraints carry equal weight as positive requirements. Dedicated `<constraints>` section at same structural level as `<requirements>`. |
+| **meta** | Two constraint types: explicit (stated as prohibitions/requirements) and implicit (encoded through high specificity that forecloses alternative interpretations). |
+| **macro** | Three-part IS/IS NOT/Do NOT structure. "This is NOT" prevents scope creep. "Do NOT" prevents execution errors. These address different failure modes and are not redundant. |
+| **micro** | Six constraint types: technical hard limits, data completeness mandates, scope boundaries, process sequencing, prerequisite forward-reference prohibition, failure mode prohibitions. |
+| **micro-micro** | Cardinal failure mode naming: elevates the most consequential error above general caution list. "Do NOT combine two atomic tasks into one prompt file — this is the cardinal failure mode." The word "cardinal" is load-bearing — not interchangeable with "important" or "critical." |
 
-**Dependencies:**
-- Requires: All other outcomes complete
-- Requires: Clarity on audience and format (not specified in conversation)
+### Dependencies
+- Input: domain knowledge (what failure modes are specific to this task)
+- Input: Phase 3 domain research (anti-patterns for this domain)
+- Produced by: `/refinep` Phase 4 techniques D4, D5
 
-**Fresh chat or chain:** FRESH CHAT — capstone deliverable; all inputs must exist first
+### Fresh Chat vs Chain
+**CHAIN** — produced within `/refinep` execution
 
 ---
 
-## Outcome Summary Table
+## OUTCOME-09: Complete Output Specification
 
-| # | Name | Type | Fresh Chat? | Deps |
-|---|---|---|---|---|
-| 01 | FDN Marker Root Cause Visual Map | Deliverable (HTML) | YES | 04, 05 |
-| 02 | Nodal Reasoning Framework | System | YES | 01, 05 |
-| 03 | SIgA Axis Complete Reference | System | NO (chain) | 06, 07 |
-| 04 | Cortisol/DHEA Ratio Reference | System | NO (chain) | — |
-| 05 | Full FDN Panel Upstream Maps | System | YES (by cluster) | External FDN marker list |
-| 06 | Vitamin A Axis Reference | Process | NO (chain) | — |
-| 07 | Neurotransmitter Root Cause Map | System | YES | OAT marker list |
-| 08 | Methodology Document | Deliverable (written) | YES | 01–07 all complete |
+**Classification:** template
+**Description:** The output declaration in a prompt specifying exact file path, format, section structure, section content, naming conventions, forbidden content, chat report format, and verification checklist.
+
+### Five-Layer Breakdown
+| Layer | Content |
+|---|---|
+| **meta-meta** | Under-specification = permission for divergence. Every element not specified is a decision Claude makes independently — and independently-made decisions may be wrong. |
+| **meta** | Eight elements required: (1) file path, (2) format, (3) section structure, (4) section content, (5) naming conventions, (6) forbidden content, (7) chat report format, (8) verification checklist. |
+| **macro** | Divergences from under-specification: wrong directory, omitted sections, `// ... more` abbreviations, inconsistent naming, missing chat report, state not updated. |
+| **micro** | File path: exact, absolute. Section structure: ordered list of required sections with heading levels. Chat report: specific markdown structure with exact field names. |
+| **micro-micro** | Forbidden content list: `// ... more`, placeholder comments, truncated data, forward-looking prerequisites, inconsistent naming. Each item in forbidden list targets a specific observed failure mode. |
+
+### Dependencies
+- Input: task specification (what files should be produced)
+- Produced by: `/refinep` Phase 4 technique F1 (Output Format Specification)
+
+### Fresh Chat vs Chain
+**CHAIN** — produced within `/refinep` execution
+
+---
+
+## OUTCOME-10: Verified Build Completion
+
+**Classification:** process
+**Description:** State where `pendingSteps` is empty, `completedSteps` contains all step IDs, and a final chat report enumerates all created artifacts with data integrity counts.
+
+### Five-Layer Breakdown
+| Layer | Content |
+|---|---|
+| **meta-meta** | Completion is defined by state.json — not by Claude's assertion. pendingSteps = [] AND completedSteps = all IDs = completion. |
+| **meta** | Final chat report is required output of Stage 8. Enumerates all created artifacts and confirms data integrity counts (e.g., how many entries per data category). |
+| **macro** | Sequential execution loop terminates when no steps remain in pendingSteps. |
+| **micro** | Final report structure: list of all files created, data integrity counts per category, confirmation that completedSteps matches expected full set. |
+| **micro-micro** | Data integrity verification: compare artifact.itemCount against expected counts from data-inventory.md. Compare dataChunks keys against expected categories. |
+
+### Dependencies
+- Input: all previous stages completed
+- Input: state.json (final state)
+- Tool: read
+
+### Fresh Chat vs Chain
+**CHAIN** — final session of Stage 7 produces this as its output
+
+---
+
+## SUMMARY TABLE
+
+| # | Outcome | Classification | Fresh Chat | Chain | Trigger Condition |
+|---|---|---|---|---|---|
+| 01 | Single Optimized Prompt | deliverable | — | YES | Any prompt needing optimization |
+| 02 | Production-Grade Refined Prompt | deliverable | For complex | YES for simple | Any production-grade task |
+| 03 | Fully Decomposed Orchestration Package | deliverable | YES | — | Complex task OR >32K token risk |
+| 04 | Domain Context File Set | system | Recommended | If already loaded | Multi-session project with domain knowledge |
+| 05 | Initialized State File | system | — | YES (within 03) | Any multi-session project |
+| 06 | Sequential Execution of One Atomic Step | process | MUST | — | Every sub-prompt execution |
+| 07 | Sub-Agent Instruction | template | MUST (sub-agent) | — | Parallel work within a session |
+| 08 | Constraint-Engineered Prompt Section | template | — | YES (within 02) | Any prompt with failure modes to prevent |
+| 09 | Complete Output Specification | template | — | YES (within 02) | Any prompt producing file artifacts |
+| 10 | Verified Build Completion | process | — | YES (final step) | When all prompts executed |
