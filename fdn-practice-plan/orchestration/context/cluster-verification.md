@@ -1,0 +1,1 @@
+clusters[] field confirmed present on DATA.symptoms entries. No modification required.
