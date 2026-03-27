@@ -3,11 +3,11 @@
   "buildTarget": "C:\\Users\\Alexb\\Documents\\Kaitlyn's vs code docs\\fdn-pwa\\index.html",
   "completedSteps": [
     "step-01-document-codebase-patterns",
-    "step-02-verify-clusters-field"
+    "step-02-verify-clusters-field",
+    "step-03-verify-selected-symptoms-state",
+    "step-04-author-practices-diet-rest-supplement"
   ],
   "pendingSteps": [
-    "step-03-verify-selected-symptoms-state",
-    "step-04-author-practices-diet-rest-supplement",
     "step-05-author-practices-exercise-stress",
     "step-06-finalize-practices-data",
     "step-07-add-data-layer",
@@ -25,18 +25,22 @@
     "itemCount": 0,
     "filesWritten": [
       "fdn-practice-plan/orchestration/context/codebase-patterns.md",
-      "fdn-practice-plan/orchestration/context/cluster-verification.md"
+      "fdn-practice-plan/orchestration/context/cluster-verification.md",
+      "fdn-practice-plan/orchestration/context/state-verification.md",
+      "fdn-practice-plan/orchestration/context/practices-diet-rest-supplement.md"
     ]
   },
   "dataChunks": {
-    "practicesDraft": {},
+    "practicesDraft": {
+      "dietRestSupplement": "complete"
+    },
     "codebasePatterns": {}
   },
   "flags": {
     "codebasePatternsDocumented": true,
     "clustersFieldVerified": true,
-    "selectedSymptomsStateVerified": false,
-    "practicesDietRestSupplementDrafted": false,
+    "selectedSymptomsStateVerified": true,
+    "practicesDietRestSupplementDrafted": true,
     "practicesExerciseStressDrafted": false,
     "practicesDataFinalized": false,
     "dataLayerAdded": false,
