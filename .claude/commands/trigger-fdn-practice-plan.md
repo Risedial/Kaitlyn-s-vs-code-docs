@@ -1,0 +1,1 @@
+Read `C:\Users\Alexb\Documents\Kaitlyn's vs code docs\fdn-practice-plan\orchestration\state.json` and locate the first item in `PendingSteps`. Then read and execute that prompt file from `C:\Users\Alexb\Documents\Kaitlyn's vs code docs\fdn-practice-plan\orchestration\`. If `PendingSteps` is empty, stop and report "No pending steps."

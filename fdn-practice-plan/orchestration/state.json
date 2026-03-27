@@ -6,13 +6,13 @@
     "step-02-verify-clusters-field",
     "step-03-verify-selected-symptoms-state",
     "step-04-author-practices-diet-rest-supplement",
-    "step-05-author-practices-exercise-stress"
-  ],
-  "pendingSteps": [
+    "step-05-author-practices-exercise-stress",
     "step-06-finalize-practices-data",
     "step-07-add-data-layer",
     "step-08-add-utility-functions",
-    "step-09-add-state-functions",
+    "step-09-add-state-functions"
+  ],
+  "pendingSteps": [
     "step-10-add-render-function",
     "step-11-add-nav-tab-html",
     "step-12-add-screen-section-html",
@@ -22,13 +22,14 @@
     "step-16-verify-build"
   ],
   "artifacts": {
-    "itemCount": 0,
+    "itemCount": 15,
     "filesWritten": [
       "fdn-practice-plan/orchestration/context/codebase-patterns.md",
       "fdn-practice-plan/orchestration/context/cluster-verification.md",
       "fdn-practice-plan/orchestration/context/state-verification.md",
       "fdn-practice-plan/orchestration/context/practices-diet-rest-supplement.md",
-      "fdn-practice-plan/orchestration/context/practices-exercise-stress.md"
+      "fdn-practice-plan/orchestration/context/practices-exercise-stress.md",
+      "fdn-practice-plan/orchestration/context/practices-final.js"
     ]
   },
   "dataChunks": {
@@ -44,10 +45,10 @@
     "selectedSymptomsStateVerified": true,
     "practicesDietRestSupplementDrafted": true,
     "practicesExerciseStressDrafted": true,
-    "practicesDataFinalized": false,
-    "dataLayerAdded": false,
-    "utilityFunctionsAdded": false,
-    "stateFunctionsAdded": false,
+    "practicesDataFinalized": true,
+    "dataLayerAdded": true,
+    "utilityFunctionsAdded": true,
+    "stateFunctionsAdded": true,
     "renderFunctionAdded": false,
     "navTabAdded": false,
     "screenSectionAdded": false,
