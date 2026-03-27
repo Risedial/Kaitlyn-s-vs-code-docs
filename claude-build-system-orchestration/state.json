@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "buildTarget": "C:\\Users\\Alexb\\Documents\\Kaitlyn's vs code docs\\claude-build-system\\",
+  "completedSteps": [],
+  "pendingSteps": [
+    "step-01-initialize-state",
+    "step-02-copy-methodology-readme",
+    "step-03-copy-methodology-system-map",
+    "step-04-copy-methodology-outcome-registry",
+    "step-05-copy-methodology-fresh-chat-vs-chain-map",
+    "step-06-copy-methodology-prompt-engineering-pipeline",
+    "step-07-copy-methodology-orchestration-decomposition",
+    "step-08-copy-methodology-context-state-system",
+    "step-09-copy-methodology-sub-prompt-schema-template",
+    "step-10-copy-methodology-state-schema-template",
+    "step-11-copy-methodology-context-file-template",
+    "step-12-copy-methodology-readme-index-template",
+    "step-13-copy-methodology-prompt-engineering-checklist",
+    "step-14-copy-methodology-approach-selection-decision-tree",
+    "step-15-copy-methodology-system-integrity-rules",
+    "step-16-copy-methodology-orchestration-spec",
+    "step-17-copy-methodology-parameter-extraction-algorithm",
+    "step-18-copy-methodology-universal-feedback-system",
+    "step-19-copy-template-sub-prompt-schema",
+    "step-20-copy-template-state-schema",
+    "step-21-copy-template-context-file",
+    "step-22-copy-template-readme-index",
+    "step-23-copy-template-prompt-engineering-checklist",
+    "step-24-write-phase-01-discover",
+    "step-25-write-phase-02-engineer",
+    "step-26-write-phase-03-orchestrate",
+    "step-27-write-phase-04-ground",
+    "step-28-write-readme",
+    "step-29-verify-complete-structure"
+  ],
+  "artifacts": {
+    "itemCount": 0,
+    "filesWritten": []
+  },
+  "dataChunks": {
+    "methodologyFiles": {},
+    "templateFiles": {},
+    "phaseFiles": {}
+  },
+  "flags": {
+    "stateInitialized": false,
+    "methodologyFilesWritten": false,
+    "templateFilesWritten": false,
+    "phasePromptsWritten": false,
+    "readmeWritten": false
+  }
+}
