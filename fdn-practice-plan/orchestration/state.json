@@ -10,15 +10,15 @@
     "step-06-finalize-practices-data",
     "step-07-add-data-layer",
     "step-08-add-utility-functions",
-    "step-09-add-state-functions"
-  ],
-  "pendingSteps": [
+    "step-09-add-state-functions",
     "step-10-add-render-function",
     "step-11-add-nav-tab-html",
     "step-12-add-screen-section-html",
     "step-13-add-css-classes",
     "step-14-add-event-delegation",
-    "step-15-add-badge-logic",
+    "step-15-add-badge-logic"
+  ],
+  "pendingSteps": [
     "step-16-verify-build"
   ],
   "artifacts": {
@@ -49,12 +49,12 @@
     "dataLayerAdded": true,
     "utilityFunctionsAdded": true,
     "stateFunctionsAdded": true,
-    "renderFunctionAdded": false,
-    "navTabAdded": false,
-    "screenSectionAdded": false,
-    "cssClassesAdded": false,
-    "eventDelegationUpdated": false,
-    "badgeLogicAdded": false,
+    "renderFunctionAdded": true,
+    "navTabAdded": true,
+    "screenSectionAdded": true,
+    "cssClassesAdded": true,
+    "eventDelegationUpdated": true,
+    "badgeLogicAdded": true,
     "buildVerified": false
   }
 }
