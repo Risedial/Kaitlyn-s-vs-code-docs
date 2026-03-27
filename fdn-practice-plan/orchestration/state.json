@@ -5,10 +5,10 @@
     "step-01-document-codebase-patterns",
     "step-02-verify-clusters-field",
     "step-03-verify-selected-symptoms-state",
-    "step-04-author-practices-diet-rest-supplement"
+    "step-04-author-practices-diet-rest-supplement",
+    "step-05-author-practices-exercise-stress"
   ],
   "pendingSteps": [
-    "step-05-author-practices-exercise-stress",
     "step-06-finalize-practices-data",
     "step-07-add-data-layer",
     "step-08-add-utility-functions",
@@ -27,12 +27,14 @@
       "fdn-practice-plan/orchestration/context/codebase-patterns.md",
       "fdn-practice-plan/orchestration/context/cluster-verification.md",
       "fdn-practice-plan/orchestration/context/state-verification.md",
-      "fdn-practice-plan/orchestration/context/practices-diet-rest-supplement.md"
+      "fdn-practice-plan/orchestration/context/practices-diet-rest-supplement.md",
+      "fdn-practice-plan/orchestration/context/practices-exercise-stress.md"
     ]
   },
   "dataChunks": {
     "practicesDraft": {
-      "dietRestSupplement": "complete"
+      "dietRestSupplement": "complete",
+      "exerciseStress": "complete"
     },
     "codebasePatterns": {}
   },
@@ -41,7 +43,7 @@
     "clustersFieldVerified": true,
     "selectedSymptomsStateVerified": true,
     "practicesDietRestSupplementDrafted": true,
-    "practicesExerciseStressDrafted": false,
+    "practicesExerciseStressDrafted": true,
     "practicesDataFinalized": false,
     "dataLayerAdded": false,
     "utilityFunctionsAdded": false,
